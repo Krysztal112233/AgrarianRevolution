@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:flowers",
+    "#minecraft:leaves",
+    "minecraft:grass",
+    "minecraft:dead_bush",
+    "minecraft:seagrass",
+    "minecraft:sea_pickle",
+    "adv_agri_core:bamboo_leaves"
+  ]
+}

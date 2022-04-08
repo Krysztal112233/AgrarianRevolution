@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "adv_agri_core",
+  "version": "${version}",
+  "name": "Advanced Agriculture-core",
+  "description": "Tech,Nature,the Agriculture.",
+  "authors": [
+    "IcedTechLab"
+  ],
+  "contact": {
+    "homepage": "https://github.com/MysteriousStudio/AdvancedAgriculture-core",
+    "sources": "https://github.com/MysteriousStudio/AdvancedAgriculture-core"
+  },
+  "license": "GPLv3",
+  "icon": "assets/adv_agri_core/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "tech.icedlab.advagri.AdvAgriSideGeneral"
+    ],
+    "client": [
+      "tech.icedlab.advagri.AdvAgriSideClient"
+    ]
+  },
+  "mixins": [
+    "adv_agri_core.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.18.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

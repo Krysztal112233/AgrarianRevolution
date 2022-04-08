@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "c:tin_ores"
+  },
+  "result": "adv_agri_core:tin_ingot",
+  "experience": 0.5,
+  "cookingtime": 200
+}
+

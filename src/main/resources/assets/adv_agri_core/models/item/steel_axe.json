@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "adv_agri_core:item/steel_axe"
+  }
+}

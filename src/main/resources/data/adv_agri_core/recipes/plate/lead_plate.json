@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "adv_agri_core:forging_hammer"
+    },
+    {
+      "tag": "c:lead_ingots"
+    }
+  ],
+  "result": {
+    "item": "adv_agri_core:lead_plate",
+    "count": 2
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GDS",
+    "TCT",
+    "SDG"
+  ],
+  "key": {
+    "C": {
+      "item": "adv_agri_core:silver_conductor_core"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "T": {
+      "tag": "c:titanium_plates"
+    },
+    "G": {
+      "tag": "c:gold_plates"
+    },
+    "S": {
+      "tag": "c:silver_plates"
+    }
+  },
+  "result": {
+    "item": "adv_agri_core:titanium_conductor_core",
+    "count": 2
+  }
+}

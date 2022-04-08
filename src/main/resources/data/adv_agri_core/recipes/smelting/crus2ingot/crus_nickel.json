@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "adv_agri_core:crushed_nickel_ore"
+  },
+  "result": "adv_agri_core:nickel_ingot",
+  "experience": 0,
+  "cookingtime": 200
+}
+  
