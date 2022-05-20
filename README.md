@@ -1,12 +1,16 @@
 <h1 align="center"> 高级农业-核心 | Advanced_Agriculture-core </h1>
 
-![Logo](others/AdvAgri.png)
+![Logo](assets/AdvAgri.png)
 
 <h2 align="center"> 一个旨在拓展 Minecraft 原版与农业相关的体验的模组 </h2>
 
 <h3 align="center">构建状态以及项目信息</br> </h3>
 
-<div align="center"> <img src="https://circleci.com/gh/MysteriousStudio/AdvancedAgriculture-core.svg?style=svg" alt="Circle CI"/> <img src="https://github.com/MysteriousStudio/AdvancedAgriculture-core/workflows/build/badge.svg"> <img src="https://img.shields.io/badge/License-GPLv3-brightgreen" alt="License"> <img src="https://img.shields.io/badge/Language-Java-blue" alt="Language"> </div>
+<div align="center">
+    <img src="https://github.com/KrysztalTechLab/AdvancedAgriculture/workflows/build/badge.svg"> 
+    <img src="https://img.shields.io/badge/License-GPLv3-brightgreen" alt="License"> 
+    <img src="https://img.shields.io/badge/Language-Java-blue" alt="Language"> 
+</div>
 
 ### 特别感谢
 
@@ -16,11 +20,11 @@
 
 ### 注意!
 
-当您使用本模组时, 即代表您已阅读[用户须知](./markdowns/UserNoticeCN.md)
+当您使用本模组时, 即代表您已阅读[用户须知](assets/markdowns/UserNoticeCN.md)
 
 _[Wiki](https://github.com/MysteriousStudio/AdvancedAgriculture-core/wiki)_ 正在施工中.
 
-[Commit 规范](./markdowns/CommitStandardCN.md)
+[Commit 规范](assets/markdowns/CommitStandardCN.md)
 
 项目中的实现逻辑以及发展逻辑大多数可以从 wiki 中获知.
 
@@ -39,7 +43,7 @@ _[Wiki](https://github.com/MysteriousStudio/AdvancedAgriculture-core/wiki)_ 正�
 
 可以通过查看 _[项目看板](https://github.com/MysteriousStudio/AdvancedAgriculture-core/projects/1)_ 来查看具体的开发进度与我们的工作
 
-版本命名规则请移步 [](markdowns/VersionName.md)
+版本命名规则请移步 [](assets/markdowns/VersionName.md)
 
 ## 如何构建
 
@@ -75,7 +79,6 @@ gradle build
 您可以通过以下的方法为模组进行贡献：
 
 - 为模组主仓库提 PR
-- 为模组子仓库提 PR
 - 为模组编写 Wiki
 - 为模组进行一定程度的推广
 - 为模组的语言全球化进行贡献
