@@ -262,9 +262,9 @@
   "item.adv_agri_core.zinc_shovel": "锌锹",
   "item.adv_agri_core.zinc_sword": "锌剑",
   "item.adv_agri_core.zircon": "蛭石",
-  "itemGroup.adv_agri_core.agriculture": "高级农业-物品",
-  "itemGroup.adv_agri_core.agriculture_tool_and_armors": "高级农业-工具与盔甲",
-  "itemGroup.adv_agri_core.agriculture_world": "高级农业-地形",
+  "itemGroup.adv_agri_core.agriculture_core": "高级农业 基础",
+  "itemGroup.adv_agri_core.agriculture_tool_and_armors": "高级农业 工具与盔甲",
+  "itemGroup.adv_agri_core.agriculture_world": "高级农业 地形",
   "ore.adv_agri_core.sulphur_ore.tooltip": "散发着刺鼻的味道...闻起来像是要爆炸",
   "title.adv_agri_core.advanced_crafting_table": "高级工作台"
 }

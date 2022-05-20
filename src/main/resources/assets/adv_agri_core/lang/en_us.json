@@ -261,9 +261,9 @@
   "item.adv_agri_core.zinc_shovel": "Zinc Shovel",
   "item.adv_agri_core.zinc_sword": "Zinc Sword",
   "item.adv_agri_core.zircon": "Zircon",
-  "itemGroup.adv_agri_core.agriculture": "AdvancedAgriculture-Items",
-  "itemGroup.adv_agri_core.agriculture_tool_and_armors": "AdvancedAgriculture-Tools and Armors",
-  "itemGroup.adv_agri_core.agriculture_world": "AdvancedAgriculture-Terrain",
+  "itemGroup.adv_agri_core.agriculture_core": "AdvancedAgriculture Core",
+  "itemGroup.adv_agri_core.agriculture_tool_and_armors": "AdvancedAgriculture Tools and Armors",
+  "itemGroup.adv_agri_core.agriculture_world": "AdvancedAgriculture Terrain",
   "ore.adv_agri_core.sulphur_ore.tooltip": "Smells pungent, m-ay explode in a second.",
   "title.adv_agri_core.advanced_crafting_table": "Advanced Crafting Table"
 }

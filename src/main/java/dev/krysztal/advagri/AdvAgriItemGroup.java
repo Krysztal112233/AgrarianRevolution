@@ -11,12 +11,12 @@ import dev.krysztal.advagri.item.armors.AdvAgriArmors;
 public class AdvAgriItemGroup {
 
     public static final ItemGroup ADV_AGRI_TOOL_ITEM_GROUP = FabricItemGroupBuilder.build(
-        new Identifier("adv_agri_core", "agriculture_tool_and_armors"),
-        () -> new ItemStack(AdvAgriArmors.BAMBOO_HELMET));
+            new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, "agriculture_tool_and_armors"),
+            () -> new ItemStack(AdvAgriArmors.BAMBOO_HELMET));
     public static final ItemGroup ADV_AGRI_CORE_ITEM_GROUP = FabricItemGroupBuilder.build(
-        new Identifier("adv_agri_core", "agriculture"),
-        () -> new ItemStack(AdvAgriItems.BAMBOO_LEAVES));
+            new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, "agriculture_core"),
+            () -> new ItemStack(AdvAgriItems.BAMBOO_LEAVES));
     public static final ItemGroup ADV_AGRI_WORLD_ITEM_GROUP = FabricItemGroupBuilder.build(
-        new Identifier("adv_agri_core", "agriculture_world"),
-        () -> new ItemStack(AdvAgriBlocks.TITANIUM_BLOCK));
+            new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, "agriculture_world"),
+            () -> new ItemStack(AdvAgriBlocks.TITANIUM_BLOCK));
 }
