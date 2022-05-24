@@ -1,18 +1,16 @@
 package dev.krysztal.advagri.item.itemclass;
 
 import dev.krysztal.advagri.item.itemutil.ForgingHammerStorage;
-import java.util.Objects;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import dev.krysztal.advagri.item.itemutil.ForgingHammerUtil;
+
+import java.util.Objects;
 
 
 public class ForgingHammer extends Item {
@@ -31,8 +29,7 @@ public class ForgingHammer extends Item {
         if (context.getWorld().isClient()) {
             if (matchMetalBlock(block)) {
                 if (isUnderBlockAnvil(blockPos, context.getWorld())) {
-                    Objects.requireNonNull(context.getPlayer())
-                        .playSound(SoundEvents.BLOCK_ANVIL_LAND, 0.7F, 1F);
+                    Objects.requireNonNull(context.getPlayer()).playSound(SoundEvents.BLOCK_ANVIL_LAND, 0.7F, 1F);
                 }
             }
         }
@@ -62,20 +59,19 @@ public class ForgingHammer extends Item {
     }
 
     public boolean matchMetalBlock(Block block) {
-        return ForgingHammerUtil.getINSTANCE().isBlockContained(block);
+//        return ForgingHammerUtil.getINSTANCE().isBlockContained(block);
+        return true;
     }
 
     public void dropPlate(Block block, BlockPos blockPos, World world) {
-        world.breakBlock(blockPos, false);
-        new ItemEntity(world, blockPos.getX(), blockPos.getY(), blockPos.getZ(),
-            new ItemStack(ForgingHammerUtil.getINSTANCE().getPlate(block))).dropStack(
-            new ItemStack(ForgingHammerUtil.getINSTANCE().getPlate(block), 18));
+//        world.breakBlock(blockPos, false);
+//        new ItemEntity(world, blockPos.getX(), blockPos.getY(), blockPos.getZ(),
+//            new ItemStack(ForgingHammerUtil.getINSTANCE().getPlate(block))).dropStack(
+//            new ItemStack(ForgingHammerUtil.getINSTANCE().getPlate(block), 18));
     }
 
     public boolean isUnderBlockAnvil(BlockPos blockPos, World world) {
-        Block getBlock = world.getBlockState(
-            new BlockPos(blockPos.getX(), blockPos.getY() - 1, blockPos.getZ())).getBlock();
-        return getBlock.equals(Blocks.ANVIL) || getBlock.equals(Blocks.CHIPPED_ANVIL)
-            || getBlock.equals(Blocks.DAMAGED_ANVIL);
+        Block getBlock = world.getBlockState(new BlockPos(blockPos.getX(), blockPos.getY() - 1, blockPos.getZ())).getBlock();
+        return getBlock.equals(Blocks.ANVIL) || getBlock.equals(Blocks.CHIPPED_ANVIL) || getBlock.equals(Blocks.DAMAGED_ANVIL);
     }
 }
