@@ -75,7 +75,6 @@ public class BambooChopper extends AdvAgriSwordItem {
     }
 
     private boolean matchBlock(BlockState blockState) {
-//        return BambooChopperUtil.getInstance().check(blockState);
         return true;
     }
 
