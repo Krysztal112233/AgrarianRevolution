@@ -6,10 +6,8 @@ import net.minecraft.util.Identifier;
 
 public class AdvAgriNetworkChannels {
 
-    public static boolean registerGlobalReceiver(Identifier FirecrackerEntitySpawn,
-        PlayChannelHandler FirecrackerEntitySpawnHandler) {
-        return ClientNetworkingImpl.PLAY.registerGlobalReceiver(FirecrackerEntitySpawn,
-            FirecrackerEntitySpawnHandler);
+    public static boolean registerGlobalReceiver(Identifier FirecrackerEntitySpawn, PlayChannelHandler FirecrackerEntitySpawnHandler) {
+        return ClientNetworkingImpl.PLAY.registerGlobalReceiver(FirecrackerEntitySpawn, FirecrackerEntitySpawnHandler);
     }
 
 }
