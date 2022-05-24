@@ -45,16 +45,16 @@ public class AdvAgriItems {
     public static Item RAW_TUNGSTEN;
     public static Item RAW_TITANIUM;
 
-    public static Item TIN_INGOT;
-    public static Item ZINC_INGOT;
-    public static Item BRONZE_INGOT;
-    public static Item ALUMINUM_INGOT;
-    public static Item LEAD_INGOT;
-    public static Item SILVER_INGOT;
-    public static Item NICKEL_INGOT;
-    public static Item STEEL_INGOT;
-    public static Item TUNGSTEN_INGOT;
-    public static Item TITANIUM_INGOT;
+    public static Item INGOT_TIN;
+    public static Item INGOT_ZINC;
+    public static Item INGOT_BRONZE;
+    public static Item INGOT_ALUMINUM;
+    public static Item INGOT_LEAD;
+    public static Item INGOT_SILVER;
+    public static Item INGOT_NICKEL;
+    public static Item INGOT_STEEL;
+    public static Item INGOT_TUNGSTEN;
+    public static Item INGOT_TITANIUM;
 
 
     public static Item TIN_POWDER;
@@ -121,7 +121,6 @@ public class AdvAgriItems {
     public static Item CRUSHED_LEAD_ORE;
     public static Item CRUSHED_SILVER_ORE;
     public static Item CRUSHED_NICKEL_ORE;
-    public static Item CRUSHED_STEEL_ORE;
     public static Item CRUSHED_TUNGSTEN_ORE;
     public static Item CRUSHED_TITANIUM_ORE;
     public static Item CRUSHED_IRON_ORE;
@@ -139,21 +138,20 @@ public class AdvAgriItems {
 
     // Ore By-products
     public static Item MINERAL_MUD;
-    public static Item CORASE_ORE_POWDER;
     public static BambooChopper BAMBOO_CHOPPER;
 
     // Tools
     public static Wench WENCH;
     public static BambooDrillRod BAMBOO_DRILL_ROD;
+    public static ForgingHammer FORGING_HAMMER;
 
     // Plant "Seed"
-    public static Item RICE_SEED_BAG;
-    public static Item CHILI_SEED_BAG;
-    public static Item CELERY_SEED_BAG;
-    public static ForgingHammer FORGING_HAMMER;
-    public static Item LETTUCE_SEED_BAG;
-    public static Item STRAWBERRY_SEED_BAG;
-    public static Item CORN_SEED_BAG;
+    public static Item SEED_BAG_RICE;
+    public static Item SEED_BAG_CHILI;
+    public static Item SEED_BAG_CELERY;
+    public static Item SEED_BAG_LETTUCE;
+    public static Item SEED_BAG_STRAWBERRY;
+    public static Item SEED_BAG_CORN;
     public static Item SWEET_POTATO_VINE;
 
     // Crops
@@ -171,392 +169,146 @@ public class AdvAgriItems {
     // Bushes
     public static Item SOLAR_BERRY;
 
-    static {
-        BAMBOO_CHOPPER = new BambooChopper(ToolMaterials.IRON, 1, 0F,
-                new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP));
-        WENCH = new Wench(
-                new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP).maxCount(1));
-        BAMBOO_DRILL_ROD = new BambooDrillRod(
-                new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP));
-        FORGING_HAMMER = new ForgingHammer(
-                new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP).maxCount(1)
-                        .recipeRemainder(FORGING_HAMMER));
-    }
 
     static {
-        registry(COM_FERT =
-                        new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "com_fert");
-        registry(POTASSIUM_SALT_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "potassium_salt_powder");
-        registry(PLANT_ASH = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "plant_ash");
-        registry(BOTTLE_SMALL = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bottle_small");
-        registry(BOTTLE_MEDIUM = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bottle_medium");
-        registry(BOTTLE_LARGE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bottle_large");
-        registry(SOLARIUM_BOTTLE_LARGE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "solarium_bottle_large");
-        registry(SOLARIUM_BOTTLE_MEDIUM = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "solarium_bottle_medium");
-        registry(SOLARIUM_BOTTLE_SMALL = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "solarium_bottle_small");
-        registry(BAMBOO_LEAVES = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bamboo_leaves");
-        registry(BAMBOO_SILK = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bamboo_silk");
-        registry(BAMBOO_SILK_BOARD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bamboo_silk_broad");
-        registry(BAMBOO_CHARCOAL = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bamboo_charcoal");
-        registry(BAMBOO_CHARCOAL_BALL = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bamboo_charcoal_ball");
-        registry(BAMBOO_SHOOT = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bamboo_shoot");
-        registry(PHOS = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "phos");
-        registry(VERMICULITE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "vermiculite");
-        registry(SULFUR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "sulfur");
-        registry(RAW_TIN = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "raw_tin");
-        registry(RAW_ZINC = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "raw_zinc");
-        registry(RAW_ALUMINUM = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "raw_aluminum");
-        registry(RAW_LEAD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "raw_lead");
-        registry(RAW_SILVER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "raw_silver");
-        registry(RAW_NICKEL = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "raw_nickel");
-        registry(RAW_TUNGSTEN = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "raw_tungsten");
-        registry(RAW_TITANIUM = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "raw_titanium");
-        registry(TIN_INGOT = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "tin_ingot");
-        registry(ZINC_INGOT = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "zinc_ingot");
-        registry(BRONZE_INGOT = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bronze_ingot");
-        registry(ALUMINUM_INGOT = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "aluminum_ingot");
-        registry(LEAD_INGOT = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "lead_ingot");
-        registry(SILVER_INGOT = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "silver_ingot");
-        registry(NICKEL_INGOT = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "nickel_ingot");
-        registry(STEEL_INGOT = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "steel_ingot");
-        registry(TUNGSTEN_INGOT = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "tungsten_ingot");
-        registry(TITANIUM_INGOT = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "titanium_ingot");
-        registry(TIN_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "tin_powder");
-        registry(ZINC_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "zinc_powder");
-        registry(COPPER_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "copper_powder");
-        registry(BRONZE_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bronze_powder");
-        registry(ALUMINUM_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "aluminum_powder");
-        registry(LEAD_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "lead_powder");
-        registry(SILVER_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "silver_powder");
-        registry(NICKEL_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "nickel_powder");
-        registry(STEEL_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "steel_powder");
-        registry(TUNGSTEN_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "tungsten_powder");
-        registry(TITANIUM_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "titanium_powder");
-        registry(IRON_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "iron_powder");
-        registry(GOLD_POWDER = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "gold_powder");
-        registry(TIN_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "tin_plate");
-        registry(ZINC_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "zinc_plate");
-        registry(COPPER_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "copper_plate");
-        registry(BRONZE_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bronze_plate");
-        registry(ALUMINUM_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "aluminum_plate");
-        registry(LEAD_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "lead_plate");
-        registry(SILVER_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "silver_plate");
-        registry(NICKEL_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "nickel_plate");
-        registry(STEEL_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "steel_plate");
-        registry(TUNGSTEN_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "tungsten_plate");
-        registry(TITANIUM_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "titanium_plate");
-        registry(IRON_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "iron_plate");
-        registry(GOLD_PLATE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "gold_plate");
-        registry(TIN_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "tin_gear");
-        registry(ZINC_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "zinc_gear");
-        registry(COPPER_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "copper_gear");
-        registry(BRONZE_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bronze_gear");
-        registry(ALUMINUM_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "aluminum_gear");
-        registry(LEAD_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "lead_gear");
-        registry(SILVER_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "silver_gear");
-        registry(NICKEL_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "nickel_gear");
-        registry(STEEL_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "steel_gear");
-        registry(TUNGSTEN_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "tungsten_gear");
-        registry(TITANIUM_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "titanium_gear");
-        registry(IRON_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "iron_gear");
-        registry(GOLD_GEAR = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "gold_gear");
-        registry(TIN_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "tin_rod");
-        registry(ZINC_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "zinc_rod");
-        registry(COPPER_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "copper_rpd");
-        registry(BRONZE_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "bronze_rod");
-        registry(ALUMINUM_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "aluminum_rod");
-        registry(LEAD_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "lead_rod");
-        registry(SILVER_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "silver_rod");
-        registry(NICKEL_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "nickel_rod");
-        registry(STEEL_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "steel_rod");
-        registry(TUNGSTEN_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "tungsten_rod");
-        registry(TITANIUM_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "titanium_row");
-        registry(IRON_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "iron_rod");
-        registry(GOLD_ROD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "gold_rod");
-        registry(CRUSHED_TIN_ORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "crushed_tin_ore");
-        registry(CRUSHED_ZINC_ORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "crushed_zinc_ore");
-        registry(CRUSHED_COPPER_ORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "crushed_copper_ore");
-        registry(CRUSHED_ALUMINUM_ORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "crushed_aluminum_ore");
-        registry(CRUSHED_LEAD_ORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "crushed_lead_ore");
-        registry(CRUSHED_SILVER_ORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "crushed_silver_ore");
-        registry(CRUSHED_NICKEL_ORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "crushed_nickel_ore");
-        registry(CRUSHED_TUNGSTEN_ORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "crushed_tungsten_ore");
-        registry(CRUSHED_TITANIUM_ORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "crushed_titanium_ore");
-        registry(CRUSHED_IRON_ORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "crushed_iron_ore");
-        registry(CRUSHED_GOLD_ORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "crushed_gold_ore");
-        registry(COPPER_CONDUCTOR_CORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "copper_conductor_core");
-        registry(SILVER_CONDUCTOR_CORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "silver_conductor_core");
-        registry(TITANIUM_CONDUCTOR_CORE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "titanium_conductor_core");
+        COM_FERT = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "com_fert");
+        POTASSIUM_SALT_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "potassium_salt_powder");
+        PLANT_ASH = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "plant_ash");
+        BOTTLE_SMALL = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bottle_small");
+        BOTTLE_MEDIUM = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bottle_medium");
+        BOTTLE_LARGE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bottle_large");
+        SOLARIUM_BOTTLE_LARGE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "solarium_bottle_large");
+        SOLARIUM_BOTTLE_MEDIUM = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "solarium_bottle_medium");
+        SOLARIUM_BOTTLE_SMALL = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "solarium_bottle_small");
+        BAMBOO_LEAVES = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_leaves");
+        BAMBOO_SILK = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_silk");
+        BAMBOO_SILK_BOARD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_silk_broad");
+        BAMBOO_CHARCOAL = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_charcoal");
+        BAMBOO_CHARCOAL_BALL = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_charcoal_ball");
+        BAMBOO_SHOOT = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_shoot");
+        PHOS = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "phos");
+        VERMICULITE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "vermiculite");
+        SULFUR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "sulfur");
 
-        registry(COPPER_COIL = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "copper_coil");
-        registry(ELECTRIC_MOTOR_SMALL = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "electric_motor_small");
-        registry(ELECTRIC_MOTOR_BIG = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "electric_motor_big");
-        registry(MINERAL_MUD = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "mineral_mud");
-        registry(RICE_SEED_BAG = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "rice_seed_bag");
-        registry(CHILI_SEED_BAG = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "chili_seed_bag");
-        registry(CELERY_SEED_BAG = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "celery_seed_bag");
-        registry(LETTUCE_SEED_BAG = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "lettuce_seed_bag");
-        registry(STRAWBERRY_SEED_BAG = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "strawberry_seed_bag");
-        registry(CORN_SEED_BAG = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "corn_seed_bag");
-        registry(SWEET_POTATO_VINE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "sweet_potato_vine");
-        registry(RICE_UNHUSKED = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "rice_unhusked");
-        registry(RICE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "rice");
-        registry(PLANT_STRAW = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "plant_straw");
-        registry(SWEET_POTATO = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "sweet_potato");
-        registry(CHILI = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "chili");
-        registry(CELERY = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "celery");
-        registry(LETTUCE = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "lettuce");
-        registry(STRAWBERRY = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "strawberry");
-        registry(GARLIC = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "garlic");
-        registry(CHUFA = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "chufa");
-        registry(SOLAR_BERRY = new Item(
-                        new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)),
-                "solar_berry");
+        RAW_TIN = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "raw_tin");
+        RAW_ZINC = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "raw_zinc");
+        RAW_ALUMINUM = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "raw_aluminum");
+        RAW_LEAD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "raw_lead");
+        RAW_SILVER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "raw_silver");
+        RAW_NICKEL = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "raw_nickel");
+        RAW_TUNGSTEN = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "raw_tungsten");
+        RAW_TITANIUM = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "raw_titanium");
+
+        INGOT_TIN = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "tin_ingot");
+        INGOT_ZINC = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "zinc_ingot");
+        INGOT_BRONZE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bronze_ingot");
+        INGOT_ALUMINUM = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "aluminum_ingot");
+        INGOT_LEAD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "lead_ingot");
+        INGOT_SILVER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "silver_ingot");
+        INGOT_NICKEL = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "nickel_ingot");
+        INGOT_STEEL = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "steel_ingot");
+        INGOT_TUNGSTEN = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "tungsten_ingot");
+        INGOT_TITANIUM = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "titanium_ingot");
+
+        TIN_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "tin_powder");
+        ZINC_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "zinc_powder");
+        COPPER_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "copper_powder");
+        BRONZE_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bronze_powder");
+        ALUMINUM_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "aluminum_powder");
+        LEAD_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "lead_powder");
+        SILVER_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "silver_powder");
+        NICKEL_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "nickel_powder");
+        STEEL_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "steel_powder");
+        TUNGSTEN_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "tungsten_powder");
+        TITANIUM_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "titanium_powder");
+        IRON_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "iron_powder");
+        GOLD_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "gold_powder");
+
+        TIN_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "tin_plate");
+        ZINC_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "zinc_plate");
+        COPPER_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "copper_plate");
+        BRONZE_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bronze_plate");
+        ALUMINUM_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "aluminum_plate");
+        LEAD_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "lead_plate");
+        SILVER_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "silver_plate");
+        NICKEL_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "nickel_plate");
+        STEEL_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "steel_plate");
+        TUNGSTEN_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "tungsten_plate");
+        TITANIUM_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "titanium_plate");
+        IRON_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "iron_plate");
+        GOLD_PLATE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "gold_plate");
+
+        TIN_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "tin_gear");
+        ZINC_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "zinc_gear");
+        COPPER_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "copper_gear");
+        BRONZE_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bronze_gear");
+        ALUMINUM_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "aluminum_gear");
+        LEAD_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "lead_gear");
+        SILVER_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "silver_gear");
+        NICKEL_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "nickel_gear");
+        STEEL_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "steel_gear");
+        TUNGSTEN_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "tungsten_gear");
+        TITANIUM_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "titanium_gear");
+        IRON_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "iron_gear");
+        GOLD_GEAR = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "gold_gear");
+
+        TIN_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "tin_rod");
+        ZINC_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "zinc_rod");
+        COPPER_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "copper_rpd");
+        BRONZE_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bronze_rod");
+        ALUMINUM_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "aluminum_rod");
+        LEAD_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "lead_rod");
+        SILVER_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "silver_rod");
+        NICKEL_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "nickel_rod");
+        STEEL_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "steel_rod");
+        TUNGSTEN_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "tungsten_rod");
+        TITANIUM_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "titanium_row");
+        IRON_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "iron_rod");
+        GOLD_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "gold_rod");
+
+        CRUSHED_TIN_ORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "crushed_tin_ore");
+        CRUSHED_ZINC_ORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "crushed_zinc_ore");
+        CRUSHED_COPPER_ORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "crushed_copper_ore");
+        CRUSHED_ALUMINUM_ORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "crushed_aluminum_ore");
+        CRUSHED_LEAD_ORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "crushed_lead_ore");
+        CRUSHED_SILVER_ORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "crushed_silver_ore");
+        CRUSHED_NICKEL_ORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "crushed_nickel_ore");
+        CRUSHED_TUNGSTEN_ORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "crushed_tungsten_ore");
+        CRUSHED_TITANIUM_ORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "crushed_titanium_ore");
+        CRUSHED_IRON_ORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "crushed_iron_ore");
+        CRUSHED_GOLD_ORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "crushed_gold_ore");
+        COPPER_CONDUCTOR_CORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "copper_conductor_core");
+        SILVER_CONDUCTOR_CORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "silver_conductor_core");
+        TITANIUM_CONDUCTOR_CORE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "titanium_conductor_core");
+
+        COPPER_COIL = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "copper_coil");
+        ELECTRIC_MOTOR_SMALL = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "electric_motor_small");
+        ELECTRIC_MOTOR_BIG = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "electric_motor_big");
+
+        MINERAL_MUD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "mineral_mud");
+        SEED_BAG_RICE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "rice_seed_bag");
+        SEED_BAG_CHILI = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "chili_seed_bag");
+        SEED_BAG_CELERY = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "celery_seed_bag");
+        SEED_BAG_LETTUCE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "lettuce_seed_bag");
+        SEED_BAG_STRAWBERRY = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "strawberry_seed_bag");
+        SEED_BAG_CORN = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "corn_seed_bag");
+        SWEET_POTATO_VINE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "sweet_potato_vine");
+        RICE_UNHUSKED = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "rice_unhusked");
+        RICE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "rice");
+        PLANT_STRAW = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "plant_straw");
+        SWEET_POTATO = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "sweet_potato");
+        CHILI = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "chili");
+        CELERY = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "celery");
+        LETTUCE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "lettuce");
+        STRAWBERRY = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "strawberry");
+        GARLIC = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "garlic");
+        CHUFA = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "chufa");
+        SOLAR_BERRY = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "solar_berry");
+
+        BAMBOO_CHOPPER = registry(new BambooChopper(ToolMaterials.IRON, 1, 0F, new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_chopper");
+        WENCH = registry(new Wench(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP).maxCount(1)), "wench");
+        BAMBOO_DRILL_ROD = registry(new BambooDrillRod(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_drill_rod");
+        FORGING_HAMMER = registry(new ForgingHammer(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP).maxCount(1).recipeRemainder(FORGING_HAMMER)), "forging_hammer");
     }
 
     static {
@@ -565,11 +317,8 @@ public class AdvAgriItems {
         FuelRegistry.INSTANCE.add(BAMBOO_LEAVES, 2 * 20);
     }
 
-
-    private static void registry(Item item, String path) {
-        Registry.register(
-                Registry.ITEM,
-                new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path),
-                item);
+    private static <T extends Item> T registry(T item, String path) {
+        Registry.register(Registry.ITEM, new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path), item);
+        return item;
     }
 }

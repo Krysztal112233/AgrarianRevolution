@@ -40,7 +40,7 @@ public class AdvAgriToolMaterials implements ToolMaterial {
             super.setAttackDamage(2F);
             super.setMiningLevel(1);
             super.setEnchantability(22);
-            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.ALUMINUM_INGOT));
+            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.INGOT_ALUMINUM));
         }
 
     }
@@ -55,7 +55,7 @@ public class AdvAgriToolMaterials implements ToolMaterial {
             super.setAttackDamage(2F);
             super.setMiningLevel(2);
             super.setEnchantability(8);
-            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.BRONZE_INGOT));
+            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.INGOT_BRONZE));
         }
     }
 
@@ -83,7 +83,7 @@ public class AdvAgriToolMaterials implements ToolMaterial {
             super.setAttackDamage(2F);
             super.setMiningLevel(1);
             super.setEnchantability(6);
-            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.LEAD_INGOT));
+            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.INGOT_LEAD));
         }
 
     }
@@ -98,7 +98,7 @@ public class AdvAgriToolMaterials implements ToolMaterial {
             super.setAttackDamage(2F);
             super.setMiningLevel(2);
             super.setEnchantability(8);
-            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.NICKEL_INGOT));
+            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.INGOT_NICKEL));
         }
     }
 
@@ -112,7 +112,7 @@ public class AdvAgriToolMaterials implements ToolMaterial {
             super.setAttackDamage(2F);
             super.setMiningLevel(1);
             super.setEnchantability(12);
-            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.SILVER_INGOT));
+            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.INGOT_SILVER));
         }
     }
 
@@ -126,7 +126,7 @@ public class AdvAgriToolMaterials implements ToolMaterial {
             super.setAttackDamage(2F);
             super.setMiningLevel(3);
             super.setEnchantability(9);
-            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.STEEL_INGOT));
+            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.INGOT_STEEL));
         }
     }
 
@@ -140,7 +140,7 @@ public class AdvAgriToolMaterials implements ToolMaterial {
             super.setAttackDamage(2F);
             super.setMiningLevel(1);
             super.setEnchantability(6);
-            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.TIN_INGOT));
+            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.INGOT_TIN));
         }
     }
 
@@ -154,7 +154,7 @@ public class AdvAgriToolMaterials implements ToolMaterial {
             super.setAttackDamage(2F);
             super.setMiningLevel(3);
             super.setEnchantability(15);
-            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.TITANIUM_INGOT));
+            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.INGOT_TITANIUM));
         }
     }
 
@@ -168,7 +168,7 @@ public class AdvAgriToolMaterials implements ToolMaterial {
             super.setAttackDamage(2F);
             super.setMiningLevel(3);
             super.setEnchantability(9);
-            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.TUNGSTEN_INGOT));
+            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.INGOT_TUNGSTEN));
         }
     }
 
@@ -182,7 +182,7 @@ public class AdvAgriToolMaterials implements ToolMaterial {
             super.setAttackDamage(2F);
             super.setMiningLevel(2);
             super.setEnchantability(6);
-            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.ZINC_INGOT));
+            super.setRepairIngredient(Ingredient.ofItems(AdvAgriItems.INGOT_ZINC));
         }
     }
 }
