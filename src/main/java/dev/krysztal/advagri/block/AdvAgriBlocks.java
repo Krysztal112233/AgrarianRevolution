@@ -1,5 +1,11 @@
 package dev.krysztal.advagri.block;
 
+import dev.krysztal.advagri.AdvAgriConstants;
+import dev.krysztal.advagri.AdvAgriItemGroup;
+import dev.krysztal.advagri.block.blocks.BambooBlock;
+import dev.krysztal.advagri.block.blocks.machines.*;
+import dev.krysztal.advagri.block.blocks.ores.NetherSulphurOre;
+import dev.krysztal.advagri.block.blocks.ores.SulphurOre;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -8,22 +14,6 @@ import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import dev.krysztal.advagri.AdvAgriConstants;
-import dev.krysztal.advagri.AdvAgriItemGroup;
-import dev.krysztal.advagri.block.blocks.BambooBlock;
-import dev.krysztal.advagri.block.blocks.machines.ACT;
-import dev.krysztal.advagri.block.blocks.machines.BurningTank;
-import dev.krysztal.advagri.block.blocks.machines.Centrifuge;
-import dev.krysztal.advagri.block.blocks.machines.Crusher;
-import dev.krysztal.advagri.block.blocks.machines.Extractor;
-import dev.krysztal.advagri.block.blocks.machines.FermentTank;
-import dev.krysztal.advagri.block.blocks.machines.MachineShell;
-import dev.krysztal.advagri.block.blocks.machines.OreWashingMachine;
-import dev.krysztal.advagri.block.blocks.machines.ResinExtractor;
-import dev.krysztal.advagri.block.blocks.machines.SHTEMachine;
-import dev.krysztal.advagri.block.blocks.machines.SLMachine;
-import dev.krysztal.advagri.block.blocks.ores.NetherSulphurOre;
-import dev.krysztal.advagri.block.blocks.ores.SulphurOre;
 
 public class AdvAgriBlocks {
 
@@ -70,175 +60,52 @@ public class AdvAgriBlocks {
     public static ResinExtractor RESIN_EXTRACTOR;
 
     static {
-        registry(
-            COPPER_CABLE =
-                new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO).requiresTool()),
-            "copper_cable");
-        registry(
-            TIN_CABLE =
-                new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO).requiresTool()),
-            "tin_cable");
-        registry(SILVER_CABLE =
-                new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO).requiresTool()),
-            "silver_cable");
-        registry(
-            GOLD_CABLE =
-                new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO).requiresTool()),
-            "gold_cable");
-        registry(
-            SILVER_ORE =
-                new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE).requiresTool()),
-            "silver_ore");
-        registry(
-            NICKEL_ORE =
-                new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE).requiresTool()),
-            "nickel_ore");
-        registry(
-            TUNGSTEN_ORE =
-                new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).requiresTool()),
-            "tungsten_ore");
-        registry(
-            TITANIUM_ORE =
-                new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).requiresTool()),
-            "titanium_ore");
-        registry(
-            ALUMINUM_ORE =
-                new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()),
-            "aluminum_ore");
-        registry(
-            LEAD_ORE =
-                new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()),
-            "lead_ore");
-        registry(
-            TIN_ORE =
-                new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()),
-            "tin_ore");
-        registry(
-            ZINC_ORE =
-                new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()),
-            "zinc_ore");
-        registry(
-            TIN_BLOCK =
-                new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK).requiresTool()),
-            "tin_block");
-        registry(
-            ZINC_BLOCK =
-                new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK).requiresTool()),
-            "zinc_block");
-        registry(
-            BRONZE_BLOCK =
-                new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK).requiresTool()),
-            "bronze_block");
-        registry(
-            ALUMINUM_BLOCK =
-                new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK).requiresTool()),
-            "aluminum_block");
-        registry(
-            LEAD_BLOCK =
-                new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool()),
-            "lead_block");
-        registry(
-            SILVER_BLOCK =
-                new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool()),
-            "silver_block");
-        registry(
-            NICKEL_BLOCK =
-                new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool()),
-            "nickel_block");
-        registry(
-            STEEL_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool()),
-            "steel_block");
-        registry(
-            TUNGSTEN_BLOCK =
-                new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).requiresTool()),
-            "tungsten_block");
-        registry(
-            TITANIUM_BLOCK =
-                new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).requiresTool()),
-            "titanium_block");
+        COPPER_CABLE = registry(new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO).requiresTool()), "copper_cable");
+        TIN_CABLE = registry(new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO).requiresTool()), "tin_cable");
+        SILVER_CABLE = registry(new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO).requiresTool()), "silver_cable");
+        GOLD_CABLE = registry(new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO).requiresTool()), "gold_cable");
+        SILVER_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE).requiresTool()), "silver_ore");
+        NICKEL_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE).requiresTool()), "nickel_ore");
+        TUNGSTEN_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).requiresTool()), "tungsten_ore");
+        TITANIUM_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).requiresTool()), "titanium_ore");
+        ALUMINUM_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "aluminum_ore");
+        LEAD_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "lead_ore");
+        TIN_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "tin_ore");
+        ZINC_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "zinc_ore");
+        TIN_BLOCK = registry(new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK).requiresTool()), "tin_block");
+        ZINC_BLOCK = registry(new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK).requiresTool()), "zinc_block");
+        BRONZE_BLOCK = registry(new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK).requiresTool()), "bronze_block");
+        ALUMINUM_BLOCK = registry(new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK).requiresTool()), "aluminum_block");
+        LEAD_BLOCK = registry(new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool()), "lead_block");
+        SILVER_BLOCK = registry(new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool()), "silver_block");
+        NICKEL_BLOCK = registry(new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool()), "nickel_block");
+        STEEL_BLOCK = registry(new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool()), "steel_block");
+        TUNGSTEN_BLOCK = registry(new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).requiresTool()), "tungsten_block");
+        TITANIUM_BLOCK = registry(new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).requiresTool()), "titanium_block");
 
-        registry(
-            PHOS_ORE =
-                new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()),
-            "phos_ore");
-        registry(
-            SULPHUR_ORE =
-                new SulphurOre(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()),
-            "sulphur_ore");
-        registry(
-            NETHER_SULPHUR_ORE =
-                new NetherSulphurOre(
-                    FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()),
-            "nether_sulphur_ore");
-        registry(
-            BAMBOO_BLOCK =
-                new BambooBlock(FabricBlockSettings.of(Material.BAMBOO)),
-            "bamboo_block");
-        registry(
-            VERMICULITE_ORE =
-                new Block(FabricBlockSettings.copyOf(Blocks.DIRT)),
-            "vermiculite_ore");
-        registry(
-            MACHINE_SHELL =
-                new MachineShell(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
-            "machine_shell");
-        registry(
-            ACT =
-                new ACT(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
-            "advanced_crafting_table");
-        registry(
-            FERMENT_TANK =
-                new FermentTank(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
-            "ferment_tank");
-        registry(
-            BURNING_TANK =
-                new BurningTank(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
-            "burning_tank");
-        registry(
-            SLMACHINE =
-                new SLMachine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
-            "sunshine_liquefies_machine");
-        registry(
-            SHTEMachine =
-                new SHTEMachine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
-            "solar_high_temperature_electrolyze_machine");
-        registry(
-            CRUSHER =
-                new Crusher(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
-            "crusher");
-        registry(
-            EXTRACTOR =
-                new Extractor(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
-            "extractor");
-        registry(
-            CENTRIFUGE =
-                new Centrifuge(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
-            "centrifuge");
-        registry(ORE_WASHING_MACHINE = new OreWashingMachine(
-                FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
-            "ore_washing_machine");
-        registry(
-            RESIN_EXTRACTOR =
-                new ResinExtractor(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
-            "resin_extractor");
+        PHOS_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "phos_ore");
+        SULPHUR_ORE = registry(new SulphurOre(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "sulphur_ore");
+        NETHER_SULPHUR_ORE = registry(new NetherSulphurOre(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "nether_sulphur_ore");
+        BAMBOO_BLOCK = registry(new BambooBlock(FabricBlockSettings.of(Material.BAMBOO)), "bamboo_block");
+        VERMICULITE_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.DIRT)), "vermiculite_ore");
+        MACHINE_SHELL = registry(new MachineShell(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "machine_shell");
+        ACT = registry(new ACT(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "advanced_crafting_table");
+        FERMENT_TANK = registry(new FermentTank(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "ferment_tank");
+        BURNING_TANK = registry(new BurningTank(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "burning_tank");
+        SLMACHINE = registry(new SLMachine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "sunshine_liquefies_machine");
+        SHTEMachine = registry(new SHTEMachine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "solar_high_temperature_electrolyze_machine");
+        CRUSHER = registry(new Crusher(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "crusher");
+        EXTRACTOR = registry(new Extractor(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "extractor");
+        CENTRIFUGE = registry(new Centrifuge(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "centrifuge");
+        ORE_WASHING_MACHINE = registry(new OreWashingMachine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "ore_washing_machine");
+        RESIN_EXTRACTOR = registry(new ResinExtractor(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "resin_extractor");
 
 
     }
 
-    private static void registry(Block block, String path) {
-        Registry.register(
-            Registry.BLOCK,
-            new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path),
-            block
-        );
-        Registry.register(
-            Registry.ITEM,
-            new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path),
-            new BlockItem(block,
-                new FabricItemSettings()
-                    .group(AdvAgriItemGroup.ADV_AGRI_WORLD_ITEM_GROUP)
-            )
-        );
-
+    private static <T extends Block> T registry(T block, String path) {
+        Registry.register(Registry.BLOCK, new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path), block);
+        Registry.register(Registry.ITEM, new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path), new BlockItem(block, new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_WORLD_ITEM_GROUP)));
+        return block;
     }
 }
