@@ -81,150 +81,78 @@ public class AdvAgriTools {
 
     static {
 
-        COPPER_SHOVEL = new AdvAgriShovelItem(CopperMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        COPPER_PICKAXE = new AdvAgriPickaxeItem(CopperMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        COPPER_AXE = new AdvAgriAxeItem(CopperMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        COPPER_HOE = new AdvAgriHoeItem(CopperMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        COPPER_SWORD = new AdvAgriSwordItem(CopperMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
 
-        ZINC_SHOVEL = new AdvAgriShovelItem(ZincMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        ZINC_PICKAXE = new AdvAgriPickaxeItem(ZincMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        ZINC_AXE = new AdvAgriAxeItem(ZincMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        ZINC_HOE = new AdvAgriHoeItem(ZincMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        ZINC_SWORD = new AdvAgriSwordItem(ZincMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
+        COPPER_SHOVEL = registry(new AdvAgriShovelItem(CopperMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "copper_shovel");
+        COPPER_PICKAXE = registry(new AdvAgriPickaxeItem(CopperMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "copper_pickaxe");
+        COPPER_AXE = registry(new AdvAgriAxeItem(CopperMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "copper_axe");
+        COPPER_HOE = registry(new AdvAgriHoeItem(CopperMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "copper_hoe");
+        COPPER_SWORD = registry(new AdvAgriSwordItem(CopperMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "copper_sword");
 
-        TIN_SHOVEL = new AdvAgriShovelItem(TinMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        TIN_PICKAXE = new AdvAgriPickaxeItem(TinMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        TIN_AXE = new AdvAgriAxeItem(TinMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        TIN_HOE = new AdvAgriHoeItem(TinMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        TIN_SWORD = new AdvAgriSwordItem(TinMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
+        ZINC_SHOVEL = registry(new AdvAgriShovelItem(ZincMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "zinc_shovel");
+        ZINC_PICKAXE = registry(new AdvAgriPickaxeItem(ZincMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "zinc_pickaxe");
+        ZINC_AXE = registry(new AdvAgriAxeItem(ZincMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "zinc_axe");
+        ZINC_HOE = registry(new AdvAgriHoeItem(ZincMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "zinc_hoe");
+        ZINC_SWORD = registry(new AdvAgriSwordItem(ZincMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "zinc_sword");
 
-        BRONZE_SHOVEL = new AdvAgriShovelItem(BronzeMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        BRONZE_PICKAXE = new AdvAgriPickaxeItem(BronzeMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        BRONZE_AXE = new AdvAgriAxeItem(BronzeMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        BRONZE_HOE = new AdvAgriHoeItem(BronzeMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        BRONZE_SWORD = new AdvAgriSwordItem(BronzeMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
+        TIN_SHOVEL = registry(new AdvAgriShovelItem(TinMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "tin_shovel");
+        TIN_PICKAXE = registry(new AdvAgriPickaxeItem(TinMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "tin_pickaxe");
+        TIN_AXE = registry(new AdvAgriAxeItem(TinMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "tin_axe");
+        TIN_HOE = registry(new AdvAgriHoeItem(TinMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "tin_hoe");
+        TIN_SWORD = registry(new AdvAgriSwordItem(TinMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "tin_sword");
 
-        STEEL_SHOVEL = new AdvAgriShovelItem(SteelMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE + 2, BASE_SHOVEL_ATTACK_SPEED + 1, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        STEEL_PICKAXE = new AdvAgriPickaxeItem(SteelMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE + 2, BASE_PICKAXE_ATTACK_SPEED + 1, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        STEEL_AXE = new AdvAgriAxeItem(SteelMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED + 1, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        STEEL_HOE = new AdvAgriHoeItem(SteelMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE + 2, BASE_HOE_ATTACK_SPEED + 1, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        STEEL_SWORD = new AdvAgriSwordItem(SteelMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE + 2, BASE_SWORD_ATTACK_SPEED + 1, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
+        BRONZE_SHOVEL = registry(new AdvAgriShovelItem(BronzeMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "bronze_shovel");
+        BRONZE_PICKAXE = registry(new AdvAgriPickaxeItem(BronzeMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "bronze_pickaxe");
+        BRONZE_AXE = registry(new AdvAgriAxeItem(BronzeMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "bronze_axe");
+        BRONZE_HOE = registry(new AdvAgriHoeItem(BronzeMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "bronze_hoe");
+        BRONZE_SWORD = registry(new AdvAgriSwordItem(BronzeMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "bronze_sword");
 
-        ALUMINUM_SHOVEL = new AdvAgriShovelItem(AluminumMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED + 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        ALUMINUM_PICKAXE = new AdvAgriPickaxeItem(AluminumMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED + 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        ALUMINUM_AXE = new AdvAgriAxeItem(AluminumMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED + 0.2F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        ALUMINUM_HOE = new AdvAgriHoeItem(AluminumMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED + 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        ALUMINUM_SWORD = new AdvAgriSwordItem(AluminumMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE - 1, BASE_SWORD_ATTACK_SPEED + 0.3F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
+        ALUMINUM_SHOVEL = registry(new AdvAgriShovelItem(AluminumMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED + 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "aluminum_shovel");
+        ALUMINUM_PICKAXE = registry(new AdvAgriPickaxeItem(AluminumMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED + 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "aluminum_pickaxe");
+        ALUMINUM_AXE = registry(new AdvAgriAxeItem(AluminumMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED + 0.2F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "aluminum_axe");
+        ALUMINUM_HOE = registry(new AdvAgriHoeItem(AluminumMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED + 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "aluminum_hoe");
+        ALUMINUM_SWORD = registry(new AdvAgriSwordItem(AluminumMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE - 1, BASE_SWORD_ATTACK_SPEED + 0.3F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "aluminum_sword");
 
-        LEAD_SHOVEL = new AdvAgriShovelItem(LeadMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED - 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        LEAD_PICKAXE = new AdvAgriPickaxeItem(LeadMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED - 0.2F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        LEAD_AXE = new AdvAgriAxeItem(LeadMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 3F, BASE_AXE_ATTACK_SPEED - 0.3F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        LEAD_HOE = new AdvAgriHoeItem(LeadMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED - 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        LEAD_SWORD = new AdvAgriSwordItem(LeadMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED - 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
+        LEAD_SHOVEL = registry(new AdvAgriShovelItem(LeadMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED - 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "lead_shovel");
+        LEAD_PICKAXE = registry(new AdvAgriPickaxeItem(LeadMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED - 0.2F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "lead_pickaxe");
+        LEAD_AXE = registry(new AdvAgriAxeItem(LeadMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 3F, BASE_AXE_ATTACK_SPEED - 0.3F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "lead_axe");
+        LEAD_HOE = registry(new AdvAgriHoeItem(LeadMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED - 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "lead_hoe");
+        LEAD_SWORD = registry(new AdvAgriSwordItem(LeadMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED - 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "lead_sword");
 
-        SILVER_SHOVEL = new AdvAgriShovelItem(SilverMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        SILVER_PICKAXE = new AdvAgriPickaxeItem(SilverMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        SILVER_AXE = new AdvAgriAxeItem(SilverMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        SILVER_HOE = new AdvAgriHoeItem(SilverMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        SILVER_SWORD = new AdvAgriSwordItem(SilverMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
+        SILVER_SHOVEL = registry(new AdvAgriShovelItem(SilverMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "silver_shovel");
+        SILVER_PICKAXE = registry(new AdvAgriPickaxeItem(SilverMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "silver_pickaxe");
+        SILVER_AXE = registry(new AdvAgriAxeItem(SilverMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "silver_axe");
+        SILVER_HOE = registry(new AdvAgriHoeItem(SilverMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "silver_hoe");
+        SILVER_SWORD = registry(new AdvAgriSwordItem(SilverMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "silver_sword");
 
-        STEEL_SHOVEL = new AdvAgriShovelItem(SteelMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        STEEL_PICKAXE = new AdvAgriPickaxeItem(SteelMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        STEEL_AXE = new AdvAgriAxeItem(SteelMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        STEEL_HOE = new AdvAgriHoeItem(SteelMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        STEEL_SWORD = new AdvAgriSwordItem(SteelMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
+        STEEL_SHOVEL = registry(new AdvAgriShovelItem(SteelMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE + 2, BASE_SHOVEL_ATTACK_SPEED + 1, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "steel_shovel");
+        STEEL_PICKAXE = registry(new AdvAgriPickaxeItem(SteelMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE + 2, BASE_PICKAXE_ATTACK_SPEED + 1, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "steel_pickaxe");
+        STEEL_AXE = registry(new AdvAgriAxeItem(SteelMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED + 1, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "steel_axe");
+        STEEL_HOE = registry(new AdvAgriHoeItem(SteelMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE + 2, BASE_HOE_ATTACK_SPEED + 1, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "steel_hoe");
+        STEEL_SWORD = registry(new AdvAgriSwordItem(SteelMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE + 2, BASE_SWORD_ATTACK_SPEED + 1, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "steel_sword");
 
-        NICKEL_SHOVEL = new AdvAgriShovelItem(NickelMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        NICKEL_PICKAXE = new AdvAgriPickaxeItem(NickelMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        NICKEL_AXE = new AdvAgriAxeItem(NickelMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        NICKEL_HOE = new AdvAgriHoeItem(NickelMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        NICKEL_SWORD = new AdvAgriSwordItem(NickelMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
+        NICKEL_SHOVEL = registry(new AdvAgriShovelItem(NickelMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "nickel_shovel");
+        NICKEL_PICKAXE = registry(new AdvAgriPickaxeItem(NickelMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "nickel_pickaxe");
+        NICKEL_AXE = registry(new AdvAgriAxeItem(NickelMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "nickel_axe");
+        NICKEL_HOE = registry(new AdvAgriHoeItem(NickelMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "nickel_hoe");
+        NICKEL_SWORD = registry(new AdvAgriSwordItem(NickelMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "nickel_sword");
 
-        TUNGSTEN_SHOVEL = new AdvAgriShovelItem(TungstenMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        TUNGSTEN_PICKAXE = new AdvAgriPickaxeItem(TungstenMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        TUNGSTEN_AXE = new AdvAgriAxeItem(TungstenMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED - 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        TUNGSTEN_HOE = new AdvAgriHoeItem(TungstenMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        TUNGSTEN_SWORD = new AdvAgriSwordItem(TungstenMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
+        TUNGSTEN_SHOVEL = registry(new AdvAgriShovelItem(TungstenMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE, BASE_SHOVEL_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "tungsten_shovel");
+        TUNGSTEN_PICKAXE = registry(new AdvAgriPickaxeItem(TungstenMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE, BASE_PICKAXE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "tungsten_pickaxe");
+        TUNGSTEN_AXE = registry(new AdvAgriAxeItem(TungstenMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 2F, BASE_AXE_ATTACK_SPEED - 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "tungsten_axe");
+        TUNGSTEN_HOE = registry(new AdvAgriHoeItem(TungstenMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "tungsten_hoe");
+        TUNGSTEN_SWORD = registry(new AdvAgriSwordItem(TungstenMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE, BASE_SWORD_ATTACK_SPEED, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "tungsten_sword");
 
-        TITANIUM_SHOVEL = new AdvAgriShovelItem(TitaniumMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE + 1, BASE_SHOVEL_ATTACK_SPEED + 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        TITANIUM_PICKAXE = new AdvAgriPickaxeItem(TitaniumMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE + 1, BASE_PICKAXE_ATTACK_SPEED + 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        TITANIUM_AXE = new AdvAgriAxeItem(TitaniumMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 3F, BASE_AXE_ATTACK_SPEED + 0.3F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        TITANIUM_HOE = new AdvAgriHoeItem(TitaniumMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED + 2, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-        TITANIUM_SWORD = new AdvAgriSwordItem(TitaniumMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE + 2, BASE_SWORD_ATTACK_SPEED + 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP));
-    }
-
-    static {
-        registry(COPPER_SHOVEL, "copper_shovel");
-        registry(COPPER_PICKAXE, "copper_pickaxe");
-        registry(COPPER_AXE, "copper_axe");
-        registry(COPPER_HOE, "copper_hoe");
-        registry(COPPER_SWORD, "copper_sword");
-
-        registry(ZINC_SHOVEL, "zinc_shovel");
-        registry(ZINC_PICKAXE, "zinc_pickaxe");
-        registry(ZINC_AXE, "zinc_axe");
-        registry(ZINC_HOE, "zinc_hoe");
-        registry(ZINC_SWORD, "zinc_sword");
-
-        registry(TIN_SHOVEL, "tin_shovel");
-        registry(TIN_PICKAXE, "tin_pickaxe");
-        registry(TIN_AXE, "tin_axe");
-        registry(TIN_HOE, "tin_hoe");
-        registry(TIN_SWORD, "tin_sword");
-
-        registry(BRONZE_SHOVEL, "bronze_shovel");
-        registry(BRONZE_PICKAXE, "bronze_pickaxe");
-        registry(BRONZE_AXE, "bronze_axe");
-        registry(BRONZE_HOE, "bronze_hoe");
-        registry(BRONZE_SWORD, "bronze_sword");
-
-        registry(ALUMINUM_SHOVEL, "aluminum_shovel");
-        registry(ALUMINUM_PICKAXE, "aluminum_pickaxe");
-        registry(ALUMINUM_AXE, "aluminum_axe");
-        registry(ALUMINUM_HOE, "aluminum_hoe");
-        registry(ALUMINUM_SWORD, "aluminum_sword");
-
-        registry(LEAD_SHOVEL, "lead_shovel");
-        registry(LEAD_PICKAXE, "lead_pickaxe");
-        registry(LEAD_AXE, "lead_axe");
-        registry(LEAD_HOE, "lead_hoe");
-        registry(LEAD_SWORD, "lead_sword");
-
-        registry(SILVER_SHOVEL, "silver_shovel");
-        registry(SILVER_PICKAXE, "silver_pickaxe");
-        registry(SILVER_AXE, "silver_axe");
-        registry(SILVER_HOE, "silver_hoe");
-        registry(SILVER_SWORD, "silver_sword");
-
-        registry(STEEL_SHOVEL, "steel_shovel");
-        registry(STEEL_PICKAXE, "steel_pickaxe");
-        registry(STEEL_AXE, "steel_axe");
-        registry(STEEL_HOE, "steel_hoe");
-        registry(STEEL_SWORD, "steel_sword");
-
-        registry(NICKEL_SHOVEL, "nickel_shovel");
-        registry(NICKEL_PICKAXE, "nickel_pickaxe");
-        registry(NICKEL_AXE, "nickel_axe");
-        registry(NICKEL_HOE, "nickel_hoe");
-        registry(NICKEL_SWORD, "nickel_sword");
-
-        registry(TUNGSTEN_SHOVEL, "tungsten_shovel");
-        registry(TUNGSTEN_PICKAXE, "tungsten_pickaxe");
-        registry(TUNGSTEN_AXE, "tungsten_axe");
-        registry(TUNGSTEN_HOE, "tungsten_hoe");
-        registry(TUNGSTEN_SWORD, "tungsten_sword");
-
-        registry(TITANIUM_SHOVEL, "titanium_shovel");
-        registry(TITANIUM_PICKAXE, "titanium_pickaxe");
-        registry(TITANIUM_AXE, "titanium_axe");
-        registry(TITANIUM_HOE, "titanium_hoe");
-        registry(TITANIUM_SWORD, "titanium_sword");
+        TITANIUM_SHOVEL = registry(new AdvAgriShovelItem(TitaniumMaterial.INSTANCE, BASE_SHOVEL_ATTACK_DAMAGE + 1, BASE_SHOVEL_ATTACK_SPEED + 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "titanium_shovel");
+        TITANIUM_PICKAXE = registry(new AdvAgriPickaxeItem(TitaniumMaterial.INSTANCE, BASE_PICKAXE_ATTACK_DAMAGE + 1, BASE_PICKAXE_ATTACK_SPEED + 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "titanium_pickaxe");
+        TITANIUM_AXE = registry(new AdvAgriAxeItem(TitaniumMaterial.INSTANCE, BASE_AXE_ATTACK_DAMAGE + 3F, BASE_AXE_ATTACK_SPEED + 0.3F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "titanium_axe");
+        TITANIUM_HOE = registry(new AdvAgriHoeItem(TitaniumMaterial.INSTANCE, BASE_HOE_ATTACK_DAMAGE, BASE_HOE_ATTACK_SPEED + 2, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "titanium_hoe");
+        TITANIUM_SWORD = registry(new AdvAgriSwordItem(TitaniumMaterial.INSTANCE, BASE_SWORD_ATTACK_DAMAGE + 2, BASE_SWORD_ATTACK_SPEED + 0.1F, new Item.Settings().group(AdvAgriItemGroup.ADV_AGRI_TOOL_ITEM_GROUP)), "titanium_sword");
 
     }
 
-    private static void registry(Item item, String PATH) {
+    private static <T extends Item> T registry(T item, String PATH) {
         Registry.register(Registry.ITEM, new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, PATH), item);
+        return item;
     }
 
 

@@ -12,9 +12,10 @@ public class AdvAgriSideGeneral implements ModInitializer {
     @Override
     public void onInitialize() {
 
+        new AdvAgriTools();
         new AdvAgriBlocks();
         new AdvAgriItems();
-        new AdvAgriTools();
+
 
     }
 }
