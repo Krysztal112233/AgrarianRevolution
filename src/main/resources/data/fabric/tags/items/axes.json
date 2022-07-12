@@ -1,14 +1,14 @@
 {
   "values": [
-    "adv_agri_core:copper_axe",
-    "adv_agri_core:aluminum_axe",
-    "adv_agri_core:tin_axe",
-    "adv_agri_core:lead_axe",
-    "adv_agri_core:zinc_axe",
-    "adv_agri_core:steel_axe",
-    "adv_agri_core:nickel_axe",
-    "adv_agri_core:titanium_axe",
-    "adv_agri_core:tungsten_axe"
+    "adv_agri:copper_axe",
+    "adv_agri:aluminum_axe",
+    "adv_agri:tin_axe",
+    "adv_agri:lead_axe",
+    "adv_agri:zinc_axe",
+    "adv_agri:steel_axe",
+    "adv_agri:nickel_axe",
+    "adv_agri:titanium_axe",
+    "adv_agri:tungsten_axe"
   ]
 }
 
