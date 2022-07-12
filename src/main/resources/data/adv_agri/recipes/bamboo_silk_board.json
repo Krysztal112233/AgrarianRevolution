@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "adv_agri:bamboo_silk"
+    },
+    {
+      "item": "adv_agri:bamboo_silk"
+    },
+    {
+      "item": "adv_agri:bamboo_silk"
+    },
+    {
+      "item": "adv_agri:bamboo_silk"
+    },
+    {
+      "item": "adv_agri:bamboo_silk"
+    },
+    {
+      "item": "adv_agri:bamboo_silk"
+    }
+  ],
+  "result": {
+    "item": "adv_agri:bamboo_silk_board"
+  }
+}

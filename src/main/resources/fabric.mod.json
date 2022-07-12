@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "id": "adv_agri_core",
+  "id": "adv_agri",
   "version": "${version}",
   "name": "Advanced Agriculture",
   "description": "Tech,Nature,the Agriculture.",
   "authors": [
-    "IcedTechLab"
+    "Krysztal"
   ],
   "contact": {
-    "homepage": "https://github.com/KrysztalTechLab/AdvancedAgriculture-core",
-    "sources": "https://github.com/KrysztalTechLab/AdvancedAgriculture-core"
+    "homepage": "https://github.com/KrysztalTechLab/AdvancedAgriculture",
+    "sources": "https://github.com/KrysztalTechLab/AdvancedAgriculture"
   },
   "license": "GPLv3",
-  "icon": "assets/adv_agri_core/icon.png",
+  "icon": "assets/adv_agri/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -23,7 +23,7 @@
     ]
   },
   "mixins": [
-    "adv_agri_core.mixins.json"
+    "adv_agri.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.7.4",

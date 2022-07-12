@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "c:zinc_dusts"
+  },
+  "result": "adv_agri:zinc_ingot",
+  "experience": 0,
+  "cookingtime": 200
+}

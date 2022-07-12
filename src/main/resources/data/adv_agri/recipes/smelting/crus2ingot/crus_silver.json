@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "adv_agri:crushed_silver_ore"
+  },
+  "result": "adv_agri:silver_ingot",
+  "experience": 0,
+  "cookingtime": 200
+}
+  
