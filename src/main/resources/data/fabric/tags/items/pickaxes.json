@@ -1,14 +1,14 @@
 {
   "values": [
-    "adv_agri_core:copper_pickaxe",
-    "adv_agri_core:aluminum_pickaxe",
-    "adv_agri_core:tin_pickaxe",
-    "adv_agri_core:lead_pickaxe",
-    "adv_agri_core:zinc_pickaxe",
-    "adv_agri_core:steel_pickaxe",
-    "adv_agri_core:nickel_pickaxe",
-    "adv_agri_core:titanium_pickaxe",
-    "adv_agri_core:tungsten_pickaxe"
+    "adv_agri:copper_pickaxe",
+    "adv_agri:aluminum_pickaxe",
+    "adv_agri:tin_pickaxe",
+    "adv_agri:lead_pickaxe",
+    "adv_agri:zinc_pickaxe",
+    "adv_agri:steel_pickaxe",
+    "adv_agri:nickel_pickaxe",
+    "adv_agri:titanium_pickaxe",
+    "adv_agri:tungsten_pickaxe"
   ]
 }
 

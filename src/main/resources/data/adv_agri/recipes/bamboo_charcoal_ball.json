@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "adv_agri:bamboo_charcoal"
+    },
+    {
+      "item": "adv_agri:bamboo_charcoal"
+    },
+    {
+      "item": "adv_agri:bamboo_charcoal"
+    },
+    {
+      "item": "adv_agri:bamboo_charcoal"
+    }
+  ],
+  "result": {
+    "item": "adv_agri:bamboo_charcoal_ball",
+    "count": 1
+  }
+}

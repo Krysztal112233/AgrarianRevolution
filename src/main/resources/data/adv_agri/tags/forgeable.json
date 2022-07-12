@@ -1,0 +1,14 @@
+{
+  "values": [
+    "adv_agri:aluminum_block",
+    "adv_agri:bronze_block",
+    "adv_agri:lead_block",
+    "adv_agri:nickel_block",
+    "adv_agri:tin_block",
+    "adv_agri:titanium_block",
+    "adv_agri:zinc_block",
+    "adv_agri:silver_block",
+    "minecraft:god_block",
+    "minecraft:iron_block"
+  ]
+}

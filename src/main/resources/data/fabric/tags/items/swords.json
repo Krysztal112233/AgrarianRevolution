@@ -1,14 +1,14 @@
 {
   "values": [
-    "adv_agri_core:copper_sword",
-    "adv_agri_core:aluminum_sword",
-    "adv_agri_core:tin_sword",
-    "adv_agri_core:lead_sword",
-    "adv_agri_core:zinc_sword",
-    "adv_agri_core:steel_sword",
-    "adv_agri_core:nickel_sword",
-    "adv_agri_core:titanium_sword",
-    "adv_agri_core:tungsten_sword"
+    "adv_agri:copper_sword",
+    "adv_agri:aluminum_sword",
+    "adv_agri:tin_sword",
+    "adv_agri:lead_sword",
+    "adv_agri:zinc_sword",
+    "adv_agri:steel_sword",
+    "adv_agri:nickel_sword",
+    "adv_agri:titanium_sword",
+    "adv_agri:tungsten_sword"
   ]
 }
 

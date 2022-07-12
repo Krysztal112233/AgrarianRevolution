@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "adv_agri:crushed_lead_ore"
+  },
+  "result": "adv_agri:lead_ingot",
+  "experience": 0,
+  "cookingtime": 200
+}
+  
