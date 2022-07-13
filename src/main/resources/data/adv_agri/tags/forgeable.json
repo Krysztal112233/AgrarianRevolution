@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "adv_agri:aluminum_block",
     "adv_agri:bronze_block",
