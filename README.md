@@ -1,6 +1,6 @@
 <h1 align="center"> 高级农业-核心 | Advanced_Agriculture-core </h1>
 
-![Logo](assets/AdvAgri.png)
+![Logo](assets/banner.png)
 
 <h2 align="center"> 一个旨在拓展 Minecraft 原版与农业相关的体验的模组 </h2>
 
@@ -26,7 +26,7 @@
 
 ## 当前状态
 
-截至 2021 年 8 月 3 日，本项目仍然处于开发状态，没有产生任何可以用于游玩的版本。
+截至 2022 年 7 月 3 日，本项目仍然处于开发状态，已经拥有部分游玩内容。
 
 ## 开发进度
 
