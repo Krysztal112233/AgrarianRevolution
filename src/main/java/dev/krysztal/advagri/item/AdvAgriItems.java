@@ -313,9 +313,9 @@ public class AdvAgriItems {
     }
 
     static {
-        FuelRegistry.INSTANCE.add(BAMBOO_CHARCOAL_BALL, 80 * 20);
-        FuelRegistry.INSTANCE.add(BAMBOO_CHARCOAL, 20 * 20);
-        FuelRegistry.INSTANCE.add(BAMBOO_LEAVES, 2 * 20);
+        FuelRegistry.INSTANCE.add(BAMBOO_CHARCOAL_BALL, 80 * 20);   //80s
+        FuelRegistry.INSTANCE.add(BAMBOO_CHARCOAL, 20 * 20);        //20s
+        FuelRegistry.INSTANCE.add(BAMBOO_LEAVES, 2 * 20);           //2s
     }
 
     private static <T extends Item> T registry(T item, String path) {
