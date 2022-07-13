@@ -29,7 +29,7 @@
 ## 开发进度
 
 - [x] Dev
-- [ ] Alpha
+- [x] Alpha
 - [ ] Beta
 - [ ] 正式版
 
