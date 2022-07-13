@@ -78,8 +78,6 @@ public class BambooChopper extends AdvAgriSwordItem {
     }
 
     private boolean matchBlock(BlockState blockState) {
-        log.info(AdvAgriTagBlock.FELLABLE.registry().toString());
-
         return blockState.isIn(AdvAgriTagBlock.FELLABLE);
     }
 
