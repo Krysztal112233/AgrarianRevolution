@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.item.itemclass;
+package dev.krysztal.advagri.item.impls;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;

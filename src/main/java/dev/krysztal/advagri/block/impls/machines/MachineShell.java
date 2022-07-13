@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.block.blocks.machines;
+package dev.krysztal.advagri.block.impls.machines;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 

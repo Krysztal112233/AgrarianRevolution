@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.item.itemclass;
+package dev.krysztal.advagri.item.impls;
 
 import dev.krysztal.advagri.AdvAgriTagBlock;
 import dev.krysztal.advagri.item.tools.AdvAgriTools.AdvAgriSwordItem;
