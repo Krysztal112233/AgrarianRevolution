@@ -17,6 +17,6 @@ public class AdvAgriSideGeneral implements ModInitializer {
         new AdvAgriBlocks();
         new AdvAgriItems();
         new AdvAgriBlockEntities();
-
+        new AdvAgriTagBlock();
     }
 }
