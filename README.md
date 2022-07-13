@@ -1,5 +1,3 @@
-<h1 align="center"> 高级农业-核心 | Advanced_Agriculture-core </h1>
-
 ![Logo](assets/banner.png)
 
 <h2 align="center"> 一个旨在拓展 Minecraft 原版与农业相关的体验的模组 </h2>
@@ -35,16 +33,14 @@
 - [ ] Beta
 - [ ] 正式版
 
-可以通过查看 _[项目看板](https://github.com/MysteriousStudio/AdvancedAgriculture-core/projects/1)_ 来查看具体的开发进度与我们的工作
-
-版本命名规则请移步 [](assets/markdowns/VersionName.md)
+可以通过查看 _[项目看板](https://github.com/orgs/KrysztalTechLab/projects/1)_ 来查看具体的开发进度与我们的工作
 
 ## 如何构建
 
 ### 手动构建
 
 ```shell
-gradle build
+gradlew build
 ```
 
 在工作完成后，最终的构建结果会出现在`./build/libs/`中。
@@ -66,10 +62,10 @@ gradle build
 
 ## 资助我们，让我们有外在动力持续开发
 
-到目前为止，高级农业-核心的开发者，材质画师，建模，策划全部为学生或者无工作身份，利用业余时间进行开发。
+到目前为止，高级农业的开发者，材质画师，建模，策划全部为学生或者无工作身份，利用业余时间进行开发。
 
 您的一份资助能减轻我们的财政负担，或是服务器开销，软件的开销，或者是买一杯奶茶，饮料喝。
 
 ### 资助方案：
 
-- [爱发电](https://afdian.net/@AdvAgri_Core)
+- [爱发电](https://afdian.net/@Krysztal)
