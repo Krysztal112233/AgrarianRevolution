@@ -2,10 +2,10 @@ package dev.krysztal.advagri.item;
 
 import dev.krysztal.advagri.AdvAgriConstants;
 import dev.krysztal.advagri.AdvAgriItemGroup;
-import dev.krysztal.advagri.item.itemclass.BambooChopper;
-import dev.krysztal.advagri.item.itemclass.BambooDrillRod;
-import dev.krysztal.advagri.item.itemclass.ForgingHammer;
-import dev.krysztal.advagri.item.itemclass.Wench;
+import dev.krysztal.advagri.item.impls.BambooChopper;
+import dev.krysztal.advagri.item.impls.BambooDrillRod;
+import dev.krysztal.advagri.item.impls.ForgingHammer;
+import dev.krysztal.advagri.item.impls.Wench;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.item.Item;

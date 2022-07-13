@@ -2,10 +2,10 @@ package dev.krysztal.advagri.block;
 
 import dev.krysztal.advagri.AdvAgriConstants;
 import dev.krysztal.advagri.AdvAgriItemGroup;
-import dev.krysztal.advagri.block.blocks.BambooBlock;
-import dev.krysztal.advagri.block.blocks.machines.*;
-import dev.krysztal.advagri.block.blocks.ores.NetherSulphurOre;
-import dev.krysztal.advagri.block.blocks.ores.SulphurOre;
+import dev.krysztal.advagri.block.impls.BambooBlock;
+import dev.krysztal.advagri.block.impls.machines.*;
+import dev.krysztal.advagri.block.impls.ores.NetherSulphurOre;
+import dev.krysztal.advagri.block.impls.ores.SulphurOre;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;

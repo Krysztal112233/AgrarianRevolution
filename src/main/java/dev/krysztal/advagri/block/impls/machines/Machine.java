@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.block.blocks.machines;
+package dev.krysztal.advagri.block.impls.machines;
 
 import net.minecraft.block.Block;
 

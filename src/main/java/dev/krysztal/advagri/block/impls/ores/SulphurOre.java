@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.block.blocks.ores;
+package dev.krysztal.advagri.block.impls.ores;
 
 import java.util.Random;
 import lombok.Setter;

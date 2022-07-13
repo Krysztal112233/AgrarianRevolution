@@ -1,10 +1,10 @@
-package dev.krysztal.advagri.item.itemclass;
+package dev.krysztal.advagri.item.impls;
 
 import java.util.Objects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.util.ActionResult;
-import dev.krysztal.advagri.block.blocks.machines.Machine;
+import dev.krysztal.advagri.block.impls.machines.Machine;
 
 public class Wench extends Item {
 
