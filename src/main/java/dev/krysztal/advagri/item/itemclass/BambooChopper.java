@@ -1,6 +1,8 @@
 package dev.krysztal.advagri.item.itemclass;
 
+import dev.krysztal.advagri.AdvAgriTagBlock;
 import dev.krysztal.advagri.item.tools.AdvAgriTools.AdvAgriSwordItem;
+import lombok.extern.log4j.Log4j2;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
@@ -9,6 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
+@Log4j2
 public class BambooChopper extends AdvAgriSwordItem {
 
     public BambooChopper(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
@@ -75,7 +78,9 @@ public class BambooChopper extends AdvAgriSwordItem {
     }
 
     private boolean matchBlock(BlockState blockState) {
-        return true;
+        log.info(AdvAgriTagBlock.FELLABLE.registry().toString());
+
+        return blockState.isIn(AdvAgriTagBlock.FELLABLE);
     }
 
 
