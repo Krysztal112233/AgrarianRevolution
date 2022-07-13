@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.block.blocks.machines;
+package dev.krysztal.advagri.block.impls.machines;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockEntityProvider;
@@ -6,20 +6,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
-import dev.krysztal.advagri.entities.block.SolarHighTemperatureElectrolyzeMachineEntity;
+import dev.krysztal.advagri.entities.block.BurningTankEntity;
 
-/**
- * SolarHighTemperatureElectrolyzeMachine
- */
-public class SHTEMachine extends Machine implements BlockEntityProvider {
+public class BurningTank extends Machine implements BlockEntityProvider {
 
-    public SHTEMachine(FabricBlockSettings settings) {
+    public BurningTank(FabricBlockSettings settings) {
         super(settings);
     }
 
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new SolarHighTemperatureElectrolyzeMachineEntity(pos, state);
+        return new BurningTankEntity(pos, state);
     }
 }

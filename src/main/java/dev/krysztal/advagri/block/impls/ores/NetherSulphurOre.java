@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.block.blocks.ores;
+package dev.krysztal.advagri.block.impls.ores;
 
 public class NetherSulphurOre extends SulphurOre {
 

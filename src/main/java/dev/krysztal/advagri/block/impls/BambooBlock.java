@@ -1,5 +1,6 @@
-package dev.krysztal.advagri.block.blocks;
+package dev.krysztal.advagri.block.impls;
 
+import dev.krysztal.advagri.entities.block.BambooBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockState;
@@ -9,7 +10,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import dev.krysztal.advagri.entities.block.BambooBlockEntity;
 
 public class BambooBlock extends Block implements BlockEntityProvider {
 
@@ -25,7 +25,7 @@ public class BambooBlock extends Block implements BlockEntityProvider {
 
     @Override
     public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state,
-        @Nullable BlockEntity blockEntity, ItemStack stack) {
+                           @Nullable BlockEntity blockEntity, ItemStack stack) {
         super.afterBreak(world, player, pos, state, blockEntity, stack);
     }
 }

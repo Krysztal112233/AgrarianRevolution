@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.item.itemclass;
+package dev.krysztal.advagri.item.impls;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;

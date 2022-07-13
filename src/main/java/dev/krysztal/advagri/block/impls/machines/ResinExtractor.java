@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.block.blocks.machines;
+package dev.krysztal.advagri.block.impls.machines;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockEntityProvider;
@@ -6,21 +6,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
-import dev.krysztal.advagri.entities.block.AdvancedCraftingTableEntity;
+import dev.krysztal.advagri.entities.block.ResinExtractorEntity;
 
-/**
- * AdvancedCraftingTable
- */
-public class ACT extends Machine implements
-    BlockEntityProvider {
+public class ResinExtractor extends Machine implements BlockEntityProvider {
 
-    public ACT(FabricBlockSettings settings) {
+    public ResinExtractor(FabricBlockSettings settings) {
         super(settings);
     }
 
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new AdvancedCraftingTableEntity(pos, state);
+        return new ResinExtractorEntity(pos, state);
     }
 }
