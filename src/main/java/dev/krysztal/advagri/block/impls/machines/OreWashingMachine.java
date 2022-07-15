@@ -6,7 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
-import dev.krysztal.advagri.entities.block.OreWashingMachineEntity;
+import dev.krysztal.advagri.entities.block.WashingMachineEntity;
 
 public class OreWashingMachine extends Machine implements BlockEntityProvider {
 
@@ -17,6 +17,6 @@ public class OreWashingMachine extends Machine implements BlockEntityProvider {
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new OreWashingMachineEntity(pos, state);
+        return new WashingMachineEntity(pos, state);
     }
 }

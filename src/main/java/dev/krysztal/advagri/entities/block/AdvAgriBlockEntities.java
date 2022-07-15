@@ -26,7 +26,7 @@ public class AdvAgriBlockEntities {
     @NotNull
     public static BlockEntityType<CentrifugeEntity> CENTRIFUGE_ENTITY;
     @NotNull
-    public static BlockEntityType<OreWashingMachineEntity> ORE_WASHING_MACHINE_ENTITY;
+    public static BlockEntityType<WashingMachineEntity> WASHING_MACHINE_ENTITY;
     @NotNull
     public static BlockEntityType<ResinExtractorEntity> RESIN_EXTRACTOR_ENTITY;
     @NotNull
@@ -78,10 +78,10 @@ public class AdvAgriBlockEntities {
             FabricBlockEntityTypeBuilder.create(CentrifugeEntity::new,
                 AdvAgriBlocks.CENTRIFUGE).build(null));
 
-        ORE_WASHING_MACHINE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+        WASHING_MACHINE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
             AdvAgriConstants.ADV_AGRI_NAMESPACE + ":ore_washing_machine",
-            FabricBlockEntityTypeBuilder.create(OreWashingMachineEntity::new,
-                AdvAgriBlocks.ORE_WASHING_MACHINE).build(null));
+            FabricBlockEntityTypeBuilder.create(WashingMachineEntity::new,
+                AdvAgriBlocks.WASHING_MACHINE).build(null));
 
         RESIN_EXTRACTOR_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
             AdvAgriConstants.ADV_AGRI_NAMESPACE + ":resin_extractor",
