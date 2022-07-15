@@ -83,7 +83,7 @@ public class AdvAgriBlocks {
         TUNGSTEN_BLOCK = registry(new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).requiresTool()), "tungsten_block");
         TITANIUM_BLOCK = registry(new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).requiresTool()), "titanium_block");
 
-        PHOS_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "phos_ore");
+        PHOS_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).luminance(8).requiresTool()), "phos_ore");
         SULPHUR_ORE = registry(new SulphurOre(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "sulphur_ore");
         NETHER_SULPHUR_ORE = registry(new NetherSulphurOre(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "nether_sulphur_ore");
         BAMBOO_BLOCK = registry(new BambooBlock(FabricBlockSettings.of(Material.BAMBOO)), "bamboo_block");
