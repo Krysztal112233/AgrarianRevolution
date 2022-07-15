@@ -254,7 +254,7 @@ public class AdvAgriItems {
 
         TIN_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "tin_rod");
         ZINC_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "zinc_rod");
-        COPPER_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "copper_rpd");
+        COPPER_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "copper_rod");
         BRONZE_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bronze_rod");
         ALUMINUM_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "aluminum_rod");
         LEAD_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "lead_rod");
@@ -262,7 +262,7 @@ public class AdvAgriItems {
         NICKEL_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "nickel_rod");
         STEEL_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "steel_rod");
         TUNGSTEN_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "tungsten_rod");
-        TITANIUM_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "titanium_row");
+        TITANIUM_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "titanium_rod");
         IRON_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "iron_rod");
         GOLD_ROD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "gold_rod");
 
