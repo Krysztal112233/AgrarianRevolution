@@ -164,7 +164,7 @@ public class AdvAgriItems {
     public static Item LETTUCE;
     public static Item STRAWBERRY;
     public static Item GARLIC;
-    public static Item CHUFA;
+    public static Item WATER_CHESTNUT;
 
     // Bushes
     public static Item SOLAR_BERRY;
@@ -302,7 +302,7 @@ public class AdvAgriItems {
         LETTUCE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "lettuce");
         STRAWBERRY = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "strawberry");
         GARLIC = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "garlic");
-        CHUFA = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "chufa");
+        WATER_CHESTNUT = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "water_chestnut");
 
         SOLAR_BERRY = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "solar_berry");
 
