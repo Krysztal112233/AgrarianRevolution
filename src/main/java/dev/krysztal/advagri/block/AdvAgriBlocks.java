@@ -56,7 +56,7 @@ public class AdvAgriBlocks {
     public static Crusher CRUSHER;
     public static Extractor EXTRACTOR;
     public static Centrifuge CENTRIFUGE;
-    public static OreWashingMachine ORE_WASHING_MACHINE;
+    public static OreWashingMachine WASHING_MACHINE;
     public static ResinExtractor RESIN_EXTRACTOR;
 
     static {
@@ -97,7 +97,7 @@ public class AdvAgriBlocks {
         CRUSHER = registry(new Crusher(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "crusher");
         EXTRACTOR = registry(new Extractor(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "extractor");
         CENTRIFUGE = registry(new Centrifuge(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "centrifuge");
-        ORE_WASHING_MACHINE = registry(new OreWashingMachine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "ore_washing_machine");
+        WASHING_MACHINE = registry(new OreWashingMachine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "washing_machine");
         RESIN_EXTRACTOR = registry(new ResinExtractor(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "resin_extractor");
 
 
