@@ -93,7 +93,7 @@ public class AdvAgriBlocks {
         FERMENT_TANK = registry(new FermentTank(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "ferment_tank");
         BURNING_TANK = registry(new BurningTank(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "burning_tank");
         SLMACHINE = registry(new SLMachine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "sunshine_liquefies_machine");
-        SHTEMachine = registry(new SHTEMachine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "solar_high_temperature_electrolyze_machine");
+        SHTEMachine = registry(new SHTEMachine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "shte");
         CRUSHER = registry(new Crusher(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "crusher");
         EXTRACTOR = registry(new Extractor(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "extractor");
         CENTRIFUGE = registry(new Centrifuge(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "centrifuge");
