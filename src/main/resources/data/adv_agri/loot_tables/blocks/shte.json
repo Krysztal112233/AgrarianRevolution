@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "adv_agri:solar_high_temperature_electrolyze_machine"
+          "name": "adv_agri:shte"
         }
       ],
       "conditions": [
