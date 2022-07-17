@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "adv_agri:ore_washing_machine"
+          "name": "adv_agri:washing_machine"
         }
       ],
       "conditions": [
