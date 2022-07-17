@@ -5,13 +5,13 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.math.BlockPos;
 
-public class BambooBlockEntity extends BlockEntity {
+public class BambooBundleEntity extends BlockEntity {
 
     public int age = 1;
     public int life = 0;
 
-    public BambooBlockEntity(BlockPos pos, BlockState state) {
-        super(AdvAgriBlockEntities.BAMBOO_BLOCK_ENTITY, pos, state);
+    public BambooBundleEntity(BlockPos pos, BlockState state) {
+        super(AdvAgriBlockEntities.BAMBOO_BUNDLE_ENTITY, pos, state);
     }
 
     @Override
