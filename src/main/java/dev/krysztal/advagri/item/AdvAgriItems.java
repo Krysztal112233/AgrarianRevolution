@@ -138,7 +138,7 @@ public class AdvAgriItems {
     public static BambooChopper BAMBOO_CHOPPER;
 
     // Tools
-    public static Wench WENCH;
+    public static Wrench Wrench;
     public static BambooDrillRod BAMBOO_DRILL_ROD;
     public static ForgingHammer FORGING_HAMMER;
 
@@ -304,7 +304,7 @@ public class AdvAgriItems {
         SOLAR_BERRY = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "solar_berry");
 
         BAMBOO_CHOPPER = registry(new BambooChopper(ToolMaterials.IRON, 1, 0F, new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_chopper");
-        WENCH = registry(new Wench(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP).maxCount(1)), "wench");
+        Wrench = registry(new Wrench(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP).maxCount(1)), "wrench");
         BAMBOO_DRILL_ROD = registry(new BambooDrillRod(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_drill_rod");
         FORGING_HAMMER = registry(new ForgingHammer(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP).maxCount(1).recipeRemainder(FORGING_HAMMER)), "forging_hammer");
     }
