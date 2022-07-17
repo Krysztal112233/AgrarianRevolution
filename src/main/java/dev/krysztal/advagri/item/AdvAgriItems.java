@@ -2,10 +2,7 @@ package dev.krysztal.advagri.item;
 
 import dev.krysztal.advagri.AdvAgriConstants;
 import dev.krysztal.advagri.AdvAgriItemGroup;
-import dev.krysztal.advagri.item.impls.BambooChopper;
-import dev.krysztal.advagri.item.impls.BambooDrillRod;
-import dev.krysztal.advagri.item.impls.ForgingHammer;
-import dev.krysztal.advagri.item.impls.Wench;
+import dev.krysztal.advagri.item.impls.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.item.Item;
@@ -17,7 +14,7 @@ import net.minecraft.util.registry.Registry;
 public class AdvAgriItems {
 
 
-    public static Item COM_FERT;
+    public static Item FERTILIZER;
     public static Item POTASSIUM_SALT_POWDER;
     public static Item PLANT_ASH;
     public static Item BOTTLE_SMALL;
@@ -171,7 +168,7 @@ public class AdvAgriItems {
 
 
     static {
-        COM_FERT = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "com_fert");
+        FERTILIZER = registry(new Fertilizer(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "fertilizer");
         POTASSIUM_SALT_POWDER = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "potassium_salt_powder");
         PLANT_ASH = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "plant_ash");
         BOTTLE_SMALL = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bottle_small");
