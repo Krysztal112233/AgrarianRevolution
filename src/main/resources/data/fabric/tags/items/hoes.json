@@ -1,6 +1,6 @@
 {
+  "replace": false,
   "values": [
-    "adv_agri:copper_hoe",
     "adv_agri:bronze_hoe",
     "adv_agri:aluminum_hoe",
     "adv_agri:tin_hoe",
@@ -9,7 +9,7 @@
     "adv_agri:steel_hoe",
     "adv_agri:nickel_hoe",
     "adv_agri:titanium_hoe",
-    "adv_agri:tungsten_hoe"
+    "adv_agri:tungsten_hoe",
+    "adv_agri:silver_hoe"
   ]
 }
-

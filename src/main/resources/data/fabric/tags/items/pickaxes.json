@@ -1,6 +1,6 @@
 {
+  "replace": false,
   "values": [
-    "adv_agri:copper_pickaxe",
     "adv_agri:bronze_pickaxe",
     "adv_agri:aluminum_pickaxe",
     "adv_agri:tin_pickaxe",
@@ -9,7 +9,7 @@
     "adv_agri:steel_pickaxe",
     "adv_agri:nickel_pickaxe",
     "adv_agri:titanium_pickaxe",
-    "adv_agri:tungsten_pickaxe"
+    "adv_agri:tungsten_pickaxe",
+    "adv_agri:silver_pickaxe"
   ]
 }
-
