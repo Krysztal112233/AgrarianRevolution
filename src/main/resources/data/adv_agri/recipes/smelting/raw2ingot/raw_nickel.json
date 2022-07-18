@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "adv_agri:crushed_copper_ore"
+    "item": "adv_agri:raw_nickel"
   },
-  "result": "minecraft:copper_ingot",
+  "result": "adv_agri:nickel_ingot",
   "experience": 0,
   "cookingtime": 200
 }
