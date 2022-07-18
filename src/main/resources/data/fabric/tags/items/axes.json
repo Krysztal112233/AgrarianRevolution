@@ -1,6 +1,6 @@
 {
+  "replace": false,
   "values": [
-    "adv_agri:copper_axe",
     "adv_agri:bronze_axe",
     "adv_agri:aluminum_axe",
     "adv_agri:tin_axe",
@@ -9,7 +9,7 @@
     "adv_agri:steel_axe",
     "adv_agri:nickel_axe",
     "adv_agri:titanium_axe",
-    "adv_agri:tungsten_axe"
+    "adv_agri:tungsten_axe",
+    "adv_agri:silver_axe"
   ]
 }
-

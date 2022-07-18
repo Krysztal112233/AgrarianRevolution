@@ -1,6 +1,6 @@
 {
+  "replace": false,
   "values": [
-    "adv_agri:copper_shovel",
     "adv_agri:bronze_shovel",
     "adv_agri:aluminum_shovel",
     "adv_agri:tin_shovel",
@@ -9,7 +9,7 @@
     "adv_agri:steel_shovel",
     "adv_agri:nickel_shovel",
     "adv_agri:titanium_shovel",
-    "adv_agri:tungsten_shovel"
+    "adv_agri:tungsten_shovel",
+    "adv_agri:silver_shovel"
   ]
 }
-
