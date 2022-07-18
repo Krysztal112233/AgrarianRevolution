@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "adv_agri:crushed_lead_ore"
+    "item": "adv_agri:raw_zinc"
   },
-  "result": "adv_agri:lead_ingot",
+  "result": "adv_agri:zinc_ingot",
   "experience": 0,
   "cookingtime": 200
 }

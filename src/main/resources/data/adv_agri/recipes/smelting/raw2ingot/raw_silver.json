@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "adv_agri:crushed_tin_ore"
+    "item": "adv_agri:raw_silver"
   },
-  "result": "adv_agri:tin_ingot",
+  "result": "adv_agri:silver_ingot",
   "experience": 0,
   "cookingtime": 200
 }
