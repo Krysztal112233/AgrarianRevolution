@@ -174,9 +174,9 @@ public class AdvAgriItems {
         BOTTLE_SMALL = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bottle_small");
         BOTTLE_MEDIUM = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bottle_medium");
         BOTTLE_LARGE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bottle_large");
-        SOLARIUM_BOTTLE_LARGE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "solarium_bottle_large");
-        SOLARIUM_BOTTLE_MEDIUM = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "solarium_bottle_medium");
         SOLARIUM_BOTTLE_SMALL = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "solarium_bottle_small");
+        SOLARIUM_BOTTLE_MEDIUM = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "solarium_bottle_medium");
+        SOLARIUM_BOTTLE_LARGE = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "solarium_bottle_large");
         BAMBOO_LEAVES = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_leaves");
         BAMBOO_SILK = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_silk");
         BAMBOO_SILK_BOARD = registry(new Item(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_silk_board");
