@@ -1,43 +1,46 @@
 package dev.krysztal.advagri.block.impls;
 
-import dev.krysztal.advagri.entities.block.BambooBundleEntity;
+import dev.krysztal.advagri.AdvAgriConstants;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class BambooBundle extends Block implements BlockEntityProvider {
-    private int dryness = 0;
-    private final int MAX_DRYNESS = 4;
+public class BambooBundle extends Block {
+    public static IntProperty BLOCKSTATE_DRYNESS = IntProperty.of("dryness", 0, AdvAgriConstants.MAX_DRYNESS);
 
     public BambooBundle(Settings settings) {
         super(settings);
-    }
-
-    @Nullable
-    @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new BambooBundleEntity(pos, state);
+        super.setDefaultState(super.getStateManager().getDefaultState().with(BLOCKSTATE_DRYNESS, 0));
     }
 
     @Override
-    public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state,
-                           @Nullable BlockEntity blockEntity, ItemStack stack) {
-        super.afterBreak(world, player, pos, state, blockEntity, stack);
+    public void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(BLOCKSTATE_DRYNESS);
     }
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (random.nextInt(100) <= 5 && this.dryness <= this.MAX_DRYNESS) {
-            this.dryness++;
-        }
+        if (random.nextInt(100) <= 5)
+            this.applyDry(state, world, pos, random);
+    }
+
+
+    private void applyDry(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        System.out.println(state.get(BLOCKSTATE_DRYNESS));
+
+        var dryness = state.get(BLOCKSTATE_DRYNESS);
+        dryness += 1;
+
+        if (dryness > AdvAgriConstants.MAX_DRYNESS)
+            dryness = AdvAgriConstants.MAX_DRYNESS;
+
+        world.setBlockState(pos, state.with(BLOCKSTATE_DRYNESS, dryness), Block.NOTIFY_LISTENERS);
     }
 }
