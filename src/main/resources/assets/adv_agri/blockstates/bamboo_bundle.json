@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
-      "model": "adv_agri:block/bamboo_bundle"
+    "dryness=0": {
+      "model": "adv_agri:block/bamboo_bundle_0"
+    },
+    "dryness=1": {
+      "model": "adv_agri:block/bamboo_bundle_1"
+    },
+    "dryness=2": {
+      "model": "adv_agri:block/bamboo_bundle_2"
+    },
+    "dryness=3": {
+      "model": "adv_agri:block/bamboo_bundle_3"
+    },
+    "dryness=4": {
+      "model": "adv_agri:block/bamboo_bundle_4"
     }
   }
 }
