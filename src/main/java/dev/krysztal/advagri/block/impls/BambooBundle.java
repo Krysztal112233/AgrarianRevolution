@@ -24,19 +24,17 @@ public class BambooBundle extends Block {
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (random.nextInt(100) <= 5)
-            this.applyDry(state, world, pos, random);
+        if (random.nextInt(100) <= 5) {
+
+            var dryness = state.get(AdvAgriStates.BLOCKSTATE_DRYNESS);
+            dryness += 1;
+
+            if (dryness > AdvAgriConstants.MAX_DRYNESS)
+                dryness = AdvAgriConstants.MAX_DRYNESS;
+
+            world.setBlockState(pos, state.with(AdvAgriStates.BLOCKSTATE_DRYNESS, dryness), Block.NOTIFY_LISTENERS);
+        }
     }
 
 
-    private void applyDry(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-
-        var dryness = state.get(AdvAgriStates.BLOCKSTATE_DRYNESS);
-        dryness += 1;
-
-        if (dryness > AdvAgriConstants.MAX_DRYNESS)
-            dryness = AdvAgriConstants.MAX_DRYNESS;
-
-        world.setBlockState(pos, state.with(AdvAgriStates.BLOCKSTATE_DRYNESS, dryness), Block.NOTIFY_LISTENERS);
-    }
 }
