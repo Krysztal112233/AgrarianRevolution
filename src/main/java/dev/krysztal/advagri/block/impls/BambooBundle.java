@@ -1,8 +1,6 @@
 package dev.krysztal.advagri.block.impls;
 
 import dev.krysztal.advagri.AdvAgriConstants;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.server.world.ServerWorld;
@@ -33,7 +31,6 @@ public class BambooBundle extends Block {
 
 
     private void applyDry(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        System.out.println(state.get(BLOCKSTATE_DRYNESS));
 
         var dryness = state.get(BLOCKSTATE_DRYNESS);
         dryness += 1;
