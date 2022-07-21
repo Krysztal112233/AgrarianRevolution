@@ -306,7 +306,7 @@ public class AdvAgriItems {
         BAMBOO_CHOPPER = registry(new BambooChopper(ToolMaterials.IRON, 1, 0F, new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_chopper");
         Wrench = registry(new Wrench(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP).maxCount(1)), "wrench");
         BAMBOO_DRILL_ROD = registry(new BambooDrillRod(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)), "bamboo_drill_rod");
-        FORGING_HAMMER = registry(new ForgingHammer(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP).maxCount(1).recipeRemainder(FORGING_HAMMER)), "forging_hammer");
+        FORGING_HAMMER = registry(new ForgingHammer(new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP).maxCount(1)), "forging_hammer");
     }
 
     static {

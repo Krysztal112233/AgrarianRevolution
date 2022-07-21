@@ -3,6 +3,7 @@ package dev.krysztal.advagri.block;
 import dev.krysztal.advagri.AdvAgriConstants;
 import dev.krysztal.advagri.AdvAgriItemGroup;
 import dev.krysztal.advagri.block.impls.BambooBundle;
+import dev.krysztal.advagri.block.impls.ForgingTable;
 import dev.krysztal.advagri.block.impls.machines.*;
 import dev.krysztal.advagri.block.impls.ores.NetherSulphurOre;
 import dev.krysztal.advagri.block.impls.ores.SulphurOre;
@@ -46,6 +47,7 @@ public class AdvAgriBlocks {
     public static final Block NETHER_SULPHUR_ORE;
     public static final BambooBundle BAMBOO_BUNDLE;
     public static final Block VERMICULITE_ORE;
+
     // Machine blocks
     public static final MachineShell MACHINE_SHELL;
     public static final ACT ACT;
@@ -58,6 +60,8 @@ public class AdvAgriBlocks {
     public static final Centrifuge CENTRIFUGE;
     public static final OreWashingMachine WASHING_MACHINE;
     public static final ResinExtractor RESIN_EXTRACTOR;
+
+    public static final ForgingTable FORGING_TABLE;
 
     static {
         COPPER_CABLE = registry(new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO).requiresTool()), "copper_cable");
@@ -100,7 +104,7 @@ public class AdvAgriBlocks {
         WASHING_MACHINE = registry(new OreWashingMachine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "washing_machine");
         RESIN_EXTRACTOR = registry(new ResinExtractor(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "resin_extractor");
 
-
+        FORGING_TABLE = registry(new ForgingTable(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "forging_table");
     }
 
     private static <T extends Block> T registry(T block, String path) {
