@@ -2,6 +2,7 @@ package dev.krysztal.advagri.item;
 
 import dev.krysztal.advagri.AdvAgriConstants;
 import dev.krysztal.advagri.AdvAgriItemGroup;
+import dev.krysztal.advagri.annotations.GenTypes;
 import dev.krysztal.advagri.item.impls.BambooChopper;
 import dev.krysztal.advagri.item.impls.BambooDrillRod;
 import dev.krysztal.advagri.item.impls.Fertilizer;
@@ -15,51 +16,89 @@ import net.minecraft.util.registry.Registry;
 
 public class AdvAgriItems {
 
+    @GenTypes
     public static Item FERTILIZER;
+    @GenTypes
     public static Item POTASSIUM_SALT_POWDER;
+    @GenTypes
     public static Item PLANT_ASH;
+    @GenTypes
     public static Item BOTTLE_SMALL;
+    @GenTypes
     public static Item BOTTLE_MEDIUM;
+    @GenTypes
     public static Item BOTTLE_LARGE;
+    @GenTypes
     public static Item SOLARIUM_BOTTLE_LARGE;
+    @GenTypes
     public static Item SOLARIUM_BOTTLE_MEDIUM;
+    @GenTypes
     public static Item SOLARIUM_BOTTLE_SMALL;
+    @GenTypes
     public static Item BAMBOO_LEAVES;
+    @GenTypes
     public static Item BAMBOO_SILK;
+    @GenTypes
     public static Item BAMBOO_SILK_BOARD;
+    @GenTypes
     public static Item BAMBOO_CHARCOAL;
+    @GenTypes
     public static Item BAMBOO_CHARCOAL_BALL;
+    @GenTypes
     public static Item BAMBOO_SHOOT;
+    @GenTypes
     public static Item PHOS;
+    @GenTypes
     public static Item VERMICULITE;
+    @GenTypes
     public static Item SULFUR;
 
+    @GenTypes
     public static BambooChopper BAMBOO_CHOPPER;
 
     // Tools
+    @GenTypes
     public static BambooDrillRod BAMBOO_DRILL_ROD;
 
     // Plant "Seed"
+    @GenTypes
     public static Item SEED_BAG_RICE;
+    @GenTypes
     public static Item SEED_BAG_CHILI;
+    @GenTypes
     public static Item SEED_BAG_CELERY;
+    @GenTypes
     public static Item SEED_BAG_LETTUCE;
+    @GenTypes
     public static Item SEED_BAG_STRAWBERRY;
+    @GenTypes
     public static Item SEED_BAG_CORN;
+    @GenTypes
     public static Item SWEET_POTATO_VINE;
 
     // Crops
+    @GenTypes
     public static Item RICE_UNHUSKED;
+    @GenTypes
     public static Item RICE;
+    @GenTypes
     public static Item PLANT_STRAW;
+    @GenTypes
     public static Item SWEET_POTATO;
+    @GenTypes
     public static Item CHILI;
+    @GenTypes
     public static Item CELERY;
+    @GenTypes
     public static Item LETTUCE;
+    @GenTypes
     public static Item STRAWBERRY;
+    @GenTypes
     public static Item GARLIC;
+    @GenTypes
     public static Item WATER_CHESTNUT;
 
+    @GenTypes
     public static Item SOLAR_BERRY;
 
     static {

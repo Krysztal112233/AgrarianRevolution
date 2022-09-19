@@ -2,16 +2,18 @@ package dev.krysztal.advagri.block.impls.ores;
 
 import dev.krysztal.advagri.item.AdvAgriItems;
 import lombok.Setter;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
 
 import java.util.Random;
 
-public class SulphurOre extends AdvAgriOreBlock {
+public class SulphurOre extends Block {
 
     @Setter
     private int explosionChance = 15;
@@ -20,6 +22,7 @@ public class SulphurOre extends AdvAgriOreBlock {
         super(settings);
     }
 
+    @Environment(EnvType.SERVER)
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
 
@@ -28,7 +31,8 @@ public class SulphurOre extends AdvAgriOreBlock {
 
         if (!player.isCreative()
                 && rad <= explosionChance
-                && (!player.getMainHandStack().isItemEqual(new ItemStack(AdvAgriItems.BAMBOO_DRILL_ROD)))) {
+                && !(player.getMainHandStack().getItem() == AdvAgriItems.BAMBOO_DRILL_ROD)
+        ) {
             world.createExplosion(
                     player,
                     pos.getX(),

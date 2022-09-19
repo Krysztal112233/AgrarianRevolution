@@ -2,7 +2,8 @@ package dev.krysztal.advagri.block;
 
 import dev.krysztal.advagri.AdvAgriConstants;
 import dev.krysztal.advagri.AdvAgriItemGroup;
-import dev.krysztal.advagri.annotations.DontGen;
+import dev.krysztal.advagri.annotations.GenType;
+import dev.krysztal.advagri.annotations.GenTypes;
 import dev.krysztal.advagri.block.impls.BambooBundle;
 import dev.krysztal.advagri.block.impls.ores.NetherSulphurOre;
 import dev.krysztal.advagri.block.impls.ores.SulphurOre;
@@ -16,14 +17,20 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class AdvAgriBlocks {
-
+    @GenTypes(types = {GenType.BlockModel, GenType.LootTableSimpleBlockType, GenType.MineShovel})
     public static final Block ACIDIFIED_SOIL;
+    @GenTypes(types = {GenType.BlockModel, GenType.LootTableSimpleBlockType, GenType.MineShovel})
     public static final Block HARDENED_SOIL;
+    @GenTypes(types = {GenType.BlockModel, GenType.MineLevel1})
     public static final Block PHOS_ORE;
+    @GenTypes(types = {GenType.BlockModel, GenType.MineLevel1})
     public static final Block SULPHUR_ORE;
+    @GenTypes(types = {GenType.BlockModel, GenType.MineLevel1})
     public static final Block NETHER_SULPHUR_ORE;
-    @DontGen
+
+    @GenTypes(types = {GenType.MineAxe})
     public static final BambooBundle BAMBOO_BUNDLE;
+    @GenTypes(types = {GenType.BlockModel})
     public static final Block VERMICULITE_ORE;
 
     static {
