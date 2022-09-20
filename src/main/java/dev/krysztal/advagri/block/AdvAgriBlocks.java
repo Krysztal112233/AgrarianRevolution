@@ -30,7 +30,7 @@ public class AdvAgriBlocks {
 
     @GenTypes(types = {GenType.MineAxe})
     public static final BambooBundle BAMBOO_BUNDLE;
-    @GenTypes(types = {GenType.BlockModel})
+    @GenTypes(types = {GenType.BlockModel, GenType.MineShovel})
     public static final Block VERMICULITE_ORE;
 
     static {

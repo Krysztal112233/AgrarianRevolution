@@ -4,7 +4,7 @@
 ae00e5a11d743730217561b8a75e882a64d98722 data\adv_agri\loot_tables\blocks\acidified_soil.json
 236067c74e4e105a47e2b0aa9d60a9b866879898 assets\adv_agri\models\item\chili_seed_bag.json
 7c9f475c902d3c517d6078159feebcd5c6116260 assets\adv_agri\models\item\phos_ore.json
-158191d5d2333e7a2ca3226989d35e69036a4a84 data\minecraft\tags\mineable\shovel.json
+effb8823b14caa93172740c046954ec333f8725a data\minecraft\tags\mineable\shovel.json
 ba65a2c9a78345e80182399b1ca23ec7f8dfd063 assets\adv_agri\models\item\plant_straw.json
 512b4ff67045884dcdaf50374bdd5c6ba942b88a assets\adv_agri\models\item\chili.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data\fabric\tags\blocks\needs_tool_level_3.json
