@@ -1,6 +1,6 @@
 package dev.krysztal.advagri.entrypoint;
 
-import dev.krysztal.advagri.AdvAgriTagBlock;
+import dev.krysztal.advagri.foundation.AdvAgriTagBlock;
 import dev.krysztal.advagri.block.AdvAgriBlocks;
 import dev.krysztal.advagri.entity.block.AdvAgriBlockEntities;
 import dev.krysztal.advagri.item.AdvAgriItems;

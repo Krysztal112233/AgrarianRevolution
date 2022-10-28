@@ -1,4 +1,4 @@
-package dev.krysztal.advagri;
+package dev.krysztal.advagri.foundation;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricMaterialBuilder;
 import net.minecraft.block.Material;

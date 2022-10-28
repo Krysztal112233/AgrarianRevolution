@@ -1,8 +1,8 @@
 package dev.krysztal.advagri.item;
 
-import dev.krysztal.advagri.AdvAgriConstants;
-import dev.krysztal.advagri.AdvAgriItemGroup;
-import dev.krysztal.advagri.annotations.GenTypes;
+import dev.krysztal.advagri.foundation.AdvAgriConstants;
+import dev.krysztal.advagri.foundation.AdvAgriItemGroup;
+import dev.krysztal.advagri.foundation.util.annotations.GenTypes;
 import dev.krysztal.advagri.item.impls.BambooChopper;
 import dev.krysztal.advagri.item.impls.BambooDrillRod;
 import dev.krysztal.advagri.item.impls.Fertilizer;

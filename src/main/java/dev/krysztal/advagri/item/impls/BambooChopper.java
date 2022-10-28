@@ -1,7 +1,7 @@
 package dev.krysztal.advagri.item.impls;
 
-import dev.krysztal.advagri.AdvAgriTagBlock;
-import dev.krysztal.advagri.item.tools.AdvAgriTools.AdvAgriSwordItem;
+import dev.krysztal.advagri.foundation.AdvAgriTagBlock;
+import dev.krysztal.advagri.foundation.tools.AdvAgriTools.AdvAgriSwordItem;
 import lombok.extern.log4j.Log4j2;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;

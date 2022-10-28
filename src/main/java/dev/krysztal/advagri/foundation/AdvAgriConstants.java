@@ -1,4 +1,4 @@
-package dev.krysztal.advagri;
+package dev.krysztal.advagri.foundation;
 
 public class AdvAgriConstants {
 

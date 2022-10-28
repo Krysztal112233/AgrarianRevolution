@@ -1,12 +1,12 @@
 package dev.krysztal.advagri.block;
 
-import dev.krysztal.advagri.AdvAgriConstants;
-import dev.krysztal.advagri.AdvAgriItemGroup;
-import dev.krysztal.advagri.annotations.GenType;
-import dev.krysztal.advagri.annotations.GenTypes;
-import dev.krysztal.advagri.block.impls.BambooBundle;
-import dev.krysztal.advagri.block.impls.ores.NetherSulphurOre;
-import dev.krysztal.advagri.block.impls.ores.SulphurOre;
+import dev.krysztal.advagri.foundation.AdvAgriConstants;
+import dev.krysztal.advagri.foundation.AdvAgriItemGroup;
+import dev.krysztal.advagri.foundation.util.annotations.GenType;
+import dev.krysztal.advagri.foundation.util.annotations.GenTypes;
+import dev.krysztal.advagri.block.impls.BambooBundleBlock;
+import dev.krysztal.advagri.block.impls.NetherSulphurOreBlock;
+import dev.krysztal.advagri.block.impls.SulphurOreBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -29,7 +29,7 @@ public class AdvAgriBlocks {
     public static final Block NETHER_SULPHUR_ORE;
 
     @GenTypes(types = {GenType.MineAxe})
-    public static final BambooBundle BAMBOO_BUNDLE;
+    public static final BambooBundleBlock BAMBOO_BUNDLE;
     @GenTypes(types = {GenType.BlockModel, GenType.MineShovel})
     public static final Block VERMICULITE_ORE;
 
@@ -37,9 +37,9 @@ public class AdvAgriBlocks {
         ACIDIFIED_SOIL = registry(new Block(FabricBlockSettings.copyOf(Blocks.DIRT)), "acidified_soil");
         HARDENED_SOIL = registry(new Block(FabricBlockSettings.copyOf(Blocks.DIRT)), "hardened_soil");
         PHOS_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).luminance(8).requiresTool()), "phos_ore");
-        SULPHUR_ORE = registry(new SulphurOre(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "sulphur_ore");
-        NETHER_SULPHUR_ORE = registry(new NetherSulphurOre(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "nether_sulphur_ore");
-        BAMBOO_BUNDLE = registry(new BambooBundle(FabricBlockSettings.of(Material.BAMBOO).ticksRandomly()), "bamboo_bundle");
+        SULPHUR_ORE = registry(new SulphurOreBlock(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "sulphur_ore");
+        NETHER_SULPHUR_ORE = registry(new NetherSulphurOreBlock(FabricBlockSettings.copyOf(Blocks.COAL_ORE).requiresTool()), "nether_sulphur_ore");
+        BAMBOO_BUNDLE = registry(new BambooBundleBlock(FabricBlockSettings.of(Material.BAMBOO).ticksRandomly()), "bamboo_bundle");
         VERMICULITE_ORE = registry(new Block(FabricBlockSettings.copyOf(Blocks.DIRT)), "vermiculite_ore");
     }
 

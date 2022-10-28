@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.item.tools;
+package dev.krysztal.advagri.foundation.tools;
 
 import lombok.Getter;
 import lombok.Setter;

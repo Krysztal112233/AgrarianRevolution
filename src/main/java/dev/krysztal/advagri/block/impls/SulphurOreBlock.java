@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.block.impls.ores;
+package dev.krysztal.advagri.block.impls;
 
 import dev.krysztal.advagri.item.AdvAgriItems;
 import lombok.Setter;
@@ -13,12 +13,12 @@ import net.minecraft.world.explosion.Explosion;
 
 import java.util.Random;
 
-public class SulphurOre extends Block {
+public class SulphurOreBlock extends Block {
 
     @Setter
     private int explosionChance = 15;
 
-    public SulphurOre(Settings settings) {
+    public SulphurOreBlock(Settings settings) {
         super(settings);
     }
 

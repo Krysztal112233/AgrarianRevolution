@@ -1,7 +1,7 @@
 package dev.krysztal.advagri.block.impls;
 
-import dev.krysztal.advagri.AdvAgriConstants;
-import dev.krysztal.advagri.AdvAgriStates;
+import dev.krysztal.advagri.foundation.AdvAgriConstants;
+import dev.krysztal.advagri.foundation.AdvAgriStates;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.server.world.ServerWorld;
@@ -10,9 +10,9 @@ import net.minecraft.util.math.BlockPos;
 
 import java.util.Random;
 
-public class BambooBundle extends Block {
+public class BambooBundleBlock extends Block {
 
-    public BambooBundle(Settings settings) {
+    public BambooBundleBlock(Settings settings) {
         super(settings);
         super.setDefaultState(super.getStateManager().getDefaultState().with(AdvAgriStates.BLOCKSTATE_DRYNESS, 0));
     }

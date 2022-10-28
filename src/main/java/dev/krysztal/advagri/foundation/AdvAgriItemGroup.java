@@ -1,4 +1,4 @@
-package dev.krysztal.advagri;
+package dev.krysztal.advagri.foundation;
 
 import dev.krysztal.advagri.item.AdvAgriItems;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;

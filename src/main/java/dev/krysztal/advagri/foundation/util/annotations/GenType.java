@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.annotations;
+package dev.krysztal.advagri.foundation.util.annotations;
 
 public enum GenType {
     BlockModel, ItemModel,
