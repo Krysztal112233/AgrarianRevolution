@@ -4,7 +4,7 @@
 
 ## 🍃 About
 
-* [🧐 Why this mod?](about/why-this-mod.md)
+* [🧐 What's this mod?](about/whats-this-mod.md)
 * [🔨 Develop Progress](about/develop-progress.md)
 
 ## 📅 Solar Term
@@ -16,3 +16,8 @@
 
 * [🧐 What's this?](crops/whats-this.md)
 * [🥳 About them](crops/about-them.md)
+
+## ⚙ Utils
+
+* [🧐 What's this?](utils/whats-this.md)
+* [🥳 About them](utils/about-them.md)
