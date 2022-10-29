@@ -1,12 +1,13 @@
 package dev.krysztal.advagri.loottable;
 
+import dev.krysztal.advagri.foundation.AdvAgriTags;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.util.registry.Registry;
 
 public class GrassLootTable {
 
@@ -24,20 +25,11 @@ public class GrassLootTable {
 
     static {
 
-        // Grass drop event
+        // Inject bamboo drop loot table into grass-like block's loot table.
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-
-            var GRASS_LOOT_TABLE_ID = Blocks.GRASS.getLootTableId();
-            var TALL_GRASS_LOOT_TABLE_ID = Blocks.TALL_GRASS.getLootTableId();
-            var FERN_LOOT_TABLE_ID = Blocks.FERN.getLootTableId();
-            var LARGE_FERN_LOOT_TABLE_ID = Blocks.LARGE_FERN.getLootTableId();
-
-            if ((GRASS_LOOT_TABLE_ID.equals(id)
-                    || TALL_GRASS_LOOT_TABLE_ID.equals(id)
-                    || FERN_LOOT_TABLE_ID.equals(id)
-                    || LARGE_FERN_LOOT_TABLE_ID.equals(id))
+            var block = Registry.BLOCK.get(id);
+            if (block.getDefaultState().isIn(AdvAgriTags.BlockTags.HIDDEN_BAMBOO)
                     && source.isBuiltin()) {
-
                 tableBuilder.pool(BAMBOO_DROP_POOL);
             }
         });
