@@ -1,7 +1,7 @@
 package dev.krysztal.advagri.entrypoint;
 
 import dev.krysztal.advagri.block.AdvAgriBlocks;
-import dev.krysztal.advagri.foundation.AdvAgriTagBlock;
+import dev.krysztal.advagri.foundation.AdvAgriTags;
 import dev.krysztal.advagri.item.AdvAgriItems;
 import dev.krysztal.advagri.loottable.BambooLootTable;
 import dev.krysztal.advagri.loottable.GrassLootTable;
@@ -16,7 +16,7 @@ public class General implements ModInitializer {
 
         new AdvAgriBlocks();
         new AdvAgriItems();
-        new AdvAgriTagBlock();
+        new AdvAgriTags();
 
         new GrassLootTable();
         new BambooLootTable();
