@@ -6,7 +6,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
-public class AdvAgriItemGroup {
+public class AdvAgriItemGroups {
 
 
     public static ItemGroup ADV_AGRI_CORE_ITEM_GROUP = FabricItemGroupBuilder.build(new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, "agriculture"), () -> new ItemStack(AdvAgriItems.BAMBOO_LEAVES));

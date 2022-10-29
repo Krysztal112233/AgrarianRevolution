@@ -1,12 +1,12 @@
 package dev.krysztal.advagri.block;
 
-import dev.krysztal.advagri.foundation.AdvAgriConstants;
-import dev.krysztal.advagri.foundation.AdvAgriItemGroup;
-import dev.krysztal.advagri.foundation.util.annotations.GenType;
-import dev.krysztal.advagri.foundation.util.annotations.GenTypes;
 import dev.krysztal.advagri.block.impls.BambooBundleBlock;
 import dev.krysztal.advagri.block.impls.NetherSulphurOreBlock;
 import dev.krysztal.advagri.block.impls.SulphurOreBlock;
+import dev.krysztal.advagri.foundation.AdvAgriConstants;
+import dev.krysztal.advagri.foundation.AdvAgriItemGroups;
+import dev.krysztal.advagri.foundation.util.annotations.GenType;
+import dev.krysztal.advagri.foundation.util.annotations.GenTypes;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -45,7 +45,11 @@ public class AdvAgriBlocks {
 
     private static <T extends Block> T registry(T block, String path) {
         Registry.register(Registry.BLOCK, new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path), block);
-        Registry.register(Registry.ITEM, new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path), new BlockItem(block, new FabricItemSettings().group(AdvAgriItemGroup.ADV_AGRI_CORE_ITEM_GROUP)));
+        Registry.register(
+                Registry.ITEM,
+                new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path),
+                new BlockItem(block, new FabricItemSettings().group(AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP))
+        );
         return block;
     }
 }
