@@ -1,4 +1,9 @@
 {
   "replace": false,
-  "values": ["adv_agri:bamboo_bundle"]
+  "values": [
+    "adv_agri:bamboo_bundle",
+    "adv_agri:ginkgo_log",
+    "adv_agri:stripped_ginkgo_log",
+    "adv_agri:ginkgo_planks"
+  ]
 }

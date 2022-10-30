@@ -1,2 +1,3 @@
 accessWidener v1 named
 
+accessible method net/minecraft/block/Blocks createLogBlock (Lnet/minecraft/block/MapColor;Lnet/minecraft/block/MapColor;)Lnet/minecraft/block/PillarBlock;

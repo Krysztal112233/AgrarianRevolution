@@ -1,4 +1,4 @@
-// 1.19.2	2022-10-30T19:55:23.7663747	Models
+// 1.19.2	2022-10-31T00:07:40.3442952	Models
 195dedc4ecfe691425351f1e88bf580bf6164e47 assets\adv_agri\blockstates\sulphur_ore.json
 8c77ae5e5830ce7051e88c09a780f2961c0d4f9b assets\adv_agri\models\item\celery_seed_bag.json
 2b8dc665d220b34d95dfb719fb073c6f3271a4f8 assets\adv_agri\models\block\hardened_soil.json
@@ -10,6 +10,7 @@ db9758bbaf5ed7b3eaffb7e66ed635316da4f6c1 assets\adv_agri\models\item\bamboo_silk
 10630f49c58c533ff476f8718422e81b234856bb assets\adv_agri\blockstates\phos_ore.json
 58464a1f3ec3ad1e1d377a8218be93722b0935c5 assets\adv_agri\blockstates\vermiculite_ore.json
 cd8ec1c61b272c881482c617c303728b6e1e7cf1 assets\adv_agri\models\item\bamboo_drill_rod.json
+5e9a6b98e2b4c67bf00cbba5ce4ca824e0f84e96 assets\adv_agri\blockstates\stripped_ginkgo_log.json
 5d925afe9f09ba2db76e737ea43adb9cc815951c assets\adv_agri\models\item\rice.json
 5be599e5cf6c8f5027642970bfd0fe491444e89d assets\adv_agri\models\item\bamboo_shoot.json
 158a3e57ed7ef0c44c2fa9c4cdc0a693cea4e7e0 assets\adv_agri\models\block\phos_ore.json
@@ -37,20 +38,25 @@ faeb81a80f934dadb9883ea302787fba6e3d94ad assets\adv_agri\models\item\plant_straw
 5c7279210860fa5f59ef40c10ae8e511d5a0b167 assets\adv_agri\models\item\sulphur_ore.json
 17d3a97c994b5866105b0b3f0247bee85ca7aa03 assets\adv_agri\blockstates\acidified_soil.json
 544f60bc4c0d78f2ccc6a4efb83de62583c4c776 assets\adv_agri\models\item\vermiculite.json
+8a9d9ca2ea6c241f4550680880633ba82180834d assets\adv_agri\blockstates\ginkgo_log.json
 2d69c9cb5a1e239087dd9aa81a813d44fc61b442 assets\adv_agri\models\item\bamboo_charcoal.json
 c5b431c4205e30f27d164bbca10031537aa56552 assets\adv_agri\models\item\bottle_small.json
 15c7413dcba4171c9f00f2d00ed57b2d1ed1404d assets\adv_agri\models\item\chili_seed_bag.json
 2c6bd1c63ba534de6470b1d654e54bcfdbbd5f47 assets\adv_agri\models\item\solarium_bottle_large.json
 13b0460ad43c92d8090adbfdbc74446ebd8bad63 assets\adv_agri\models\item\lettuce.json
 ef6e4ead69377cdd7bbf8b69dc5a0f2dbd873532 assets\adv_agri\models\block\sulphur_ore.json
+40d34266357782c6d438f9fcdb11a873f404738f assets\adv_agri\blockstates\ginkgo_planks.json
 5c4f3b432f9b0107dfaa4f5d03fa2ea2d8b288a8 assets\adv_agri\models\item\sweet_potato.json
 b649b4fab7d883e12572fcbce20fc1ba20b63e09 assets\adv_agri\models\item\chili.json
+a40f4d71530aededd793fad3f043df96147ec48d assets\adv_agri\models\item\stripped_ginkgo_log.json
 cef0f376a2ada558c22e2d6c1f80c5cc226e27c3 assets\adv_agri\models\item\bamboo_charcoal_ball.json
 41822abda281852df1dff322982ebca0c4525faa assets\adv_agri\models\item\potassium_salt_powder.json
 b952da14a7000e75155ebaaf61e1c549e4f7f577 assets\adv_agri\models\item\sweet_potato_vine.json
+22896a98f7336fa7982dc73d6b696cff749ffa42 assets\adv_agri\models\item\ginkgo_planks.json
 fda3bd25a2b6cd5bc472aa882c095dfe2d07a96e assets\adv_agri\models\item\strawberry.json
 f30a94493e5d6a68ae1596da314cd53063fa9320 assets\adv_agri\models\item\sulfur.json
 2acc2e7676f8cf1133640ed3cb3ceae9b1016b79 assets\adv_agri\models\item\bamboo_silk.json
+95a806e2cda82b3bd62643494af87f9d5ee11088 assets\adv_agri\models\item\ginkgo_log.json
 5be05018a89315ae24422532a40bbf6e1972e89a assets\adv_agri\models\item\phos_ore.json
 bfff38b380ac9106f2beceed7862b5ddc4aecdbe assets\adv_agri\models\item\rice_unhusked.json
 5ebabc7785c1edfdc9957984b37d3c43c33aa733 assets\adv_agri\models\item\solarium_bottle_small.json

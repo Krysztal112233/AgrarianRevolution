@@ -53,6 +53,46 @@ public class AdvAgriBlocks {
   @GenTypes(types = { GenType.MineAxe })
   public static final BambooBundleBlock BAMBOO_BUNDLE;
 
+  //====================== Wood ====================//
+  @GenTypes(
+    types = {
+      GenType.LootTableSimpleBlockType,
+      GenType.MineAxe,
+      GenType.SimpleBlockState,
+    }
+  )
+  public static final Block GINKGO_LOG;
+
+  //====================== Stripped wood ==========//
+  @GenTypes(
+    types = {
+      GenType.LootTableSimpleBlockType,
+      GenType.MineAxe,
+      GenType.SimpleBlockState,
+    }
+  )
+  public static final Block STRIPPED_GINKGO_LOG;
+
+  //====================== Planks =================//
+  @GenTypes(
+    types = {
+      GenType.LootTableSimpleBlockType,
+      GenType.MineAxe,
+      GenType.SimpleBlockState,
+    }
+  )
+  public static final Block GINKGO_PLANKS;
+
+  //====================== Leaves =================//
+  @GenTypes(
+    types = {
+      GenType.LootTableSimpleBlockType,
+      GenType.MineAxe,
+      GenType.SimpleBlockState,
+    }
+  )
+  public static final Block GINKGO_LEAVES;
+
   static {
     ACIDIFIED_SOIL = registry(defaultBlock(Blocks.DIRT), "acidified_soil");
     HARDENED_SOIL = registry(defaultBlock(Blocks.DIRT), "hardened_soil");
@@ -88,6 +128,33 @@ public class AdvAgriBlocks {
         ),
         "bamboo_bundle"
       );
+
+    //====================== Wood ====================//
+    GINKGO_LOG =
+      registry(
+        new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).luminance(4)),
+        "ginkgo_log"
+      );
+
+    //====================== Stripped wood ==========//
+    STRIPPED_GINKGO_LOG =
+      registry(
+        new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).luminance(4)),
+        "stripped_ginkgo_log"
+      );
+
+    //====================== Planks =================//
+    GINKGO_PLANKS =
+      registry(
+        new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).luminance(4)),
+        "ginkgo_planks"
+      );
+    //====================== Leaves =================//
+    GINKGO_LEAVES =
+      registry(
+        new Block(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).luminance(4)),
+        "ginkgo_leaves"
+      );
   }
 
   private static <T extends Block> T registry(T block, String path) {
@@ -109,6 +176,12 @@ public class AdvAgriBlocks {
   }
 
   private static Block defaultBlock(Block block) {
-    return new Block(FabricBlockSettings.copyOf(block).requiresTool());
+    return defaultBlock(block, true);
+  }
+
+  private static Block defaultBlock(Block block, boolean requiresTool) {
+    return requiresTool
+      ? new Block(FabricBlockSettings.copyOf(block).requiresTool())
+      : new Block(FabricBlockSettings.copyOf(block));
   }
 }
