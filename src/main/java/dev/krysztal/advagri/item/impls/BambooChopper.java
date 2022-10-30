@@ -30,8 +30,8 @@ public class BambooChopper extends AdvAgriSwordItem {
     BlockPos pos,
     LivingEntity miner
   ) {
-    for (int i = -2; i < 2; i++) {
-      for (int j = -2; j < 2; j++) {
+    for (int i = -2; i <= 2; i++) {
+      for (int j = -2; j <= 2; j++) {
         BlockPos tPos = new BlockPos(
           pos.getX() + i,
           pos.getY(),
