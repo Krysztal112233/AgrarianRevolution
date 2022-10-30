@@ -4,6 +4,7 @@ import dev.krysztal.advagri.foundation.AdvAgriTags;
 import dev.krysztal.advagri.foundation.tool.AdvAgriTools.AdvAgriSwordItem;
 import lombok.extern.log4j.Log4j2;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
@@ -30,6 +31,8 @@ public class BambooChopper extends AdvAgriSwordItem {
     BlockPos pos,
     LivingEntity miner
   ) {
+    var damageAmount = 1;
+
     for (int i = -2; i <= 2; i++) {
       for (int j = -2; j <= 2; j++) {
         BlockPos tPos = new BlockPos(
@@ -37,13 +40,20 @@ public class BambooChopper extends AdvAgriSwordItem {
           pos.getY(),
           pos.getZ() + j
         );
-        if (match(world.getBlockState(tPos))) world.breakBlock(
-          tPos,
-          true,
-          miner
-        );
+        if (match(world.getBlockState(tPos))) {
+          world.breakBlock(tPos, true, miner);
+          damageAmount++;
+        }
       }
     }
+
+    stack.damage(
+      damageAmount,
+      miner,
+      livingEntity ->
+        livingEntity.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND)
+    );
+
     return super.postMine(stack, world, state, pos, miner);
   }
 
