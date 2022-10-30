@@ -47,11 +47,11 @@ public class AdvAgriBlocks {
   )
   public static final Block NETHER_SULPHUR_ORE;
 
-  @GenTypes(types = { GenType.MineAxe })
-  public static final BambooBundleBlock BAMBOO_BUNDLE;
-
   @GenTypes(types = { GenType.BlockModel, GenType.MineShovel })
   public static final Block VERMICULITE_ORE;
+
+  @GenTypes(types = { GenType.MineAxe })
+  public static final BambooBundleBlock BAMBOO_BUNDLE;
 
   static {
     ACIDIFIED_SOIL = registry(defaultBlock(Blocks.DIRT), "acidified_soil");
