@@ -54,16 +54,8 @@ public class AdvAgriBlocks {
   public static final Block VERMICULITE_ORE;
 
   static {
-    ACIDIFIED_SOIL =
-      registry(
-        new Block(FabricBlockSettings.copyOf(Blocks.DIRT)),
-        "acidified_soil"
-      );
-    HARDENED_SOIL =
-      registry(
-        new Block(FabricBlockSettings.copyOf(Blocks.DIRT)),
-        "hardened_soil"
-      );
+    ACIDIFIED_SOIL = registry(defaultBlock(Blocks.DIRT), "acidified_soil");
+    HARDENED_SOIL = registry(defaultBlock(Blocks.DIRT), "hardened_soil");
     PHOS_ORE =
       registry(
         new Block(
@@ -95,11 +87,7 @@ public class AdvAgriBlocks {
         ),
         "bamboo_bundle"
       );
-    VERMICULITE_ORE =
-      registry(
-        new Block(FabricBlockSettings.copyOf(Blocks.DIRT)),
-        "vermiculite_ore"
-      );
+    VERMICULITE_ORE = registry(defaultBlock(Blocks.DIRT), "vermiculite_ore");
   }
 
   private static <T extends Block> T registry(T block, String path) {
@@ -118,5 +106,9 @@ public class AdvAgriBlocks {
       )
     );
     return block;
+  }
+
+  private static Block defaultBlock(Block block) {
+    return new Block(FabricBlockSettings.copyOf(block).requiresTool());
   }
 }
