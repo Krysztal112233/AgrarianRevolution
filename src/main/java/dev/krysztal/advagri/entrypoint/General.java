@@ -1,8 +1,7 @@
 package dev.krysztal.advagri.entrypoint;
 
-import dev.krysztal.advagri.foundation.AdvAgriTagBlock;
 import dev.krysztal.advagri.block.AdvAgriBlocks;
-import dev.krysztal.advagri.entity.block.AdvAgriBlockEntities;
+import dev.krysztal.advagri.foundation.AdvAgriTags;
 import dev.krysztal.advagri.item.AdvAgriItems;
 import dev.krysztal.advagri.loottable.BambooLootTable;
 import dev.krysztal.advagri.loottable.GrassLootTable;
@@ -12,15 +11,13 @@ import net.fabricmc.api.ModInitializer;
 @Slf4j
 public class General implements ModInitializer {
 
-    @Override
-    public void onInitialize() {
+  @Override
+  public void onInitialize() {
+    new AdvAgriBlocks();
+    new AdvAgriItems();
+    new AdvAgriTags();
 
-        new AdvAgriBlocks();
-        new AdvAgriItems();
-        new AdvAgriBlockEntities();
-        new AdvAgriTagBlock();
-
-        new GrassLootTable();
-        new BambooLootTable();
-    }
+    new GrassLootTable();
+    new BambooLootTable();
+  }
 }

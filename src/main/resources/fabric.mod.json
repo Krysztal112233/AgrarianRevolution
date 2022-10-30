@@ -4,9 +4,7 @@
   "version": "${version}",
   "name": "Advanced Agriculture",
   "description": "Tech,Nature,the Agriculture.",
-  "authors": [
-    "Krysztal"
-  ],
+  "authors": ["Krysztal"],
   "contact": {
     "homepage": "https://github.com/KrysztalTechLab/AdvancedAgriculture",
     "sources": "https://github.com/KrysztalTechLab/AdvancedAgriculture"
@@ -15,23 +13,15 @@
   "icon": "assets/adv_agri/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "dev.krysztal.advagri.entrypoint.General"
-    ],
-    "client": [
-      "dev.krysztal.advagri.entrypoint.Client"
-    ],
-    "fabric-datagen": [
-      "dev.krysztal.advagri.entrypoint.datagen.DataGen"
-    ]
+    "main": ["dev.krysztal.advagri.entrypoint.General"],
+    "client": ["dev.krysztal.advagri.entrypoint.Client"],
+    "fabric-datagen": ["dev.krysztal.advagri.entrypoint.datagen.DataGen"]
   },
-  "mixins": [
-    "adv_agri.mixins.json"
-  ],
+  "mixins": ["adv_agri.mixins.json"],
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.18.x"
+    "minecraft": "1.19.x"
   },
   "suggests": {
     "flamingo": "*"
