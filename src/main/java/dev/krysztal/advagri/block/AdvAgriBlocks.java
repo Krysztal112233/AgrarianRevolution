@@ -80,6 +80,7 @@ public class AdvAgriBlocks {
         ),
         "nether_sulphur_ore"
       );
+    VERMICULITE_ORE = registry(defaultBlock(Blocks.DIRT), "vermiculite_ore");
     BAMBOO_BUNDLE =
       registry(
         new BambooBundleBlock(
@@ -87,7 +88,6 @@ public class AdvAgriBlocks {
         ),
         "bamboo_bundle"
       );
-    VERMICULITE_ORE = registry(defaultBlock(Blocks.DIRT), "vermiculite_ore");
   }
 
   private static <T extends Block> T registry(T block, String path) {
