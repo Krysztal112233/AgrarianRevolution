@@ -92,6 +92,7 @@ sourceSets {
 }
 
 loom {
+    accessWidenerPath = file("src/main/resources/adv_agri.accesswidener")
     runs {
         // This adds a new gradle task that runs the datagen API: "gradlew runDatagenClient"
         datagenClient {

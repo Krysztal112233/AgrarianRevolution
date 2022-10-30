@@ -5,6 +5,7 @@ import dev.krysztal.advagri.foundation.util.GeneratorUtils;
 import dev.krysztal.advagri.foundation.util.annotations.GenType;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.mininglevel.v1.MiningLevelManager;
 import net.minecraft.block.Block;
 import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
@@ -15,22 +16,6 @@ public class MineLevelGenerator extends FabricTagProvider.BlockTagProvider {
   private static final TagKey<Block> MINE_LEVEL_0 = TagKey.of(
     Registry.BLOCK_KEY,
     new Identifier("fabric:needs_tool_level_0")
-  );
-  private static final TagKey<Block> MINE_LEVEL_1 = TagKey.of(
-    Registry.BLOCK_KEY,
-    new Identifier("fabric:needs_tool_level_1")
-  );
-  private static final TagKey<Block> MINE_LEVEL_2 = TagKey.of(
-    Registry.BLOCK_KEY,
-    new Identifier("fabric:needs_tool_level_2")
-  );
-  private static final TagKey<Block> MINE_LEVEL_3 = TagKey.of(
-    Registry.BLOCK_KEY,
-    new Identifier("fabric:needs_tool_level_3")
-  );
-  private static final TagKey<Block> MINE_LEVEL_4 = TagKey.of(
-    Registry.BLOCK_KEY,
-    new Identifier("fabric:needs_tool_level_4")
   );
 
   public MineLevelGenerator(FabricDataGenerator dataGenerator) {
@@ -44,15 +29,23 @@ public class MineLevelGenerator extends FabricTagProvider.BlockTagProvider {
       .forEach(super.getOrCreateTagBuilder(MINE_LEVEL_0)::add);
     new GeneratorUtils.Collector(GenType.MineLevel1)
       .<Block>collect(AdvAgriBlocks.class)
-      .forEach(super.getOrCreateTagBuilder(MINE_LEVEL_1)::add);
+      .forEach(
+        super.getOrCreateTagBuilder(MiningLevelManager.getBlockTag(1))::add
+      );
     new GeneratorUtils.Collector(GenType.MineLevel2)
       .<Block>collect(AdvAgriBlocks.class)
-      .forEach(super.getOrCreateTagBuilder(MINE_LEVEL_2)::add);
+      .forEach(
+        super.getOrCreateTagBuilder(MiningLevelManager.getBlockTag(2))::add
+      );
     new GeneratorUtils.Collector(GenType.MineLevel3)
       .<Block>collect(AdvAgriBlocks.class)
-      .forEach(super.getOrCreateTagBuilder(MINE_LEVEL_3)::add);
+      .forEach(
+        super.getOrCreateTagBuilder(MiningLevelManager.getBlockTag(3))::add
+      );
     new GeneratorUtils.Collector(GenType.MineLevel4)
       .<Block>collect(AdvAgriBlocks.class)
-      .forEach(super.getOrCreateTagBuilder(MINE_LEVEL_4)::add);
+      .forEach(
+        super.getOrCreateTagBuilder(MiningLevelManager.getBlockTag(4))::add
+      );
   }
 }

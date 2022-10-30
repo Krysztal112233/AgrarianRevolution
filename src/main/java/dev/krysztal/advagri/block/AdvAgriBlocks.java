@@ -32,13 +32,19 @@ public class AdvAgriBlocks {
   )
   public static final Block HARDENED_SOIL;
 
-  @GenTypes(types = { GenType.BlockModel, GenType.MineLevel1 })
+  @GenTypes(
+    types = { GenType.BlockModel, GenType.MinePickaxe, GenType.MineLevel1 }
+  )
   public static final Block PHOS_ORE;
 
-  @GenTypes(types = { GenType.BlockModel, GenType.MineLevel1 })
+  @GenTypes(
+    types = { GenType.BlockModel, GenType.MinePickaxe, GenType.MineLevel1 }
+  )
   public static final Block SULPHUR_ORE;
 
-  @GenTypes(types = { GenType.BlockModel, GenType.MineLevel1 })
+  @GenTypes(
+    types = { GenType.BlockModel, GenType.MinePickaxe, GenType.MineLevel1 }
+  )
   public static final Block NETHER_SULPHUR_ORE;
 
   @GenTypes(types = { GenType.MineAxe })
