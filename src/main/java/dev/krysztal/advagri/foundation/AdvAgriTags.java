@@ -11,10 +11,12 @@ public class AdvAgriTags {
 
     public static final TagKey<Block> FELLABLE;
     public static final TagKey<Block> HIDDEN_BAMBOO;
+    public static final TagKey<Block> SULPHUR_ORE;
 
     static {
       FELLABLE = registry("fellable");
       HIDDEN_BAMBOO = registry("hidden_bamboo");
+      SULPHUR_ORE = registry("sulphur_ore");
     }
 
     private static TagKey<Block> registry(String id) {
