@@ -11,14 +11,13 @@ import net.fabricmc.api.ModInitializer;
 @Slf4j
 public class General implements ModInitializer {
 
-    @Override
-    public void onInitialize() {
+  @Override
+  public void onInitialize() {
+    new AdvAgriBlocks();
+    new AdvAgriItems();
+    new AdvAgriTags();
 
-        new AdvAgriBlocks();
-        new AdvAgriItems();
-        new AdvAgriTags();
-
-        new GrassLootTable();
-        new BambooLootTable();
-    }
+    new GrassLootTable();
+    new BambooLootTable();
+  }
 }

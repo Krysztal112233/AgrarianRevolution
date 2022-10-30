@@ -1,10 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "GPG",
-    "G G",
-    "GGG"
-  ],
+  "pattern": ["GPG", "G G", "GGG"],
   "key": {
     "P": {
       "tag": "minecraft:planks"

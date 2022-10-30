@@ -11,29 +11,30 @@ import net.minecraft.util.registry.Registry;
 
 public class GrassLootTable {
 
+  static final LootPool BAMBOO_DROP_POOL;
 
-    static final LootPool BAMBOO_DROP_POOL;
+  static {
+    BAMBOO_DROP_POOL =
+      LootPool
+        .builder()
+        .rolls(ConstantLootNumberProvider.create(1))
+        .conditionally(RandomChanceLootCondition.builder(0.01F).build())
+        .with(ItemEntry.builder(Items.BAMBOO).build())
+        .build();
+  }
 
-
-    static {
-        BAMBOO_DROP_POOL = LootPool.builder()
-                .rolls(ConstantLootNumberProvider.create(1))
-                .conditionally(RandomChanceLootCondition.builder(0.01F).build())
-                .with(ItemEntry.builder(Items.BAMBOO)
-                        .build()).build();
-    }
-
-    static {
-
-        // Inject bamboo drop loot table into grass-like block's loot table.
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            var block = Registry.BLOCK.get(id);
-            if (block.getDefaultState().isIn(AdvAgriTags.BlockTags.HIDDEN_BAMBOO)
-                    && source.isBuiltin()) {
-                tableBuilder.pool(BAMBOO_DROP_POOL);
-            }
-        });
-
-
-    }
+  static {
+    // Inject bamboo drop loot table into grass-like block's loot table.
+    LootTableEvents.MODIFY.register(
+      (resourceManager, lootManager, id, tableBuilder, source) -> {
+        var block = Registry.BLOCK.get(id);
+        if (
+          block.getDefaultState().isIn(AdvAgriTags.BlockTags.HIDDEN_BAMBOO) &&
+          source.isBuiltin()
+        ) {
+          tableBuilder.pool(BAMBOO_DROP_POOL);
+        }
+      }
+    );
+  }
 }

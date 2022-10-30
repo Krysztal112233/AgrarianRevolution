@@ -4,8 +4,5 @@ import net.fabricmc.api.ClientModInitializer;
 
 public class Client implements ClientModInitializer {
 
-    public void onInitializeClient() {
-
-
-    }
+  public void onInitializeClient() {}
 }
