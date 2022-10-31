@@ -1,4 +1,4 @@
-// 1.19.2	2022-10-31T00:07:40.3442952	Models
+// 1.19.2	2022-10-31T12:15:16.4358786	Models
 195dedc4ecfe691425351f1e88bf580bf6164e47 assets\adv_agri\blockstates\sulphur_ore.json
 8c77ae5e5830ce7051e88c09a780f2961c0d4f9b assets\adv_agri\models\item\celery_seed_bag.json
 2b8dc665d220b34d95dfb719fb073c6f3271a4f8 assets\adv_agri\models\block\hardened_soil.json
@@ -35,10 +35,12 @@ cdef9b98360ae719c074e05b160a43bc196b2d44 assets\adv_agri\models\item\acidified_s
 cc08bc84f3100dc61e44adbc581f2ec11822478b assets\adv_agri\models\item\celery.json
 faeb81a80f934dadb9883ea302787fba6e3d94ad assets\adv_agri\models\item\plant_straw.json
 569c5eaffaf6199f38434bf8668cec256d9550df assets\adv_agri\models\item\plant_ash.json
+92214db5b39fcd79e6e5643e9e1757bd5dd73277 assets\adv_agri\blockstates\ginkgo_leaves.json
 5c7279210860fa5f59ef40c10ae8e511d5a0b167 assets\adv_agri\models\item\sulphur_ore.json
 17d3a97c994b5866105b0b3f0247bee85ca7aa03 assets\adv_agri\blockstates\acidified_soil.json
 544f60bc4c0d78f2ccc6a4efb83de62583c4c776 assets\adv_agri\models\item\vermiculite.json
 8a9d9ca2ea6c241f4550680880633ba82180834d assets\adv_agri\blockstates\ginkgo_log.json
+60cc4fd606a9c8529c8a90355969225990b00b8b assets\adv_agri\models\item\ginkgo_leaves.json
 2d69c9cb5a1e239087dd9aa81a813d44fc61b442 assets\adv_agri\models\item\bamboo_charcoal.json
 c5b431c4205e30f27d164bbca10031537aa56552 assets\adv_agri\models\item\bottle_small.json
 15c7413dcba4171c9f00f2d00ed57b2d1ed1404d assets\adv_agri\models\item\chili_seed_bag.json
@@ -57,6 +59,7 @@ fda3bd25a2b6cd5bc472aa882c095dfe2d07a96e assets\adv_agri\models\item\strawberry.
 f30a94493e5d6a68ae1596da314cd53063fa9320 assets\adv_agri\models\item\sulfur.json
 2acc2e7676f8cf1133640ed3cb3ceae9b1016b79 assets\adv_agri\models\item\bamboo_silk.json
 95a806e2cda82b3bd62643494af87f9d5ee11088 assets\adv_agri\models\item\ginkgo_log.json
+006bc64aaf69dd9aff7271a8faf55094b07de6bb assets\adv_agri\models\block\ginkgo_leaves.json
 5be05018a89315ae24422532a40bbf6e1972e89a assets\adv_agri\models\item\phos_ore.json
 bfff38b380ac9106f2beceed7862b5ddc4aecdbe assets\adv_agri\models\item\rice_unhusked.json
 5ebabc7785c1edfdc9957984b37d3c43c33aa733 assets\adv_agri\models\item\solarium_bottle_small.json

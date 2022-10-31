@@ -84,13 +84,7 @@ public class AdvAgriBlocks {
   public static final Block GINKGO_PLANKS;
 
   //====================== Leaves =================//
-  @GenTypes(
-    types = {
-      GenType.LootTableSimpleBlockType,
-      GenType.MineAxe,
-      GenType.SimpleBlockState,
-    }
-  )
+  @GenTypes(types = { GenType.MineAxe, GenType.BlockModel })
   public static final Block GINKGO_LEAVES;
 
   static {
@@ -149,6 +143,7 @@ public class AdvAgriBlocks {
         new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).luminance(4)),
         "ginkgo_planks"
       );
+
     //====================== Leaves =================//
     GINKGO_LEAVES =
       registry(
