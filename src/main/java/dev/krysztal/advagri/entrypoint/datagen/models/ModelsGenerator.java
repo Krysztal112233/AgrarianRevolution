@@ -20,22 +20,21 @@ public class ModelsGenerator extends FabricModelProvider {
 
   @Override
   public void generateBlockStateModels(
-      BlockStateModelGenerator blockStateModelGenerator
+    BlockStateModelGenerator blockStateModelGenerator
   ) {
     new GeneratorUtils.Collector(GenType.BlockModel)
-        .<Block>collect(AdvAgriBlocks.class)
-        .forEach(blockStateModelGenerator::registerSimpleCubeAll);
+      .<Block>collect(AdvAgriBlocks.class)
+      .forEach(blockStateModelGenerator::registerSimpleCubeAll);
 
-    new GeneratorUtils.Collector(GenType.SimpleBlockState).<Block>collect(AdvAgriBlocks.class)
-        .forEach(
-            blockStateModelGenerator::registerSimpleState
-        );
+    new GeneratorUtils.Collector(GenType.SimpleBlockState)
+      .<Block>collect(AdvAgriBlocks.class)
+      .forEach(blockStateModelGenerator::registerSimpleState);
   }
 
   @Override
   public void generateItemModels(ItemModelGenerator itemModelGenerator) {
     new GeneratorUtils.Collector(GenType.ItemModel)
-        .<Item>collect(AdvAgriItems.class)
-        .forEach(item -> itemModelGenerator.register(item, Models.GENERATED));
+      .<Item>collect(AdvAgriItems.class)
+      .forEach(item -> itemModelGenerator.register(item, Models.GENERATED));
   }
 }

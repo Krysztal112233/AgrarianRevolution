@@ -8,6 +8,9 @@ import net.minecraft.client.render.RenderLayer;
 public class Client implements ClientModInitializer {
 
   public void onInitializeClient() {
-    BlockRenderLayerMap.INSTANCE.putBlock(AdvAgriBlocks.GINKGO_LEAVES, RenderLayer.getTranslucent());
+    BlockRenderLayerMap.INSTANCE.putBlock(
+      AdvAgriBlocks.GINKGO_LEAVES,
+      RenderLayer.getTranslucent()
+    );
   }
 }
