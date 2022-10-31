@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.loottable;
+package dev.krysztal.advagri.loot;
 
 import dev.krysztal.advagri.foundation.AdvAgriTags;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
