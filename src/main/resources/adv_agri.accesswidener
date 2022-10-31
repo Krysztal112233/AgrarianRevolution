@@ -1,3 +1,4 @@
 accessWidener v1 named
 
 accessible method net/minecraft/block/Blocks createLogBlock (Lnet/minecraft/block/MapColor;Lnet/minecraft/block/MapColor;)Lnet/minecraft/block/PillarBlock;
+accessible method net/minecraft/loot/condition/LootConditionTypes register (Ljava/lang/String;Lnet/minecraft/util/JsonSerializer;)Lnet/minecraft/loot/condition/LootConditionType;
