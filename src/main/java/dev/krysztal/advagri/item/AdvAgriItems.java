@@ -57,8 +57,7 @@ public class AdvAgriItems {
   @GenTypes
   public static Item BAMBOO_CHARCOAL_BALL;
 
-  @GenTypes
-  public static Item BAMBOO_SHOOT;
+  public static Item BAMBOO_SAPLING;
 
   @GenTypes
   public static Item PHOS;
@@ -154,7 +153,7 @@ public class AdvAgriItems {
     BAMBOO_SILK_BOARD = registry(defaultItem(), "bamboo_silk_board");
     BAMBOO_CHARCOAL = registry(defaultItem(), "bamboo_charcoal");
     BAMBOO_CHARCOAL_BALL = registry(defaultItem(), "bamboo_charcoal_ball");
-    BAMBOO_SHOOT = registry(defaultItem(), "bamboo_shoot");
+    BAMBOO_SAPLING = registry(defaultItem(), "bamboo_sapling");
     PHOS = registry(defaultItem(), "phos");
     VERMICULITE = registry(defaultItem(), "vermiculite");
     SULFUR = registry(defaultItem(), "sulfur");
