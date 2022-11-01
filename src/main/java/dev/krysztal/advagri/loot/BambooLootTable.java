@@ -1,6 +1,7 @@
 package dev.krysztal.advagri.loot;
 
 import dev.krysztal.advagri.item.AdvAgriItems;
+import dev.krysztal.advagri.loot.conditions.OnGroundTagCondition;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.block.Blocks;
 import net.minecraft.loot.LootPool;
@@ -11,7 +12,7 @@ import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 public class BambooLootTable {
 
   static final LootPool BAMBOO_LEAVES_POOL;
-  static final LootPool BAMBOO_SHOOT_POOL;
+  static final LootPool BAMBOO_SAPLING_POOL;
 
   static {
     BAMBOO_LEAVES_POOL =
@@ -22,12 +23,15 @@ public class BambooLootTable {
         .with(ItemEntry.builder(AdvAgriItems.BAMBOO_LEAVES).build())
         .build();
 
-    BAMBOO_SHOOT_POOL =
+    BAMBOO_SAPLING_POOL =
       LootPool
         .builder()
         .rolls(ConstantLootNumberProvider.create(1))
         .conditionally(RandomChanceLootCondition.builder(0.1F).build())
-        .with(ItemEntry.builder(AdvAgriItems.BAMBOO_SHOOT).build())
+        .conditionally(
+          OnGroundTagCondition.builder().tag("minecraft:dirt").build()
+        )
+        .with(ItemEntry.builder(AdvAgriItems.BAMBOO_SAPLING).build())
         .build();
   }
 
@@ -43,13 +47,13 @@ public class BambooLootTable {
       }
     );
 
-    // Bamboo shoot event
+    // Bamboo sapling event
     LootTableEvents.MODIFY.register(
       (resourceManager, lootManager, id, tableBuilder, source) -> {
         var BAMBOO_SAPLING_LOOT_TABLE_ID = Blocks.BAMBOO_SAPLING.getLootTableId();
 
         if (BAMBOO_SAPLING_LOOT_TABLE_ID.equals(id) && source.isBuiltin()) {
-          tableBuilder.pool(BAMBOO_SHOOT_POOL);
+          tableBuilder.pool(BAMBOO_SAPLING_POOL);
         }
       }
     );
