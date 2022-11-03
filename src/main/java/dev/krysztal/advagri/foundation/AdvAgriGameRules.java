@@ -13,51 +13,68 @@ public class AdvAgriGameRules {
 
   public static final GameRules.Key<GameRules.IntRule> LENGTH_OF_YEAR;
 
-  public static void init(){}
+  public static void init() {
+  }
 
   static {
     ALLOW_SEASONS_CHANGE =
-      GameRuleRegistry.register(
-        "allowSeasonsChange",
-        GameRules.Category.UPDATES,
-        GameRuleFactory.createBooleanRule(true)
-      );
+        GameRuleRegistry.register(
+            "allowSeasonsChange",
+            GameRules.Category.UPDATES,
+            GameRuleFactory.createBooleanRule(true)
+        );
 
     LENGTH_OF_YEAR =
-      GameRuleRegistry.register(
-        "lengthOfYear",
-        GameRules.Category.UPDATES,
-        GameRuleFactory.createIntRule(
-          12,
-          (
-            (minecraftServer, intRule) -> {
-              var ruleValue = intRule.get();
-              var fixedValue = 0;
-              if (ruleValue % 4 != 0) {
-                for (int i = ruleValue;; i++) if (i % 4 == 0) {
-                  fixedValue = i;
-                  break;
-                }
+        GameRuleRegistry.register(
+            "lengthOfYear",
+            GameRules.Category.UPDATES,
+            GameRuleFactory.createIntRule(
+                12,
+                (
+                    (minecraftServer, intRule) -> {
+                      var ruleValue = intRule.get();
+                      var fixedValue = 0;
 
-                minecraftServer.sendMessage(
-                  Text.translatable(
-                    "adv_agri.game_rule.lengthOfYear.error1",
-                    ruleValue
-                  )
-                );
+                      if (ruleValue <= 1) {
+                        minecraftServer.sendMessage(
+                            Text.translatable(
+                                "adv_agri.game_rule.lengthOfYear.error3",
+                                ruleValue
+                            )
+                        );
 
-                minecraftServer.sendMessage(
-                  Text.translatable(
-                    "adv_agri.game_rule.lengthOfYear.error2",
-                    fixedValue
-                  )
-                );
+                        intRule.set(12, minecraftServer);
 
-                intRule.set(fixedValue, minecraftServer);
-              }
-            }
-          )
-        )
-      );
+                        return;
+                      }
+
+
+                      if (ruleValue % 4 != 0) {
+                        for (int i = ruleValue; ; i++)
+                          if (i % 4 == 0) {
+                            fixedValue = i;
+                            break;
+                          }
+
+                        minecraftServer.sendMessage(
+                            Text.translatable(
+                                "adv_agri.game_rule.lengthOfYear.error1",
+                                ruleValue
+                            )
+                        );
+
+                        minecraftServer.sendMessage(
+                            Text.translatable(
+                                "adv_agri.game_rule.lengthOfYear.error2",
+                                fixedValue
+                            )
+                        );
+
+                        intRule.set(fixedValue, minecraftServer);
+                      }
+                    }
+                )
+            )
+        );
   }
 }

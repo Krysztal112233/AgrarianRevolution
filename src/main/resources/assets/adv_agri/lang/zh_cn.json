@@ -59,5 +59,6 @@
   "ore.adv_agri.sulphur_ore.tooltip": "散发着刺鼻的味道...闻起来像是要爆炸",
   "_": "->------------------------]   Messages  [------------------------<-",
   "adv_agri.game_rule.lengthOfYear.error1": "不可以将游戏规则 lengthOfYear 的值设置为 %s，因为 %s 不可以被 4 整除。",
-  "adv_agri.game_rule.lengthOfYear.error2": "经过向上取数，数值被设置为 %s。"
+  "adv_agri.game_rule.lengthOfYear.error2": "经过向上取数，数值被设置为 %s。",
+  "adv_agri.game_rule.lengthOfYear.error3": "游戏规则 lengthOfYear 数值不可以设置为小于 %s ,因此值被设置为12。"
 }
