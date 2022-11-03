@@ -56,5 +56,8 @@
   "item.adv_agri.vermiculite": "蛭石",
   "item.adv_agri.water_chestnut": "荸荠",
   "itemGroup.adv_agri.agriculture": "高级农业",
-  "ore.adv_agri.sulphur_ore.tooltip": "散发着刺鼻的味道...闻起来像是要爆炸"
+  "ore.adv_agri.sulphur_ore.tooltip": "散发着刺鼻的味道...闻起来像是要爆炸",
+  "_": "->------------------------]   Messages  [------------------------<-",
+  "adv_agri.game_rule.lengthOfYear.error1": "不可以将游戏规则 lengthOfYear 的值设置为 %s，因为 %s 不可以被 4 整除。",
+  "adv_agri.game_rule.lengthOfYear.error2": "经过向上取数，数值被设置为 %s。"
 }

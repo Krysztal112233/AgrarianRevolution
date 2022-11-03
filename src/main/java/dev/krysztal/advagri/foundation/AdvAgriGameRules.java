@@ -39,14 +39,14 @@ public class AdvAgriGameRules {
 
                 minecraftServer.sendMessage(
                   Text.translatable(
-                    "adv_agri.text_translate.gamerule.lengthOfYear.error1",
+                    "adv_agri.game_rule.lengthOfYear.error1",
                     ruleValue
                   )
                 );
 
                 minecraftServer.sendMessage(
                   Text.translatable(
-                    "adv_agri.text_translate.gamerule.lengthOfYear.error2",
+                    "adv_agri.game_rule.lengthOfYear.error2",
                     fixedValue
                   )
                 );
