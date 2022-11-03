@@ -56,5 +56,8 @@
   "item.adv_agri.vermiculite": "Vermiculite",
   "item.adv_agri.water_chestnut": "Water Chestnut",
   "itemGroup.adv_agri.agriculture": "AdvancedAgriculture Core",
-  "ore.adv_agri.sulphur_ore.tooltip": "Smells pungent, m-ay explode in a second."
+  "ore.adv_agri.sulphur_ore.tooltip": "Smells pungent, m-ay explode in a second.",
+  "_": "->------------------------]   Messages  [------------------------<-",
+  "adv_agri.text_translate.gamerule.lengthOfYear.error1": "It is not possible to set the value of lengthOfYear to %s, because %s is not divisible by 4.",
+  "adv_agri.text_translate.gamerule.lengthOfYear.error2": " After fetching upwards, the value is set to %s"
 }
