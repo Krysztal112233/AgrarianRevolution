@@ -10,7 +10,8 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 
 public class BambooLoot {
-  public static void init(){}
+
+  public static void init() {}
 
   static final LootPool BAMBOO_LEAVES_POOL;
   static final LootPool BAMBOO_SAPLING_POOL;

@@ -17,7 +17,7 @@ public class AdvAgriTags {
     public static final TagKey<Block> HIDDEN_BAMBOO;
     public static final TagKey<Block> SULPHUR_ORE;
 
-    public static void init(){}
+    public static void init() {}
 
     static {
       FELLABLE = registry("fellable");
