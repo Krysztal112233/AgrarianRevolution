@@ -131,6 +131,11 @@ public class AdvAgriItems {
   @GenTypes
   public static Item SOLAR_BERRY;
 
+
+
+  public static void init(){}
+
+
   static {
     FERTILIZER =
       registry(

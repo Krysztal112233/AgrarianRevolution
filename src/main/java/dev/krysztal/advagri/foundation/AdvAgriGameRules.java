@@ -13,6 +13,8 @@ public class AdvAgriGameRules {
 
   public static final GameRules.Key<GameRules.IntRule> LENGTH_OF_YEAR;
 
+  public static void init(){}
+
   static {
     ALLOW_SEASONS_CHANGE =
       GameRuleRegistry.register(

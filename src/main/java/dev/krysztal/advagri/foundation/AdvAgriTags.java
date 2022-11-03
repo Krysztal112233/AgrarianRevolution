@@ -7,11 +7,17 @@ import net.minecraft.util.registry.Registry;
 
 public class AdvAgriTags {
 
+  public static void init() {
+    BlockTags.init();
+  }
+
   public static class BlockTags {
 
     public static final TagKey<Block> FELLABLE;
     public static final TagKey<Block> HIDDEN_BAMBOO;
     public static final TagKey<Block> SULPHUR_ORE;
+
+    public static void init(){}
 
     static {
       FELLABLE = registry("fellable");

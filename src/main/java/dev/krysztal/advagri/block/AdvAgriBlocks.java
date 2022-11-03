@@ -87,6 +87,10 @@ public class AdvAgriBlocks {
   @GenTypes(types = { GenType.MineAxe, GenType.BlockModel })
   public static final Block GINKGO_LEAVES;
 
+
+  public static void init(){}
+
+
   static {
     ACIDIFIED_SOIL = registry(defaultBlock(Blocks.DIRT), "acidified_soil");
     HARDENED_SOIL = registry(defaultBlock(Blocks.DIRT), "hardened_soil");

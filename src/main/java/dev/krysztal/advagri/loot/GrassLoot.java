@@ -9,7 +9,8 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.util.registry.Registry;
 
-public class GrassLootTable {
+public class GrassLoot {
+  public static void init(){}
 
   static final LootPool BAMBOO_DROP_POOL;
 
