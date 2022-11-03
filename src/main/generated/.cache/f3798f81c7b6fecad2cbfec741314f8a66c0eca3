@@ -1,4 +1,4 @@
-// 1.19.2	2022-11-01T23:06:25.9630261	Models
+// 1.19.2	2022-11-03T19:40:50.0984851	Models
 195dedc4ecfe691425351f1e88bf580bf6164e47 assets\adv_agri\blockstates\sulphur_ore.json
 8c77ae5e5830ce7051e88c09a780f2961c0d4f9b assets\adv_agri\models\item\celery_seed_bag.json
 2b8dc665d220b34d95dfb719fb073c6f3271a4f8 assets\adv_agri\models\block\hardened_soil.json
@@ -12,7 +12,6 @@ db9758bbaf5ed7b3eaffb7e66ed635316da4f6c1 assets\adv_agri\models\item\bamboo_silk
 cd8ec1c61b272c881482c617c303728b6e1e7cf1 assets\adv_agri\models\item\bamboo_drill_rod.json
 5e9a6b98e2b4c67bf00cbba5ce4ca824e0f84e96 assets\adv_agri\blockstates\stripped_ginkgo_log.json
 5d925afe9f09ba2db76e737ea43adb9cc815951c assets\adv_agri\models\item\rice.json
-5be599e5cf6c8f5027642970bfd0fe491444e89d assets\adv_agri\models\item\bamboo_shoot.json
 158a3e57ed7ef0c44c2fa9c4cdc0a693cea4e7e0 assets\adv_agri\models\block\phos_ore.json
 d2b25e062dacedc386c05f544dae5f6afd2a2dec assets\adv_agri\models\item\lettuce_seed_bag.json
 2b644d0605b62f8d0781d132b8f1ced8d54eacfa assets\adv_agri\models\item\hardened_soil.json
