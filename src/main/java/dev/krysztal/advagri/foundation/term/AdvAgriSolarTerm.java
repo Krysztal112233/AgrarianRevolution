@@ -1,6 +1,9 @@
 package dev.krysztal.advagri.foundation.term;
 
+import dev.krysztal.advagri.foundation.persistents.SolarTermPersistentState;
 import lombok.Getter;
+import lombok.Setter;
+import org.jetbrains.annotations.Nullable;
 
 public class AdvAgriSolarTerm {
 
