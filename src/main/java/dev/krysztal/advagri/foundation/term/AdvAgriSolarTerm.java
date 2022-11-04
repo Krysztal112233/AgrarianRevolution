@@ -7,11 +7,14 @@ import org.jetbrains.annotations.Nullable;
 
 public class AdvAgriSolarTerm {
 
+  @Nullable
   @Getter
-  private AdvAgriSeason currentSeason = AdvAgriSeason.SPRING;
+  @Setter
+  private SolarTermPersistentState persistentState = null;
 
   @Getter
-  private Integer currentYear = 0;
+  @Setter
+  private boolean enable = false;
 
   //==================Single Instance======================//
   private AdvAgriSolarTerm() {}
