@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.event.EventFactory;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.world.ServerWorld;
 
+@SuppressWarnings("unused")
 public class SolarTermChangeEvent {
 
   public static Event<SeasonChange> BEFORE = EventFactory.createArrayBacked(
