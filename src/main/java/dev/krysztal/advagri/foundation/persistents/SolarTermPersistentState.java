@@ -7,6 +7,7 @@ import lombok.Setter;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.PersistentState;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.NotNull;
 
 public class SolarTermPersistentState extends PersistentState {
 
@@ -26,12 +27,12 @@ public class SolarTermPersistentState extends PersistentState {
   }
 
   @Override
-  public NbtCompound writeNbt(NbtCompound nbt) {
+  public NbtCompound writeNbt(@NotNull NbtCompound nbt) {
     nbt.putInt(NBT_KEY, season);
     return nbt;
   }
 
-  public static AdvAgriSolarTerm getSeason(NbtCompound nbtCompound) {
+  public static AdvAgriSolarTerm getSeason(@NotNull NbtCompound nbtCompound) {
     var currentSeason = nbtCompound.getInt(NBT_KEY);
     return currentSeason > 0 || currentSeason < AdvAgriSolarTerm.values().length
       ? AdvAgriSolarTerm.values()[currentSeason]
@@ -42,7 +43,7 @@ public class SolarTermPersistentState extends PersistentState {
     return new SolarTermPersistentState();
   }
 
-  public static SolarTermPersistentState get(World world) {
+  public static SolarTermPersistentState get(@NotNull World world) {
     return Objects
       .requireNonNull(world.getServer())
       .getOverworld()
@@ -54,7 +55,7 @@ public class SolarTermPersistentState extends PersistentState {
       );
   }
 
-  public static void set(World world, SolarTermPersistentState state) {
+  public static void set(@NotNull World world, SolarTermPersistentState state) {
     Objects
       .requireNonNull(world.getServer())
       .getOverworld()
