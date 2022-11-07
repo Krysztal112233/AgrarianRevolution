@@ -1,6 +1,5 @@
 package dev.krysztal.advagri.block.impls;
 
-import dev.krysztal.advagri.foundation.AdvAgriConstants;
 import dev.krysztal.advagri.foundation.AdvAgriStates;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -39,8 +38,8 @@ public class BambooBundleBlock extends Block {
       var dryness = state.get(AdvAgriStates.BLOCKSTATE_DRYNESS);
       dryness += 1;
 
-      if (dryness > AdvAgriConstants.MAX_DRYNESS) dryness =
-        AdvAgriConstants.MAX_DRYNESS;
+      if (dryness > AdvAgriStates.MAX_DRYNESS) dryness =
+        AdvAgriStates.MAX_DRYNESS;
 
       world.setBlockState(
         pos,
