@@ -17,6 +17,14 @@ public class SolarTermPersistentState extends PersistentState {
   @Setter
   private int season = 0;
 
+  public void incSeason() {
+    this.season = (this.season++) % 4;
+  }
+
+  public void decSeason() {
+    this.season = (this.season--) % 4;
+  }
+
   @Override
   public NbtCompound writeNbt(NbtCompound nbt) {
     nbt.putInt(NBT_KEY, season);
