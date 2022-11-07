@@ -2,6 +2,8 @@ package dev.krysztal.advagri.foundation.persistents;
 
 import dev.krysztal.advagri.foundation.term.AdvAgriSeason;
 import java.util.Objects;
+import lombok.Getter;
+import lombok.Setter;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.PersistentState;
 import net.minecraft.world.World;
@@ -11,6 +13,8 @@ public class SolarTermPersistentState extends PersistentState {
   private static final String NBT_KEY = "adv_agri_nbt_current_season";
   public static final String ID = "solar_term_persistent";
 
+  @Getter
+  @Setter
   private int season = 0;
 
   @Override
