@@ -1,6 +1,6 @@
-package dev.krysztal.advagri.foundation.term;
+package dev.krysztal.advagri.foundation;
 
-public enum AdvAgriSeason {
+public enum AdvAgriSolarTerm {
   //=========Spring========//
   SPRING,
   WAKING_OF_INSECTS,

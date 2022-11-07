@@ -1,6 +1,6 @@
 package dev.krysztal.advagri.api.event;
 
-import dev.krysztal.advagri.foundation.term.AdvAgriSeason;
+import dev.krysztal.advagri.foundation.AdvAgriSolarTerm;
 import java.util.Arrays;
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;
@@ -33,7 +33,7 @@ public class SolarTermChangeEvent {
     public void interact(
       MinecraftServer minecraftServer,
       ServerWorld serverWorld,
-      AdvAgriSeason season
+      AdvAgriSolarTerm season
     );
   }
 }
