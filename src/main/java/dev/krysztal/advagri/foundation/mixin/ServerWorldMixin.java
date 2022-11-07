@@ -12,13 +12,15 @@ public class ServerWorldMixin {
 
   @Inject(method = "setTimeOfDay", at = @At("HEAD"))
   public void beforeDayChange(long timeOfDay, CallbackInfo ci) {
-    var castThis = (ServerWorld) ((Object) this);
-    DayChangeEvent.BEFORE.invoker().interact(castThis.getServer(), castThis);
+    if (((ServerWorld) ((Object) this)).getTimeOfDay() != 0) return;
+
+    DayChangeEvent.BEFORE.invoker().interact(((ServerWorld) ((Object) this)).getServer(), (ServerWorld) ((Object) this));
   }
 
   @Inject(method = "setTimeOfDay", at = @At("TAIL"))
   public void afterDayChange(long timeOfDay, CallbackInfo ci) {
-    var castThis = (ServerWorld) ((Object) this);
-    DayChangeEvent.AFTER.invoker().interact(castThis.getServer(), castThis);
+    if (((ServerWorld) ((Object) this)).getTimeOfDay() != 0) return;
+
+    DayChangeEvent.AFTER.invoker().interact(((ServerWorld) ((Object) this)).getServer(), (ServerWorld) ((Object) this));
   }
 }
