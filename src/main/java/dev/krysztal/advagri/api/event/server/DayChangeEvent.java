@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.api.event;
+package dev.krysztal.advagri.api.event.server;
 
 import java.util.Arrays;
 import net.fabricmc.fabric.api.event.Event;
