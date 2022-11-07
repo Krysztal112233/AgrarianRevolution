@@ -13,27 +13,26 @@ public class SolarTermChangeEvent {
   public static Event<SeasonChange> BEFORE = EventFactory.createArrayBacked(
     SeasonChange.class,
     listeners ->
-      (minecraftServer, serverWorld, season) ->
+      (minecraftServer, serverWorld) ->
         Arrays
           .stream(listeners)
-          .forEach($ -> $.interact(minecraftServer, serverWorld, season))
+          .forEach($ -> $.interact(minecraftServer, serverWorld))
   );
 
   public static Event<SeasonChange> AFTER = EventFactory.createArrayBacked(
     SeasonChange.class,
     listeners ->
-      (minecraftServer, serverWorld, season) ->
+      (minecraftServer, serverWorld) ->
         Arrays
           .stream(listeners)
-          .forEach($ -> $.interact(minecraftServer, serverWorld, season))
+          .forEach($ -> $.interact(minecraftServer, serverWorld))
   );
 
   @FunctionalInterface
   public interface SeasonChange {
     public void interact(
       MinecraftServer minecraftServer,
-      ServerWorld serverWorld,
-      AdvAgriSolarTerm season
+      ServerWorld serverWorld
     );
   }
 }
