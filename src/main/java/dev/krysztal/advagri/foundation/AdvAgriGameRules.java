@@ -13,6 +13,8 @@ public class AdvAgriGameRules {
 
   public static final GameRules.Key<GameRules.IntRule> LENGTH_OF_YEAR;
 
+  private static final int SOLAR_TERM_COUNT = AdvAgriSolarTerm.values().length;
+
   public static void init() {}
 
   static {
@@ -28,27 +30,24 @@ public class AdvAgriGameRules {
         "lengthOfYear",
         GameRules.Category.UPDATES,
         GameRuleFactory.createIntRule(
-          12,
+          SOLAR_TERM_COUNT,
           (
             (minecraftServer, intRule) -> {
               var ruleValue = intRule.get();
               var fixedValue = 0;
 
-              if (ruleValue <= 1) {
+              if (ruleValue <= SOLAR_TERM_COUNT) {
                 minecraftServer.sendMessage(
-                  Text.translatable(
-                    "adv_agri.game_rule.lengthOfYear.error3",
-                    ruleValue
-                  )
+                  Text.translatable("adv_agri.game_rule.lengthOfYear.error3")
                 );
 
-                intRule.set(12, minecraftServer);
+                intRule.set(SOLAR_TERM_COUNT, minecraftServer);
 
                 return;
               }
 
-              if (ruleValue % 4 != 0) {
-                for (int i = ruleValue;; i++) if (i % 4 == 0) {
+              if (ruleValue % SOLAR_TERM_COUNT != 0) {
+                for (int i = ruleValue;; i++) if (i % SOLAR_TERM_COUNT == 0) {
                   fixedValue = i;
                   break;
                 }
