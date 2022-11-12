@@ -10,7 +10,7 @@ public class AdvAgriEvents {
     //============================Server world unload event=================//
     //    ServerWorldEvents.UNLOAD.register(WorldUnloadEvent.disableAdvAgriSolarTerm);
     //============================Day change before event===================//
-    DayChangeEvent.BEFORE.register(DayChangeEvents.afterDayChange);
+    DayChangeEvent.BEFORE.register(DayChangeEvents.changeSolarTerm);
     //============================Day change after event====================//
 
   }
