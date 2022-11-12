@@ -1,6 +1,7 @@
 package dev.krysztal.advagri.item;
 
 import dev.krysztal.advagri.foundation.AdvAgriConstants;
+import dev.krysztal.advagri.foundation.AdvAgriFoodComponents;
 import dev.krysztal.advagri.foundation.AdvAgriItemGroups;
 import dev.krysztal.advagri.foundation.util.annotations.GenTypes;
 import dev.krysztal.advagri.item.impls.BambooChopper;
@@ -9,6 +10,7 @@ import dev.krysztal.advagri.item.impls.Fertilizer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -71,11 +73,11 @@ public class AdvAgriItems {
   @GenTypes
   public static BambooChopper BAMBOO_CHOPPER;
 
-  // Tools
+  //===================== Tools ===================//
   @GenTypes
   public static BambooDrillRod BAMBOO_DRILL_ROD;
 
-  // Plant "Seed"
+  //================== "Seed" ====================//
   @GenTypes
   public static Item SEED_BAG_RICE;
 
@@ -97,7 +99,7 @@ public class AdvAgriItems {
   @GenTypes
   public static Item SWEET_POTATO_VINE;
 
-  // Crops
+  //========= Agricultural Products =============//
   @GenTypes
   public static Item RICE_UNHUSKED;
 
@@ -131,6 +133,13 @@ public class AdvAgriItems {
   @GenTypes
   public static Item SOLAR_BERRY;
 
+  //================ Food =====================//
+  @GenTypes
+  public static Item ASPARAGUS;
+
+  @GenTypes
+  public static Item PEELED_BAMBOO_SAPLING;
+
   public static void init() {}
 
   static {
@@ -159,7 +168,9 @@ public class AdvAgriItems {
     PHOS = registry(defaultItem(), "phos");
     VERMICULITE = registry(defaultItem(), "vermiculite");
     SULFUR = registry(defaultItem(), "sulfur");
+  }
 
+  static {
     SEED_BAG_RICE = registry(defaultItem(), "rice_seed_bag");
     SEED_BAG_CHILI = registry(defaultItem(), "chili_seed_bag");
     SEED_BAG_CELERY = registry(defaultItem(), "celery_seed_bag");
@@ -198,6 +209,28 @@ public class AdvAgriItems {
             .group(AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
         ),
         "bamboo_drill_rod"
+      );
+  }
+
+  static {
+    ASPARAGUS =
+      registry(
+        new Item(
+          new FabricItemSettings()
+            .group(ItemGroup.FOOD)
+            .food(AdvAgriFoodComponents.ASPARAGUS)
+        ),
+        "asparagus"
+      );
+
+    PEELED_BAMBOO_SAPLING =
+      registry(
+        new Item(
+          new FabricItemSettings()
+            .group(ItemGroup.FOOD)
+            .food(AdvAgriFoodComponents.PEELED_BAMBOO_SAPLING)
+        ),
+        "peeled_bamboo_shoot"
       );
   }
 
