@@ -151,45 +151,45 @@ public class AdvAgriItems {
         ),
         "fertilizer"
       );
-    POTASSIUM_SALT_POWDER = registry(defaultItem(), "potassium_salt_powder");
-    PLANT_ASH = registry(defaultItem(), "plant_ash");
-    BOTTLE_SMALL = registry(defaultItem(), "bottle_small");
-    BOTTLE_MEDIUM = registry(defaultItem(), "bottle_medium");
-    BOTTLE_LARGE = registry(defaultItem(), "bottle_large");
-    SOLARIUM_BOTTLE_SMALL = registry(defaultItem(), "solarium_bottle_small");
-    SOLARIUM_BOTTLE_MEDIUM = registry(defaultItem(), "solarium_bottle_medium");
-    SOLARIUM_BOTTLE_LARGE = registry(defaultItem(), "solarium_bottle_large");
-    BAMBOO_LEAVES = registry(defaultItem(), "bamboo_leaves");
-    BAMBOO_SILK = registry(defaultItem(), "bamboo_silk");
-    BAMBOO_SILK_BOARD = registry(defaultItem(), "bamboo_silk_board");
-    BAMBOO_CHARCOAL = registry(defaultItem(), "bamboo_charcoal");
-    BAMBOO_CHARCOAL_BALL = registry(defaultItem(), "bamboo_charcoal_ball");
-    BAMBOO_SAPLING = registry(defaultItem(), "bamboo_sapling");
-    PHOS = registry(defaultItem(), "phos");
-    VERMICULITE = registry(defaultItem(), "vermiculite");
-    SULFUR = registry(defaultItem(), "sulfur");
+    POTASSIUM_SALT_POWDER = registry("potassium_salt_powder");
+    PLANT_ASH = registry("plant_ash");
+    BOTTLE_SMALL = registry("bottle_small");
+    BOTTLE_MEDIUM = registry("bottle_medium");
+    BOTTLE_LARGE = registry("bottle_large");
+    SOLARIUM_BOTTLE_SMALL = registry("solarium_bottle_small");
+    SOLARIUM_BOTTLE_MEDIUM = registry("solarium_bottle_medium");
+    SOLARIUM_BOTTLE_LARGE = registry("solarium_bottle_large");
+    BAMBOO_LEAVES = registry("bamboo_leaves");
+    BAMBOO_SILK = registry("bamboo_silk");
+    BAMBOO_SILK_BOARD = registry("bamboo_silk_board");
+    BAMBOO_CHARCOAL = registry("bamboo_charcoal");
+    BAMBOO_CHARCOAL_BALL = registry("bamboo_charcoal_ball");
+    BAMBOO_SAPLING = registry("bamboo_sapling");
+    PHOS = registry("phos");
+    VERMICULITE = registry("vermiculite");
+    SULFUR = registry("sulfur");
   }
 
   static {
-    SEED_BAG_RICE = registry(defaultItem(), "rice_seed_bag");
-    SEED_BAG_CHILI = registry(defaultItem(), "chili_seed_bag");
-    SEED_BAG_CELERY = registry(defaultItem(), "celery_seed_bag");
-    SEED_BAG_LETTUCE = registry(defaultItem(), "lettuce_seed_bag");
-    SEED_BAG_STRAWBERRY = registry(defaultItem(), "strawberry_seed_bag");
-    SEED_BAG_CORN = registry(defaultItem(), "corn_seed_bag");
-    SWEET_POTATO_VINE = registry(defaultItem(), "sweet_potato_vine");
-    RICE_UNHUSKED = registry(defaultItem(), "rice_unhusked");
-    RICE = registry(defaultItem(), "rice");
-    PLANT_STRAW = registry(defaultItem(), "plant_straw");
-    SWEET_POTATO = registry(defaultItem(), "sweet_potato");
-    CHILI = registry(defaultItem(), "chili");
-    CELERY = registry(defaultItem(), "celery");
-    LETTUCE = registry(defaultItem(), "lettuce");
-    STRAWBERRY = registry(defaultItem(), "strawberry");
-    GARLIC = registry(defaultItem(), "garlic");
-    WATER_CHESTNUT = registry(defaultItem(), "water_chestnut");
+    SEED_BAG_RICE = registry("rice_seed_bag");
+    SEED_BAG_CHILI = registry("chili_seed_bag");
+    SEED_BAG_CELERY = registry("celery_seed_bag");
+    SEED_BAG_LETTUCE = registry("lettuce_seed_bag");
+    SEED_BAG_STRAWBERRY = registry("strawberry_seed_bag");
+    SEED_BAG_CORN = registry("corn_seed_bag");
+    SWEET_POTATO_VINE = registry("sweet_potato_vine");
+    RICE_UNHUSKED = registry("rice_unhusked");
+    RICE = registry("rice");
+    PLANT_STRAW = registry("plant_straw");
+    SWEET_POTATO = registry("sweet_potato");
+    CHILI = registry("chili");
+    CELERY = registry("celery");
+    LETTUCE = registry("lettuce");
+    STRAWBERRY = registry("strawberry");
+    GARLIC = registry("garlic");
+    WATER_CHESTNUT = registry("water_chestnut");
 
-    SOLAR_BERRY = registry(defaultItem(), "solar_berry");
+    SOLAR_BERRY = registry("solar_berry");
 
     BAMBOO_CHOPPER =
       registry(
@@ -247,6 +247,16 @@ public class AdvAgriItems {
       item
     );
     return item;
+  }
+
+  private static Item registry(String path) {
+    var di = defaultItem();
+    Registry.register(
+      Registry.ITEM,
+      new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path),
+      di
+    );
+    return di;
   }
 
   private static Item defaultItem() {
