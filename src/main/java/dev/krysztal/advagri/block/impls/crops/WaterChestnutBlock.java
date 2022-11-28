@@ -11,7 +11,6 @@ public class WaterChestnutBlock extends AdvAgriCropBlock {
 
   public static final IntProperty AGE = Properties.AGE_5;
 
-  @Getter
   private static final VoxelShape[] voxelShapes = new VoxelShape[] {
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D), // Age 0, 播种
