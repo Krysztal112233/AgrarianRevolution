@@ -3,6 +3,7 @@ package dev.krysztal.advagri.block;
 import dev.krysztal.advagri.block.impls.BambooBundleBlock;
 import dev.krysztal.advagri.block.impls.NetherSulphurOreBlock;
 import dev.krysztal.advagri.block.impls.SulphurOreBlock;
+import dev.krysztal.advagri.block.impls.crops.*;
 import dev.krysztal.advagri.foundation.AdvAgriConstants;
 import dev.krysztal.advagri.foundation.AdvAgriItemGroups;
 import dev.krysztal.advagri.foundation.util.annotations.GenType;
@@ -87,6 +88,15 @@ public class AdvAgriBlocks {
   @GenTypes(types = { GenType.MineAxe, GenType.BlockModel })
   public static final Block GINKGO_LEAVES;
 
+  //================= Plants Blocks ===============//
+  public static final CornBlock CRON_BLOCK;
+  public static final GarlicBlock GARLIC_BLOCK;
+  public static final LettuceBlock LETTUCE_BLOCK;
+  public static final SolarBerryBlock SOLAR_BERRY_BLOCK;
+  public static final StrawBerryBlock STRAW_BERRY_BLOCK;
+  public static final SweetPotatoBlock SWEET_POTATO_BLOCK;
+  public static final WaterChestnutBlock WATER_CHESTNUT_BLOCK;
+
   public static void init() {}
 
   static {
@@ -152,6 +162,49 @@ public class AdvAgriBlocks {
         new Block(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).luminance(4)),
         "ginkgo_leaves"
       );
+
+    //================= Plants Blocks ===============//
+    CRON_BLOCK =
+      registryPlant(
+        new CornBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        "cron_block"
+      );
+
+    GARLIC_BLOCK =
+      registryPlant(
+        new GarlicBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        "garlic_block"
+      );
+
+    LETTUCE_BLOCK =
+      registryPlant(
+        new LettuceBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        "lettuce_block"
+      );
+
+    SOLAR_BERRY_BLOCK =
+      registryPlant(
+        new SolarBerryBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        "solar_berry_block"
+      );
+
+    STRAW_BERRY_BLOCK =
+      registryPlant(
+        new StrawBerryBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        "strawberry_block"
+      );
+
+    SWEET_POTATO_BLOCK =
+      registryPlant(
+        new SweetPotatoBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        "sweet_potato_block"
+      );
+
+    WATER_CHESTNUT_BLOCK =
+      registryPlant(
+        new WaterChestnutBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        "water_chestnut_block"
+      );
   }
 
   private static <T extends Block> T registry(T block, String path) {
@@ -168,6 +221,20 @@ public class AdvAgriBlocks {
         new FabricItemSettings()
           .group(AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
       )
+    );
+    return block;
+  }
+
+  private static <T extends Block> T registryPlant(T block, String path) {
+    Registry.register(
+      Registry.BLOCK,
+      new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path),
+      block
+    );
+    Registry.register(
+      Registry.ITEM,
+      new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path),
+      new BlockItem(block, new FabricItemSettings())
     );
     return block;
   }
