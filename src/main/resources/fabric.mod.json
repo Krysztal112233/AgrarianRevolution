@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "Advanced Agriculture",
   "description": "Tech,Nature,the Agriculture.",
-  "authors": ["Krysztal"],
+  "authors": ["Krysztal Huang <suibing112233@outlook.com>"],
   "contact": {
     "homepage": "https://github.com/KrysztalTechLab/AdvancedAgriculture",
     "sources": "https://github.com/KrysztalTechLab/AdvancedAgriculture"
