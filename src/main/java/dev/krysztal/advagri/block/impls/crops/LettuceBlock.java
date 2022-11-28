@@ -8,14 +8,13 @@ import net.minecraft.util.shape.VoxelShape;
 
 public class LettuceBlock extends AdvAgriCropBlock {
 
-  private static final IntProperty AGE = Properties.AGE_4;
+  private static final IntProperty AGE = Properties.AGE_3;
 
   private static final VoxelShape[] voxelShapes = new VoxelShape[] {
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D), // Age 0, 播种
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D), // Age 1, 出苗
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D), // Age 2, 拔高至半格，成熟
-    Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), // Age 4, 开花
-    Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), // Age 5, 接种
+    Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), // Age 3, 接种
   };
 
   public LettuceBlock(Settings settings) {

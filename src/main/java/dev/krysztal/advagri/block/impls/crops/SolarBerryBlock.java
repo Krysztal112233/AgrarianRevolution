@@ -14,7 +14,7 @@ import net.minecraft.util.shape.VoxelShape;
 public class SolarBerryBlock extends SweetBerryBushBlock {
 
   @Getter
-  private static final IntProperty AGE = Properties.AGE_4;
+  private static final IntProperty AGE = Properties.AGE_3;
 
   @Getter
   private static final VoxelShape[] AGE_TO_SHAPE = new VoxelShape[] {
@@ -22,7 +22,6 @@ public class SolarBerryBlock extends SweetBerryBushBlock {
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D), // Age 1, 出苗
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D), // Age 2, 拔高至半格，成熟
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), // Age 4, 开花
-    Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), // Age 5, 接种
   };
 
   public SolarBerryBlock(Settings settings) {
