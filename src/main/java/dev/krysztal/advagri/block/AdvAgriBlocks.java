@@ -24,35 +24,35 @@ public class AdvAgriBlocks {
       GenType.BlockModel, GenType.LootTableSimpleBlockType, GenType.MineShovel,
     }
   )
-  public static final Block ACIDIFIED_SOIL;
+  public static Block ACIDIFIED_SOIL;
 
   @GenTypes(
     types = {
       GenType.BlockModel, GenType.LootTableSimpleBlockType, GenType.MineShovel,
     }
   )
-  public static final Block HARDENED_SOIL;
+  public static Block HARDENED_SOIL;
 
   @GenTypes(
     types = { GenType.BlockModel, GenType.MinePickaxe, GenType.MineLevel1 }
   )
-  public static final Block PHOS_ORE;
+  public static Block PHOS_ORE;
 
   @GenTypes(
     types = { GenType.BlockModel, GenType.MinePickaxe, GenType.MineLevel1 }
   )
-  public static final Block SULPHUR_ORE;
+  public static Block SULPHUR_ORE;
 
   @GenTypes(
     types = { GenType.BlockModel, GenType.MinePickaxe, GenType.MineLevel1 }
   )
-  public static final Block NETHER_SULPHUR_ORE;
+  public static Block NETHER_SULPHUR_ORE;
 
   @GenTypes(types = { GenType.BlockModel, GenType.MineShovel })
-  public static final Block VERMICULITE_ORE;
+  public static Block VERMICULITE_ORE;
 
   @GenTypes(types = { GenType.MineAxe })
-  public static final BambooBundleBlock BAMBOO_BUNDLE;
+  public static BambooBundleBlock BAMBOO_BUNDLE;
 
   //====================== Wood ====================//
   @GenTypes(
@@ -62,7 +62,7 @@ public class AdvAgriBlocks {
       GenType.SimpleBlockState,
     }
   )
-  public static final Block GINKGO_LOG;
+  public static Block GINKGO_LOG;
 
   //====================== Stripped wood ==========//
   @GenTypes(
@@ -72,7 +72,7 @@ public class AdvAgriBlocks {
       GenType.SimpleBlockState,
     }
   )
-  public static final Block STRIPPED_GINKGO_LOG;
+  public static Block STRIPPED_GINKGO_LOG;
 
   //====================== Planks =================//
   @GenTypes(
@@ -82,24 +82,22 @@ public class AdvAgriBlocks {
       GenType.SimpleBlockState,
     }
   )
-  public static final Block GINKGO_PLANKS;
+  public static Block GINKGO_PLANKS;
 
   //====================== Leaves =================//
   @GenTypes(types = { GenType.MineAxe, GenType.BlockModel })
-  public static final Block GINKGO_LEAVES;
+  public static Block GINKGO_LEAVES;
 
   //================= Plants Blocks ===============//
-  public static final CornBlock CRON_BLOCK;
-  public static final GarlicBlock GARLIC_BLOCK;
-  public static final LettuceBlock LETTUCE_BLOCK;
-  public static final SolarBerryBlock SOLAR_BERRY_BLOCK;
-  public static final StrawBerryBlock STRAW_BERRY_BLOCK;
-  public static final SweetPotatoBlock SWEET_POTATO_BLOCK;
-  public static final WaterChestnutBlock WATER_CHESTNUT_BLOCK;
+  public static CornBlock CRON_BLOCK;
+  public static GarlicBlock GARLIC_BLOCK;
+  public static LettuceBlock LETTUCE_BLOCK;
+  public static SolarBerryBlock SOLAR_BERRY_BLOCK;
+  public static StrawBerryBlock STRAW_BERRY_BLOCK;
+  public static SweetPotatoBlock SWEET_POTATO_BLOCK;
+  public static WaterChestnutBlock WATER_CHESTNUT_BLOCK;
 
-  public static void init() {}
-
-  static {
+  public static void init() {
     ACIDIFIED_SOIL = registry(defaultBlock(Blocks.DIRT), "acidified_soil");
     HARDENED_SOIL = registry(defaultBlock(Blocks.DIRT), "hardened_soil");
     PHOS_ORE =
@@ -178,31 +176,31 @@ public class AdvAgriBlocks {
 
     LETTUCE_BLOCK =
       registryPlant(
-        new LettuceBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        new LettuceBlock(AdvAgriCropBlock.CORN_SETTINGS),
         "lettuce_block"
       );
 
     SOLAR_BERRY_BLOCK =
       registryPlant(
-        new SolarBerryBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        new SolarBerryBlock(AdvAgriCropBlock.CORN_SETTINGS),
         "solar_berry_block"
       );
 
     STRAW_BERRY_BLOCK =
       registryPlant(
-        new StrawBerryBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        new StrawBerryBlock(AdvAgriCropBlock.CORN_SETTINGS),
         "strawberry_block"
       );
 
     SWEET_POTATO_BLOCK =
       registryPlant(
-        new SweetPotatoBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        new SweetPotatoBlock(AdvAgriCropBlock.CORN_SETTINGS),
         "sweet_potato_block"
       );
 
     WATER_CHESTNUT_BLOCK =
       registryPlant(
-        new WaterChestnutBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        new WaterChestnutBlock(AdvAgriCropBlock.CORN_SETTINGS),
         "water_chestnut_block"
       );
   }

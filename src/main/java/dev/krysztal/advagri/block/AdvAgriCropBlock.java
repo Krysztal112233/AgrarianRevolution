@@ -1,33 +1,29 @@
 package dev.krysztal.advagri.block;
 
-import lombok.Getter;
-import lombok.Setter;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.CropBlock;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.IntProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
 public abstract class AdvAgriCropBlock extends CropBlock {
 
-  @Setter
-  @Getter
-  private IntProperty age;
+  public static final AbstractBlock.Settings CORN_SETTINGS = AbstractBlock.Settings
+    .of(Material.PLANT)
+    .noCollision()
+    .ticksRandomly()
+    .breakInstantly()
+    .sounds(BlockSoundGroup.CROP);
 
-  @Setter
-  @Getter
-  private VoxelShape[] voxelShapes;
+  private static IntProperty AGE = Properties.AGE_7;
 
-  @Override
-  public IntProperty getAgeProperty() {
-    return this.age;
-  }
+  private final VoxelShape[] voxelShapes;
 
   @Override
   public int getMaxAge() {
-    return this.age.field_37656;
+    return AGE.field_37656;
   }
 
   @Override
@@ -37,11 +33,13 @@ public abstract class AdvAgriCropBlock extends CropBlock {
     BlockPos pos,
     ShapeContext context
   ) {
-    return this.voxelShapes[state.get(this.age)];
+    return this.voxelShapes[state.get(AGE)];
   }
 
-  private AdvAgriCropBlock(Settings settings) {
-    super(settings);
+  public AdvAgriCropBlock(VoxelShape[] voxelShapes, IntProperty age) {
+    super(AdvAgriCropBlock.CORN_SETTINGS);
+    AGE = age;
+    this.voxelShapes = voxelShapes;
   }
 
   public AdvAgriCropBlock(
@@ -50,7 +48,7 @@ public abstract class AdvAgriCropBlock extends CropBlock {
     IntProperty age
   ) {
     super(settings);
-    this.age = age;
+    AGE = age;
     this.voxelShapes = voxelShapes;
   }
 }
