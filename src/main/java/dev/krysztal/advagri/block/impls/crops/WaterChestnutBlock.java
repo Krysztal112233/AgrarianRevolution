@@ -1,11 +1,14 @@
 package dev.krysztal.advagri.block.impls.crops;
 
 import dev.krysztal.advagri.block.AdvAgriCropBlock;
-import lombok.Getter;
+import dev.krysztal.advagri.foundation.AdvAgriTags;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.world.BlockView;
 
 public class WaterChestnutBlock extends AdvAgriCropBlock {
 
@@ -22,5 +25,14 @@ public class WaterChestnutBlock extends AdvAgriCropBlock {
 
   public WaterChestnutBlock(Settings settings) {
     super(settings, voxelShapes, AGE);
+  }
+
+  @Override
+  protected boolean canPlantOnTop(
+    BlockState floor,
+    BlockView world,
+    BlockPos pos
+  ) {
+    return floor.isIn(AdvAgriTags.BlockTags.SILT);
   }
 }
