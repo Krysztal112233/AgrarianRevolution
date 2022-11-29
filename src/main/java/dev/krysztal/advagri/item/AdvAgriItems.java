@@ -110,9 +110,6 @@ public class AdvAgriItems {
   public static Item PLANT_STRAW;
 
   @GenTypes
-  public static Item SWEET_POTATO;
-
-  @GenTypes
   public static Item CHILI;
 
   @GenTypes
@@ -130,15 +127,18 @@ public class AdvAgriItems {
   @GenTypes
   public static Item WATER_CHESTNUT;
 
-  @GenTypes
-  public static Item SOLAR_BERRY;
-
   //================ Food =====================//
   @GenTypes
   public static Item ASPARAGUS;
 
   @GenTypes
   public static Item PEELED_BAMBOO_SAPLING;
+
+  @GenTypes
+  public static Item SOLAR_BERRY;
+
+  @GenTypes
+  public static Item SWEET_POTATO;
 
   public static void init() {}
 
@@ -181,15 +181,12 @@ public class AdvAgriItems {
     RICE_UNHUSKED = registry("rice_unhusked");
     RICE = registry("rice");
     PLANT_STRAW = registry("plant_straw");
-    SWEET_POTATO = registry("sweet_potato");
     CHILI = registry("chili");
     CELERY = registry("celery");
     LETTUCE = registry("lettuce");
     STRAWBERRY = registry("strawberry");
     GARLIC = registry("garlic");
     WATER_CHESTNUT = registry("water_chestnut");
-
-    SOLAR_BERRY = registry("solar_berry");
 
     BAMBOO_CHOPPER =
       registry(
@@ -231,6 +228,26 @@ public class AdvAgriItems {
             .food(AdvAgriFoodComponents.PEELED_BAMBOO_SAPLING)
         ),
         "peeled_bamboo_shoot"
+      );
+
+    SWEET_POTATO =
+      registry(
+        new Item(
+          new FabricItemSettings()
+            .group(ItemGroup.FOOD)
+            .food(AdvAgriFoodComponents.SWEET_POTATO)
+        ),
+        "sweet_potato"
+      );
+
+    SOLAR_BERRY =
+      registry(
+        new Item(
+          new FabricItemSettings()
+            .group(ItemGroup.FOOD)
+            .food(AdvAgriFoodComponents.SOLAR_BERRY)
+        ),
+        "solar_berry"
       );
   }
 
