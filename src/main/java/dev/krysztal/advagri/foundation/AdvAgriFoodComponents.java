@@ -39,9 +39,9 @@ public class AdvAgriFoodComponents {
         .hunger(2)
         .saturationModifier(0.1F)
         .alwaysEdible()
-        .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20), 1)
+        .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 60), 1)
         .statusEffect(
-          new StatusEffectInstance(StatusEffects.NIGHT_VISION, 60),
+          new StatusEffectInstance(StatusEffects.NIGHT_VISION, 120),
           1
         )
         .build();
