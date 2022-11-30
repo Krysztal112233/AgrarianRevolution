@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "adv_agri:block/strawberry_block_0"
+    },
+    "age=1": {
+      "model": "adv_agri:block/strawberry_block_1"
+    },
+    "age=2": {
+      "model": "adv_agri:block/strawberry_block_2"
+    },
+    "age=3": {
+      "model": "adv_agri:block/strawberry_block_3"
+    },
+    "age=4": {
+      "model": "adv_agri:block/strawberry_block_4"
+    },
+    "age=5": {
+      "model": "adv_agri:block/strawberry_block_5"
+    },
+    "age=6": {
+      "model": "adv_agri:block/strawberry_block_6"
+    },
+    "age=7": {
+      "model": "adv_agri:block/strawberry_block_7"
+    }
+  }
+}
