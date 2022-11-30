@@ -11,7 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 
-public class SolarBerryBlock extends SweetBerryBushBlock {
+public class SolarBerryBushBlock extends SweetBerryBushBlock {
 
   @Getter
   private static final IntProperty AGE = Properties.AGE_3;
@@ -24,7 +24,7 @@ public class SolarBerryBlock extends SweetBerryBushBlock {
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), // Age 4, 开花
   };
 
-  public SolarBerryBlock(Settings settings) {
+  public SolarBerryBushBlock(Settings settings) {
     super(settings);
   }
 

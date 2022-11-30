@@ -92,7 +92,7 @@ public class AdvAgriBlocks {
   public static CornBlock CRON_BLOCK;
   public static GarlicBlock GARLIC_BLOCK;
   public static LettuceBlock LETTUCE_BLOCK;
-  public static SolarBerryBlock SOLAR_BERRY_BLOCK;
+  public static SolarBerryBushBlock SOLAR_BERRY_BUSH_BLOCK;
   public static StrawBerryBlock STRAW_BERRY_BLOCK;
   public static SweetPotatoBlock SWEET_POTATO_BLOCK;
   public static WaterChestnutBlock WATER_CHESTNUT_BLOCK;
@@ -180,10 +180,10 @@ public class AdvAgriBlocks {
         "lettuce_block"
       );
 
-    SOLAR_BERRY_BLOCK =
+    SOLAR_BERRY_BUSH_BLOCK =
       registryPlant(
-        new SolarBerryBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
-        "solar_berry_block"
+        new SolarBerryBushBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
+        "solar_berry_bush_block"
       );
 
     STRAW_BERRY_BLOCK =
