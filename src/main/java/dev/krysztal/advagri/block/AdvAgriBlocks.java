@@ -176,31 +176,31 @@ public class AdvAgriBlocks {
 
     LETTUCE_BLOCK =
       registryPlant(
-        new LettuceBlock(AdvAgriCropBlock.CORN_SETTINGS),
+        new LettuceBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
         "lettuce_block"
       );
 
     SOLAR_BERRY_BLOCK =
       registryPlant(
-        new SolarBerryBlock(AdvAgriCropBlock.CORN_SETTINGS),
+        new SolarBerryBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
         "solar_berry_block"
       );
 
     STRAW_BERRY_BLOCK =
       registryPlant(
-        new StrawBerryBlock(AdvAgriCropBlock.CORN_SETTINGS),
+        new StrawBerryBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
         "strawberry_block"
       );
 
     SWEET_POTATO_BLOCK =
       registryPlant(
-        new SweetPotatoBlock(AdvAgriCropBlock.CORN_SETTINGS),
+        new SweetPotatoBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
         "sweet_potato_block"
       );
 
     WATER_CHESTNUT_BLOCK =
       registryPlant(
-        new WaterChestnutBlock(AdvAgriCropBlock.CORN_SETTINGS),
+        new WaterChestnutBlock(FabricBlockSettings.copyOf(Blocks.CARROTS)),
         "water_chestnut_block"
       );
   }
