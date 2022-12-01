@@ -22,7 +22,7 @@ public class ModelsGenerator extends FabricModelProvider {
   public void generateBlockStateModels(
     BlockStateModelGenerator blockStateModelGenerator
   ) {
-    new GeneratorUtils.Collector(GenType.BlockModel)
+    new GeneratorUtils.Collector(GenType.SimpleBlockModel)
       .<Block>collect(AdvAgriBlocks.class)
       .forEach(blockStateModelGenerator::registerSimpleCubeAll);
 
@@ -33,7 +33,7 @@ public class ModelsGenerator extends FabricModelProvider {
 
   @Override
   public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-    new GeneratorUtils.Collector(GenType.ItemModel)
+    new GeneratorUtils.Collector(GenType.SimpleItemModel)
       .<Item>collect(AdvAgriItems.class)
       .forEach(item -> itemModelGenerator.register(item, Models.GENERATED));
   }

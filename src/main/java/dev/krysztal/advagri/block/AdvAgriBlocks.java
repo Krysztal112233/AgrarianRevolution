@@ -21,34 +21,44 @@ public class AdvAgriBlocks {
 
   @GenTypes(
     types = {
-      GenType.BlockModel, GenType.LootTableSimpleBlockType, GenType.MineShovel,
+      GenType.SimpleBlockModel,
+      GenType.LootTableSimpleBlockType,
+      GenType.MineShovel,
     }
   )
   public static Block ACIDIFIED_SOIL;
 
   @GenTypes(
     types = {
-      GenType.BlockModel, GenType.LootTableSimpleBlockType, GenType.MineShovel,
+      GenType.SimpleBlockModel,
+      GenType.LootTableSimpleBlockType,
+      GenType.MineShovel,
     }
   )
   public static Block HARDENED_SOIL;
 
   @GenTypes(
-    types = { GenType.BlockModel, GenType.MinePickaxe, GenType.MineLevel1 }
+    types = {
+      GenType.SimpleBlockModel, GenType.MinePickaxe, GenType.MineLevel1,
+    }
   )
   public static Block PHOS_ORE;
 
   @GenTypes(
-    types = { GenType.BlockModel, GenType.MinePickaxe, GenType.MineLevel1 }
+    types = {
+      GenType.SimpleBlockModel, GenType.MinePickaxe, GenType.MineLevel1,
+    }
   )
   public static Block SULPHUR_ORE;
 
   @GenTypes(
-    types = { GenType.BlockModel, GenType.MinePickaxe, GenType.MineLevel1 }
+    types = {
+      GenType.SimpleBlockModel, GenType.MinePickaxe, GenType.MineLevel1,
+    }
   )
   public static Block NETHER_SULPHUR_ORE;
 
-  @GenTypes(types = { GenType.BlockModel, GenType.MineShovel })
+  @GenTypes(types = { GenType.SimpleBlockModel, GenType.MineShovel })
   public static Block VERMICULITE_ORE;
 
   @GenTypes(types = { GenType.MineAxe })
@@ -85,7 +95,7 @@ public class AdvAgriBlocks {
   public static Block GINKGO_PLANKS;
 
   //====================== Leaves =================//
-  @GenTypes(types = { GenType.MineAxe, GenType.BlockModel })
+  @GenTypes(types = { GenType.MineAxe, GenType.SimpleBlockModel })
   public static Block GINKGO_LEAVES;
 
   //================= Plants Blocks ===============//

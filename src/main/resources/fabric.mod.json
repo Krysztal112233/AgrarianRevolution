@@ -15,7 +15,7 @@
   "entrypoints": {
     "main": ["dev.krysztal.advagri.entrypoint.General"],
     "client": ["dev.krysztal.advagri.entrypoint.Client"],
-    "fabric-datagen": ["dev.krysztal.advagri.entrypoint.datagen.DataGen"]
+    "fabric-datagen": ["dev.krysztal.advagri.entrypoint.datagen.AdvAgriDataGen"]
   },
   "mixins": ["adv_agri.mixins.json"],
   "depends": {

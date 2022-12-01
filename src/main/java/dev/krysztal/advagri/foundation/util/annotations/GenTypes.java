@@ -9,5 +9,5 @@ import java.lang.annotation.*;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface GenTypes {
-  GenType[] types() default { GenType.ItemModel };
+  GenType[] types() default { GenType.SimpleItemModel };
 }

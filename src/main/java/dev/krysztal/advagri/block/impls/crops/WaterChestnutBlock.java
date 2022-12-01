@@ -4,6 +4,7 @@ import dev.krysztal.advagri.block.AdvAgriCropBlock;
 import dev.krysztal.advagri.foundation.AdvAgriTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
@@ -23,8 +24,25 @@ public class WaterChestnutBlock extends AdvAgriCropBlock {
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 7.0D, 16.0D), // Age 4, 枯死
   };
 
+  @Override
+  public int getMaxAge() {
+    return AGE.field_37656;
+  }
+
+  @Override
+  public IntProperty getAgeProperty() {
+    return AGE;
+  }
+
   public WaterChestnutBlock(Settings settings) {
-    super(settings, voxelShapes, AGE);
+    super(settings);
+  }
+
+  @Override
+  protected void appendProperties(
+    StateManager.Builder<Block, BlockState> builder
+  ) {
+    builder.add(AGE);
   }
 
   @Override

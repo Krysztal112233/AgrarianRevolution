@@ -2,6 +2,8 @@ package dev.krysztal.advagri.block.impls.crops;
 
 import dev.krysztal.advagri.block.AdvAgriCropBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.shape.VoxelShape;
@@ -17,7 +19,24 @@ public class LettuceBlock extends AdvAgriCropBlock {
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), // Age 3, 接种
   };
 
+  @Override
+  public IntProperty getAgeProperty() {
+    return AGE;
+  }
+
+  @Override
+  protected void appendProperties(
+    StateManager.Builder<Block, BlockState> builder
+  ) {
+    builder.add(AGE);
+  }
+
+  @Override
+  public int getMaxAge() {
+    return AGE.field_37656;
+  }
+
   public LettuceBlock(Settings settings) {
-    super(settings, voxelShapes, AGE);
+    super(settings);
   }
 }

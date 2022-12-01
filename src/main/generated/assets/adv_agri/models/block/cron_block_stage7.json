@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "adv_agri:block/cron_block_stage7"
+  }
+}
