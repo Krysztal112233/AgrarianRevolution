@@ -6,10 +6,8 @@ import dev.krysztal.advagri.foundation.AdvAgriGameRules;
 import dev.krysztal.advagri.foundation.AdvAgriTags;
 import dev.krysztal.advagri.item.AdvAgriItems;
 import dev.krysztal.advagri.loot.AdvAgriLoot;
-import lombok.extern.slf4j.Slf4j;
 import net.fabricmc.api.ModInitializer;
 
-@Slf4j
 public class General implements ModInitializer {
 
   @Override

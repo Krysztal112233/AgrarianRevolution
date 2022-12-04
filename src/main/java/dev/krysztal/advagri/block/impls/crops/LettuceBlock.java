@@ -37,10 +37,12 @@ public class LettuceBlock extends AdvAgriCropBlock {
   public int getMaxAge() {
     return AGE.field_37656;
   }
-@Override
-protected ItemConvertible getSeedsItem() {
+
+  @Override
+  protected ItemConvertible getSeedsItem() {
     return AdvAgriItems.GARLIC;
-}
+  }
+
   public LettuceBlock(Settings settings) {
     super(settings);
   }
