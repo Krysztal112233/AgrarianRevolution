@@ -1,6 +1,7 @@
 package dev.krysztal.advagri.block.impls.crops;
 
 import dev.krysztal.advagri.foundation.block.AdvAgriCropBlock;
+import lombok.Getter;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
@@ -14,6 +15,7 @@ public class GarlicBlock extends AdvAgriCropBlock {
 
   private static final IntProperty AGE = IntProperty.of("age", 0, 6);
 
+  @Getter
   private static final VoxelShape[] voxelShapes = new VoxelShape[] {
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D), // Age 0, 播种
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D), // Age 1, 出苗
