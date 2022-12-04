@@ -63,5 +63,5 @@
   "adv_agri.game_rule.lengthOfYear.error3": "The game rule lengthOfYear cannot be set to less than %s, so the value is set to 12.",
   "_": "->------------------------]   Gamerules [------------------------<-",
   "gamerule.lengthOfYear": "Length of one year",
-  "gamerule.allowSeasonsChange":"Allow season and solar term changes."
+  "gamerule.allowSeasonsChange": "Allow season and solar term changes."
 }

@@ -1,5 +1,6 @@
 package dev.krysztal.advagri.block.impls.crops;
 
+import dev.krysztal.advagri.foundation.AdvAgriSolarTerm;
 import dev.krysztal.advagri.foundation.AdvAgriTags;
 import dev.krysztal.advagri.foundation.block.AdvAgriCropBlock;
 import lombok.Getter;
@@ -37,7 +38,7 @@ public class WaterChestnutBlock extends AdvAgriCropBlock {
   }
 
   public WaterChestnutBlock(Settings settings) {
-    super(settings);
+    super(settings, AdvAgriSolarTerm.WAKING_OF_INSECTS);
   }
 
   @Override

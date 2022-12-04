@@ -1,5 +1,6 @@
 package dev.krysztal.advagri.block.impls.crops;
 
+import dev.krysztal.advagri.foundation.AdvAgriSolarTerm;
 import dev.krysztal.advagri.foundation.block.AdvAgriCropBlock;
 import lombok.Getter;
 import net.minecraft.block.Block;
@@ -26,7 +27,7 @@ public class GarlicBlock extends AdvAgriCropBlock {
   };
 
   public GarlicBlock(Settings settings) {
-    super(settings);
+    super(settings, AdvAgriSolarTerm.WHITE_DEW);
   }
 
   @Override

@@ -63,5 +63,5 @@
   "adv_agri.game_rule.lengthOfYear.error3": "游戏规则 lengthOfYear 数值不可以设置为小于 12 ，因此值被设置为 12。",
   "_": "->------------------------]   Gamerules [------------------------<-",
   "gamerule.lengthOfYear": "一年的长度",
-  "gamerule.allowSeasonsChange":"允许四季与节气更迭"
+  "gamerule.allowSeasonsChange": "允许四季与节气更迭"
 }

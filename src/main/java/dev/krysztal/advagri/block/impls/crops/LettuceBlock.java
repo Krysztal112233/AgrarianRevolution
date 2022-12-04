@@ -1,5 +1,6 @@
 package dev.krysztal.advagri.block.impls.crops;
 
+import dev.krysztal.advagri.foundation.AdvAgriSolarTerm;
 import dev.krysztal.advagri.foundation.block.AdvAgriCropBlock;
 import dev.krysztal.advagri.item.AdvAgriItems;
 import lombok.Getter;
@@ -46,6 +47,6 @@ public class LettuceBlock extends AdvAgriCropBlock {
   }
 
   public LettuceBlock(Settings settings) {
-    super(settings);
+    super(settings, AdvAgriSolarTerm.SPRING);
   }
 }

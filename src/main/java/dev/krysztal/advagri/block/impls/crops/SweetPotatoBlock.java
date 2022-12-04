@@ -1,5 +1,6 @@
 package dev.krysztal.advagri.block.impls.crops;
 
+import dev.krysztal.advagri.foundation.AdvAgriSolarTerm;
 import dev.krysztal.advagri.foundation.block.AdvAgriCropBlock;
 import dev.krysztal.advagri.item.AdvAgriItems;
 import lombok.Getter;
@@ -44,7 +45,7 @@ public class SweetPotatoBlock extends AdvAgriCropBlock {
   }
 
   public SweetPotatoBlock(Settings settings) {
-    super(settings);
+    super(settings, AdvAgriSolarTerm.SPRING);
   }
 
   @Override

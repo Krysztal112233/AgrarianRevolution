@@ -1,5 +1,6 @@
 package dev.krysztal.advagri.block.impls.crops;
 
+import dev.krysztal.advagri.foundation.AdvAgriSolarTerm;
 import dev.krysztal.advagri.foundation.block.AdvAgriCropBlock;
 import dev.krysztal.advagri.item.AdvAgriItems;
 import lombok.Getter;
@@ -62,6 +63,6 @@ public class CornBlock extends AdvAgriCropBlock {
   }
 
   public CornBlock(Settings settings) {
-    super(settings);
+    super(settings, AdvAgriSolarTerm.CLEAR_AND_BRIGHT);
   }
 }
