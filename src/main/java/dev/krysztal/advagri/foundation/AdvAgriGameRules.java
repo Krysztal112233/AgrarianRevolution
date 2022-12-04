@@ -25,7 +25,7 @@ public class AdvAgriGameRules {
         var ruleValue = intRule.get();
         var fixedValue = 0;
 
-        if (ruleValue <= SOLAR_TERM_COUNT) {
+        if (ruleValue < SOLAR_TERM_COUNT) {
           minecraftServer.sendMessage(
             Text.translatable("adv_agri.game_rule.lengthOfYear.error3")
           );

@@ -100,7 +100,7 @@ public class AdvAgriItems {
   public static Item SEED_BAG_CORN;
 
   @GenTypes
-  public static Item SWEET_POTATO_VINE;
+  public static Item SEED_BAG_SWEET_POTATO_BEAN;
 
   //========= Agricultural Products =============//
   @GenTypes
@@ -180,7 +180,7 @@ public class AdvAgriItems {
     SEED_BAG_LETTUCE = registry("lettuce_seed_bag");
     SEED_BAG_STRAWBERRY = registry("strawberry_seed_bag");
     SEED_BAG_CORN = registryAliased("corn_seed_bag", AdvAgriBlocks.CRON_BLOCK);
-    SWEET_POTATO_VINE = registry("sweet_potato_vine");
+    SEED_BAG_SWEET_POTATO_BEAN = registry("sweet_potato_bean_seed_bag");
     RICE_UNHUSKED = registry("rice_unhusked");
     RICE = registry("rice");
     PLANT_STRAW = registry("plant_straw");
