@@ -3,9 +3,12 @@ package dev.krysztal.advagri.block.impls.crops;
 import dev.krysztal.advagri.foundation.block.AdvAgriCropBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.world.BlockView;
 
 public class GarlicBlock extends AdvAgriCropBlock {
 
@@ -29,6 +32,16 @@ public class GarlicBlock extends AdvAgriCropBlock {
     StateManager.Builder<Block, BlockState> builder
   ) {
     builder.add(AGE);
+  }
+
+  @Override
+  public VoxelShape getOutlineShape(
+    BlockState state,
+    BlockView world,
+    BlockPos pos,
+    ShapeContext context
+  ) {
+    return AdvAgriCropBlock.getShapeOfAge(state, AGE, voxelShapes);
   }
 
   @Override

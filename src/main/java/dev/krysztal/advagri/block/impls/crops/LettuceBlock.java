@@ -1,8 +1,10 @@
 package dev.krysztal.advagri.block.impls.crops;
 
 import dev.krysztal.advagri.foundation.block.AdvAgriCropBlock;
+import dev.krysztal.advagri.item.AdvAgriItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
@@ -35,7 +37,10 @@ public class LettuceBlock extends AdvAgriCropBlock {
   public int getMaxAge() {
     return AGE.field_37656;
   }
-
+@Override
+protected ItemConvertible getSeedsItem() {
+    return AdvAgriItems.GARLIC;
+}
   public LettuceBlock(Settings settings) {
     super(settings);
   }

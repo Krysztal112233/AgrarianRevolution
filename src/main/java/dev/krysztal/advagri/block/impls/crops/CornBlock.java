@@ -1,12 +1,17 @@
 package dev.krysztal.advagri.block.impls.crops;
 
 import dev.krysztal.advagri.foundation.block.AdvAgriCropBlock;
+import dev.krysztal.advagri.item.AdvAgriItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.ShapeContext;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.world.BlockView;
 
 public class CornBlock extends AdvAgriCropBlock {
 
@@ -33,10 +38,25 @@ public class CornBlock extends AdvAgriCropBlock {
   }
 
   @Override
+  public VoxelShape getOutlineShape(
+    BlockState state,
+    BlockView world,
+    BlockPos pos,
+    ShapeContext context
+  ) {
+    return AdvAgriCropBlock.getShapeOfAge(state, AGE, voxelShapes);
+  }
+
+  @Override
   protected void appendProperties(
     StateManager.Builder<Block, BlockState> builder
   ) {
     builder.add(AGE);
+  }
+
+  @Override
+  protected ItemConvertible getSeedsItem() {
+    return AdvAgriItems.SEED_BAG_CORN;
   }
 
   public CornBlock(Settings settings) {

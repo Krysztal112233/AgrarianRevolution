@@ -1,5 +1,6 @@
 package dev.krysztal.advagri.item;
 
+import dev.krysztal.advagri.block.AdvAgriBlocks;
 import dev.krysztal.advagri.foundation.AdvAgriConstants;
 import dev.krysztal.advagri.foundation.AdvAgriFoodComponents;
 import dev.krysztal.advagri.foundation.AdvAgriItemGroups;
@@ -9,6 +10,8 @@ import dev.krysztal.advagri.item.impls.BambooDrillRod;
 import dev.krysztal.advagri.item.impls.Fertilizer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolMaterials;
@@ -176,7 +179,7 @@ public class AdvAgriItems {
     SEED_BAG_CELERY = registry("celery_seed_bag");
     SEED_BAG_LETTUCE = registry("lettuce_seed_bag");
     SEED_BAG_STRAWBERRY = registry("strawberry_seed_bag");
-    SEED_BAG_CORN = registry("corn_seed_bag");
+    SEED_BAG_CORN = registryAliased("corn_seed_bag", AdvAgriBlocks.CRON_BLOCK);
     SWEET_POTATO_VINE = registry("sweet_potato_vine");
     RICE_UNHUSKED = registry("rice_unhusked");
     RICE = registry("rice");
@@ -186,7 +189,8 @@ public class AdvAgriItems {
     LETTUCE = registry("lettuce");
     STRAWBERRY = registry("strawberry");
     GARLIC = registry("garlic");
-    WATER_CHESTNUT = registry("water_chestnut");
+    WATER_CHESTNUT =
+      registryAliased("water_chestnut", AdvAgriBlocks.WATER_CHESTNUT_BLOCK);
 
     BAMBOO_CHOPPER =
       registry(
@@ -264,6 +268,19 @@ public class AdvAgriItems {
       item
     );
     return item;
+  }
+
+  private static Item registryAliased(String path, Block aliasedBlock) {
+    var aliased = new AliasedBlockItem(
+      aliasedBlock,
+      new FabricItemSettings().group(AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
+    );
+    Registry.register(
+      Registry.ITEM,
+      new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path),
+      aliased
+    );
+    return aliased;
   }
 
   private static Item registry(String path) {
