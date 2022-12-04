@@ -60,5 +60,8 @@
   "_": "->------------------------]   Messages  [------------------------<-",
   "adv_agri.game_rule.lengthOfYear.error1": "It is not possible to set the value of lengthOfYear to %s, because %s is not divisible by 12.",
   "adv_agri.game_rule.lengthOfYear.error2": "After fetching upwards, the value is set to %s.",
-  "adv_agri.game_rule.lengthOfYear.error3": "The game rule lengthOfYear cannot be set to less than %s, so the value is set to 12."
+  "adv_agri.game_rule.lengthOfYear.error3": "The game rule lengthOfYear cannot be set to less than %s, so the value is set to 12.",
+  "_": "->------------------------]   Gamerules [------------------------<-",
+  "gamerule.lengthOfYear": "Length of one year",
+  "gamerule.allowSeasonsChange":"Allow season and solar term changes."
 }

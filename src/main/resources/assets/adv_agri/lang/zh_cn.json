@@ -60,5 +60,8 @@
   "_": "->------------------------]   Messages  [------------------------<-",
   "adv_agri.game_rule.lengthOfYear.error1": "不可以将游戏规则 lengthOfYear 的值设置为 %s，因为 %s 不可以被 12 整除。",
   "adv_agri.game_rule.lengthOfYear.error2": "经过向上取数，数值被设置为 %s。",
-  "adv_agri.game_rule.lengthOfYear.error3": "游戏规则 lengthOfYear 数值不可以设置为小于 12 ，因此值被设置为 12。"
+  "adv_agri.game_rule.lengthOfYear.error3": "游戏规则 lengthOfYear 数值不可以设置为小于 12 ，因此值被设置为 12。",
+  "_": "->------------------------]   Gamerules [------------------------<-",
+  "gamerule.lengthOfYear": "一年的长度",
+  "gamerule.allowSeasonsChange":"允许四季与节气更迭"
 }
