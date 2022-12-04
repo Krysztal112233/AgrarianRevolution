@@ -19,7 +19,7 @@ public class DayChangeEvents {
       AdvAgriSolarTerm.values().length;
 
     // Check should increase solar term.
-    if (serverWorld.getTimeOfDay() % termLength != 0) return;
+    if (termLength != 0 && serverWorld.getTimeOfDay() % termLength != 0) return;
 
     solarTermPersistentState.incSeason();
     SolarTermPersistentState.set(serverWorld, solarTermPersistentState);
