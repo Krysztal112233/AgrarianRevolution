@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
 import net.minecraft.text.Text;
 import net.minecraft.world.GameRules;
 
-@Log4j2
 public class AdvAgriGameRules {
 
   public static final GameRules.Key<GameRules.BooleanRule> ALLOW_SEASONS_CHANGE;
