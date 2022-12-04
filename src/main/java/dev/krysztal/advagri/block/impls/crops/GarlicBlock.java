@@ -1,6 +1,6 @@
 package dev.krysztal.advagri.block.impls.crops;
 
-import dev.krysztal.advagri.block.AdvAgriCropBlock;
+import dev.krysztal.advagri.foundation.block.AdvAgriCropBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.StateManager;

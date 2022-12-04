@@ -2,7 +2,6 @@ package dev.krysztal.advagri.item.impls;
 
 import dev.krysztal.advagri.foundation.AdvAgriTags;
 import dev.krysztal.advagri.foundation.tool.AdvAgriTools.AdvAgriSwordItem;
-import lombok.extern.log4j.Log4j2;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -11,7 +10,6 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-@Log4j2
 public class BambooChopper extends AdvAgriSwordItem {
 
   public BambooChopper(

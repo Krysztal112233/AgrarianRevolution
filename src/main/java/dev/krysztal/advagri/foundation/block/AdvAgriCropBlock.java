@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.block;
+package dev.krysztal.advagri.foundation.block;
 
 import net.minecraft.block.CropBlock;
 
