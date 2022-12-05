@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "bamboo_charcoal",
+  "ingredient": {
+    "tag": "adv_agri:bamboo"
+  },
+  "result": "adv_agri:bamboo_charcoal",
+  "experience": 0.15,
+  "cookingtime": 100
+}

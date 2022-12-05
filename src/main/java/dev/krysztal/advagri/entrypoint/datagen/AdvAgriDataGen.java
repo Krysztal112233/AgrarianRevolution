@@ -3,6 +3,7 @@ package dev.krysztal.advagri.entrypoint.datagen;
 import dev.krysztal.advagri.entrypoint.datagen.loottables.LootTablesGenerator;
 import dev.krysztal.advagri.entrypoint.datagen.models.CropModelsGenerator;
 import dev.krysztal.advagri.entrypoint.datagen.models.ModelsGenerator;
+import dev.krysztal.advagri.entrypoint.datagen.recipes.FurnaceGenerator;
 import dev.krysztal.advagri.entrypoint.datagen.tags.MineLevelGenerator;
 import dev.krysztal.advagri.entrypoint.datagen.tags.MineableGenerator;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -21,5 +22,7 @@ public class AdvAgriDataGen implements DataGeneratorEntrypoint {
 
     fabricDataGenerator.addProvider(MineLevelGenerator::new);
     fabricDataGenerator.addProvider(MineableGenerator::new);
+
+    fabricDataGenerator.addProvider(FurnaceGenerator::new);
   }
 }
