@@ -14,6 +14,7 @@ import net.minecraft.world.BlockView;
 
 public class StrawBerryBlock extends SweetBerryBushBlock {
 
+  @Getter
   private static final IntProperty AGE = Properties.AGE_5;
 
   @Getter
