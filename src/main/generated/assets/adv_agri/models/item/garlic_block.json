@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "adv_agri:item/cron_block"
+    "layer0": "adv_agri:item/garlic_block"
   }
 }

@@ -67,9 +67,7 @@ public class AdvAgriBlocks {
   //====================== Wood ====================//
   @GenTypes(
     types = {
-      GenType.LootTableSimpleBlockType,
-      GenType.MineAxe,
-      GenType.SimpleBlockState,
+      GenType.LootTableSimpleBlockType, GenType.MineAxe, GenType.LogBlockState,
     }
   )
   public static Block GINKGO_LOG;
@@ -77,9 +75,7 @@ public class AdvAgriBlocks {
   //====================== Stripped wood ==========//
   @GenTypes(
     types = {
-      GenType.LootTableSimpleBlockType,
-      GenType.MineAxe,
-      GenType.SimpleBlockState,
+      GenType.LootTableSimpleBlockType, GenType.MineAxe, GenType.LogBlockState,
     }
   )
   public static Block STRIPPED_GINKGO_LOG;

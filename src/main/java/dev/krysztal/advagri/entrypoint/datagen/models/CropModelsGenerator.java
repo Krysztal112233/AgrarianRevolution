@@ -38,6 +38,20 @@ public class CropModelsGenerator extends FabricModelProvider {
         .rangeClosed(0, AdvAgriBlocks.LETTUCE_BLOCK.getMaxAge())
         .toArray()
     );
+
+    blockStateModelGenerator.registerCrop(
+      AdvAgriBlocks.GARLIC_BLOCK,
+      AdvAgriBlocks.GARLIC_BLOCK.getAgeProperty(),
+      IntStream.rangeClosed(0, AdvAgriBlocks.GARLIC_BLOCK.getMaxAge()).toArray()
+    );
+
+    blockStateModelGenerator.registerCrop(
+      AdvAgriBlocks.WATER_CHESTNUT_BLOCK,
+      AdvAgriBlocks.WATER_CHESTNUT_BLOCK.getAgeProperty(),
+      IntStream
+        .rangeClosed(0, AdvAgriBlocks.WATER_CHESTNUT_BLOCK.getMaxAge())
+        .toArray()
+    );
   }
 
   @Override

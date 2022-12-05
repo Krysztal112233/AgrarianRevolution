@@ -29,6 +29,10 @@ public class ModelsGenerator extends FabricModelProvider {
     new GeneratorUtils.Collector(GenType.SimpleBlockState)
       .<Block>collect(AdvAgriBlocks.class)
       .forEach(blockStateModelGenerator::registerSimpleState);
+
+    new GeneratorUtils.Collector(GenType.LogBlockState)
+      .<Block>collect(AdvAgriBlocks.class)
+      .forEach(blockStateModelGenerator::registerLog);
   }
 
   @Override
