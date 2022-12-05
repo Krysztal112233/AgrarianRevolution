@@ -12,6 +12,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.AliasedBlockItem;
+import net.minecraft.item.FoodComponents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolMaterials;
@@ -143,6 +144,12 @@ public class AdvAgriItems {
   @GenTypes
   public static Item SWEET_POTATO;
 
+  @GenTypes
+  public static Item ACORNS;
+
+  @GenTypes
+  public static Item ROASTED_ACORNS;
+
   public static void init() {}
 
   static {
@@ -252,6 +259,26 @@ public class AdvAgriItems {
             .food(AdvAgriFoodComponents.SOLAR_BERRY)
         ),
         "solar_berry"
+      );
+
+    ACORNS =
+      registry(
+        new Item(
+          new FabricItemSettings()
+            .group(ItemGroup.FOOD)
+            .food(FoodComponents.DRIED_KELP)
+        ),
+        "acorns"
+      );
+
+    ROASTED_ACORNS =
+      registry(
+        new Item(
+          new FabricItemSettings()
+            .group(ItemGroup.FOOD)
+            .food(AdvAgriFoodComponents.ROASTED_ACORNS)
+        ),
+        "roasted_acorns"
       );
   }
 
