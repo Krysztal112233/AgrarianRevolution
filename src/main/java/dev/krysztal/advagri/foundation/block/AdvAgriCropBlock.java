@@ -2,6 +2,7 @@ package dev.krysztal.advagri.foundation.block;
 
 import dev.krysztal.advagri.foundation.AdvAgriGameRules;
 import dev.krysztal.advagri.foundation.AdvAgriSolarTerm;
+import dev.krysztal.advagri.foundation.persistents.SolarTermPersistentState;
 import lombok.Getter;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;
@@ -46,7 +47,17 @@ public abstract class AdvAgriCropBlock extends CropBlock {
       !world.getGameRules().get(AdvAgriGameRules.ALLOW_SEASONS_CHANGE).get()
     ) return true;
 
-    // TODO Auto-generated method stub
-    return super.canGrow(world, random, pos, state);
+    // The lenght between right term and current term.
+    var stepLength = Math.abs(
+      this.rightSolarterm.ordinal() -
+      SolarTermPersistentState.get(world).getSeason()
+    );
+
+    // Cacl the grow chance.
+    var growChance = (int) (
+      ((double) stepLength / (double) AdvAgriSolarTerm.values().length) * 100
+    );
+
+    return random.nextBetweenExclusive(0, 100) <= growChance;
   }
 }
