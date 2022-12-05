@@ -8,9 +8,20 @@ import net.minecraft.client.render.RenderLayer;
 public class Client implements ClientModInitializer {
 
   public void onInitializeClient() {
-    BlockRenderLayerMap.INSTANCE.putBlock(
-      AdvAgriBlocks.GINKGO_LEAVES,
-      RenderLayer.getTranslucent()
+    BlockRenderLayerMap.INSTANCE.putBlocks(
+      RenderLayer.getTranslucent(),
+      AdvAgriBlocks.GINKGO_LEAVES
+    );
+
+    BlockRenderLayerMap.INSTANCE.putBlocks(
+      RenderLayer.getCutout(),
+      AdvAgriBlocks.SOLAR_BERRY_BUSH_BLOCK,
+      AdvAgriBlocks.LETTUCE_BLOCK,
+      AdvAgriBlocks.CRON_BLOCK,
+      AdvAgriBlocks.GARLIC_BLOCK,
+      AdvAgriBlocks.SWEET_POTATO_BLOCK,
+      AdvAgriBlocks.WATER_CHESTNUT_BLOCK,
+      AdvAgriBlocks.STRAW_BERRY_BLOCK
     );
   }
 }
