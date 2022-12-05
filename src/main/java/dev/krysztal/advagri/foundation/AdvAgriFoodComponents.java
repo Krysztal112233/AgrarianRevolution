@@ -1,6 +1,5 @@
 package dev.krysztal.advagri.foundation;
 
-import com.ibm.j9ddr.vm29.structure.fieldIndexTableEntry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
