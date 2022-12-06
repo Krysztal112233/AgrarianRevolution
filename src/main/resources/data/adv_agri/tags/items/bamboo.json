@@ -1,4 +1,4 @@
 {
   "replace": "false",
-  "values": ["minecraft:bamboo", "adv_agri:bamboo_sapling"]
+  "values": ["minecraft:bamboo", "advagri:bamboo_sapling"]
 }

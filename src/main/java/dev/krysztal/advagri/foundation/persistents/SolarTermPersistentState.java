@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class SolarTermPersistentState extends PersistentState {
 
-  private static final String NBT_KEY = "adv_agri_nbt_current_season";
+  private static final String NBT_KEY = "advagri_nbt_current_season";
   public static final String ID = "solar_term_persistent";
 
   @Getter

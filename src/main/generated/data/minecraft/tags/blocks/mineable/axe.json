@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "adv_agri:bamboo_bundle",
-    "adv_agri:ginkgo_log",
-    "adv_agri:stripped_ginkgo_log",
-    "adv_agri:ginkgo_planks",
-    "adv_agri:ginkgo_leaves"
+    "advagri:bamboo_bundle",
+    "advagri:ginkgo_log",
+    "advagri:stripped_ginkgo_log",
+    "advagri:ginkgo_planks",
+    "advagri:ginkgo_leaves"
   ]
 }

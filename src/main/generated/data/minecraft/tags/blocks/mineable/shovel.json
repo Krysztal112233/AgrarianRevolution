@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "adv_agri:acidified_soil",
-    "adv_agri:hardened_soil",
-    "adv_agri:vermiculite_ore"
+    "advagri:acidified_soil",
+    "advagri:hardened_soil",
+    "advagri:vermiculite_ore"
   ]
 }

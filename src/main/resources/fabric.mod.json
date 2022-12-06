@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "adv_agri",
+  "id": "advagri",
   "version": "${version}",
   "name": "Advanced Agriculture",
   "description": "Tech,Nature,the Agriculture.",
@@ -10,14 +10,14 @@
     "sources": "https://github.com/KrysztalTechLab/AdvancedAgriculture"
   },
   "license": "GPLv3",
-  "icon": "assets/adv_agri/icon.png",
+  "icon": "assets/advagri/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": ["dev.krysztal.advagri.entrypoint.General"],
     "client": ["dev.krysztal.advagri.entrypoint.Client"],
     "fabric-datagen": ["dev.krysztal.advagri.entrypoint.datagen.AdvAgriDataGen"]
   },
-  "mixins": ["adv_agri.mixins.json"],
+  "mixins": ["advagri.mixins.json"],
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",

@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "adv_agri:phos_ore"
+              "name": "advagri:phos_ore"
             },
             {
               "type": "minecraft:item",
@@ -46,7 +46,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "adv_agri:phos"
+              "name": "advagri:phos"
             }
           ]
         }
