@@ -5,13 +5,12 @@ import dev.krysztal.advagri.block.impls.SulphurOreBlock;
 import dev.krysztal.advagri.block.impls.crops.*;
 import dev.krysztal.advagri.foundation.AdvAgriConstants;
 import dev.krysztal.advagri.foundation.AdvAgriItemGroups;
-import dev.krysztal.advagri.foundation.util.annotations.GenType;
-import dev.krysztal.advagri.foundation.util.annotations.GenTypes;
+import dev.krysztal.advagri.foundation.annotation.GenType;
+import dev.krysztal.advagri.foundation.annotation.GenTypes;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -91,12 +90,23 @@ public class AdvAgriBlocks {
   public static Block GINKGO_LEAVES;
 
   //================= Plants Blocks ===============//
+  @GenTypes(types = { GenType.CropBlockState })
   public static CornBlock CRON_BLOCK;
+
+  @GenTypes(types = { GenType.CropBlockState })
   public static GarlicBlock GARLIC_BLOCK;
+
+  @GenTypes(types = { GenType.CropBlockState })
   public static LettuceBlock LETTUCE_BLOCK;
+
   public static SolarBerryBushBlock SOLAR_BERRY_BUSH_BLOCK;
+
   public static StrawBerryBlock STRAW_BERRY_BLOCK;
+
+  @GenTypes(types = { GenType.CropBlockState })
   public static SweetPotatoBlock SWEET_POTATO_BLOCK;
+
+  @GenTypes(types = { GenType.CropBlockState })
   public static WaterChestnutBlock WATER_CHESTNUT_BLOCK;
 
   public static void init() {

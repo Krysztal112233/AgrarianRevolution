@@ -1,9 +1,10 @@
-package dev.krysztal.advagri.foundation.util.annotations;
+package dev.krysztal.advagri.foundation.annotation;
 
 public enum GenType {
   SimpleBlockModel,
   SimpleItemModel,
   SimpleBlockState,
+  CropBlockState,
   LogBlockState,
   LootTableSimpleBlockType,
   MineLevel0,

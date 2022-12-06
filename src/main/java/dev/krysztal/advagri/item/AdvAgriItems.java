@@ -4,7 +4,7 @@ import dev.krysztal.advagri.block.AdvAgriBlocks;
 import dev.krysztal.advagri.foundation.AdvAgriConstants;
 import dev.krysztal.advagri.foundation.AdvAgriFoodComponents;
 import dev.krysztal.advagri.foundation.AdvAgriItemGroups;
-import dev.krysztal.advagri.foundation.util.annotations.GenTypes;
+import dev.krysztal.advagri.foundation.annotation.GenTypes;
 import dev.krysztal.advagri.item.impls.BambooChopper;
 import dev.krysztal.advagri.item.impls.BambooDrillRod;
 import dev.krysztal.advagri.item.impls.Fertilizer;

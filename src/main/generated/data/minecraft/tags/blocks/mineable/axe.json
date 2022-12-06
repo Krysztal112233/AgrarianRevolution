@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "advagri:bamboo_bundle",
     "advagri:ginkgo_log",
     "advagri:stripped_ginkgo_log",
     "advagri:ginkgo_planks",

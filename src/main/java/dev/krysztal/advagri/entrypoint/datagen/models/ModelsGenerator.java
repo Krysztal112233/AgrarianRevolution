@@ -1,8 +1,8 @@
 package dev.krysztal.advagri.entrypoint.datagen.models;
 
 import dev.krysztal.advagri.block.AdvAgriBlocks;
+import dev.krysztal.advagri.foundation.annotation.GenType;
 import dev.krysztal.advagri.foundation.util.GeneratorUtils;
-import dev.krysztal.advagri.foundation.util.annotations.GenType;
 import dev.krysztal.advagri.item.AdvAgriItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;

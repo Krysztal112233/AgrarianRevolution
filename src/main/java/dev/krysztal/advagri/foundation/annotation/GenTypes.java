@@ -1,4 +1,4 @@
-package dev.krysztal.advagri.foundation.util.annotations;
+package dev.krysztal.advagri.foundation.annotation;
 
 import java.lang.annotation.*;
 

@@ -1,7 +1,7 @@
 package dev.krysztal.advagri.foundation.util;
 
-import dev.krysztal.advagri.foundation.util.annotations.GenType;
-import dev.krysztal.advagri.foundation.util.annotations.GenTypes;
+import dev.krysztal.advagri.foundation.annotation.GenType;
+import dev.krysztal.advagri.foundation.annotation.GenTypes;
 import java.util.ArrayList;
 import java.util.Arrays;
 
