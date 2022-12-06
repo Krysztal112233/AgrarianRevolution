@@ -27,21 +27,25 @@ public class MineLevelGenerator extends FabricTagProvider.BlockTagProvider {
     new GeneratorUtils.Collector(GenType.MineLevel0)
       .<Block>collect(AdvAgriBlocks.class)
       .forEach(super.getOrCreateTagBuilder(MINE_LEVEL_0)::add);
+
     new GeneratorUtils.Collector(GenType.MineLevel1)
       .<Block>collect(AdvAgriBlocks.class)
       .forEach(
         super.getOrCreateTagBuilder(MiningLevelManager.getBlockTag(1))::add
       );
+
     new GeneratorUtils.Collector(GenType.MineLevel2)
       .<Block>collect(AdvAgriBlocks.class)
       .forEach(
         super.getOrCreateTagBuilder(MiningLevelManager.getBlockTag(2))::add
       );
+
     new GeneratorUtils.Collector(GenType.MineLevel3)
       .<Block>collect(AdvAgriBlocks.class)
       .forEach(
         super.getOrCreateTagBuilder(MiningLevelManager.getBlockTag(3))::add
       );
+
     new GeneratorUtils.Collector(GenType.MineLevel4)
       .<Block>collect(AdvAgriBlocks.class)
       .forEach(

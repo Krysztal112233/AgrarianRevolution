@@ -39,9 +39,11 @@ public class AdvAgriTags {
   public static class ItemTags {
 
     public static final TagKey<Item> BAMBOO;
+    public static final TagKey<Item> PLANT;
 
     static {
       BAMBOO = registry("bamboo");
+      PLANT = registry("plant");
     }
 
     private static TagKey<Item> registry(String id) {

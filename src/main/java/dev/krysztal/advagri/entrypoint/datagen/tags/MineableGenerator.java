@@ -8,12 +8,11 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.fabricmc.fabric.api.mininglevel.v1.FabricMineableTags;
 import net.minecraft.block.Block;
 import net.minecraft.tag.BlockTags;
-import net.minecraft.util.registry.Registry;
 
-public class MineableGenerator extends FabricTagProvider<Block> {
+public class MineableGenerator extends FabricTagProvider.BlockTagProvider {
 
   public MineableGenerator(FabricDataGenerator dataGenerator) {
-    super(dataGenerator, Registry.BLOCK);
+    super(dataGenerator);
   }
 
   @Override

@@ -1,12 +1,14 @@
 {
-  "replace": false,
+  "replace": "false",
   "values": [
     "#minecraft:flowers",
     "#minecraft:leaves",
+    "#minecraft:crops",
     "minecraft:grass",
     "minecraft:dead_bush",
     "minecraft:seagrass",
     "minecraft:sea_pickle",
+    "minecraft:kelp",
     "advagri:bamboo_leaves"
   ]
 }
