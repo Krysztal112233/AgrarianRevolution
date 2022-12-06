@@ -1,6 +1,5 @@
 package dev.krysztal.advagri.block;
 
-import dev.krysztal.advagri.block.impls.BambooBundleBlock;
 import dev.krysztal.advagri.block.impls.NetherSulphurOreBlock;
 import dev.krysztal.advagri.block.impls.SulphurOreBlock;
 import dev.krysztal.advagri.block.impls.crops.*;
@@ -60,9 +59,6 @@ public class AdvAgriBlocks {
 
   @GenTypes(types = { GenType.SimpleBlockModel, GenType.MineShovel })
   public static Block VERMICULITE_ORE;
-
-  @GenTypes(types = { GenType.MineAxe })
-  public static BambooBundleBlock BAMBOO_BUNDLE;
 
   //====================== Wood ====================//
   @GenTypes(
@@ -131,13 +127,6 @@ public class AdvAgriBlocks {
         "nether_sulphur_ore"
       );
     VERMICULITE_ORE = registry(defaultBlock(Blocks.DIRT), "vermiculite_ore");
-    BAMBOO_BUNDLE =
-      registry(
-        new BambooBundleBlock(
-          FabricBlockSettings.of(Material.BAMBOO).ticksRandomly()
-        ),
-        "bamboo_bundle"
-      );
 
     //====================== Wood ====================//
     GINKGO_LOG =
