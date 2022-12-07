@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "advagri:block/bamboo_bundle_0"
-  }
-}

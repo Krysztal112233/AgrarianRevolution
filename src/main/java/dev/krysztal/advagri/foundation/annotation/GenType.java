@@ -5,7 +5,6 @@ public enum GenType {
   SimpleItemModel,
   SimpleBlockState,
   CropBlockState,
-  LogBlockState,
   LootTableSimpleBlockType,
   MineLevel0,
   MineLevel1,

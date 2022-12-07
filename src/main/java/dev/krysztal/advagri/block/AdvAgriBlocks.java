@@ -11,6 +11,8 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -59,18 +61,32 @@ public class AdvAgriBlocks {
   @GenTypes(types = { GenType.SimpleBlockModel, GenType.MineShovel })
   public static Block VERMICULITE_ORE;
 
-  //====================== Wood ====================//
+  //====================== Log ===================//
   @GenTypes(
     types = {
-      GenType.LootTableSimpleBlockType, GenType.MineAxe, GenType.LogBlockState,
+      GenType.LootTableSimpleBlockType,
+      GenType.MineAxe,
+      GenType.SimpleItemModel,
     }
   )
   public static Block GINKGO_LOG;
 
-  //====================== Stripped wood ==========//
+  //====================== Wood ====================//
   @GenTypes(
     types = {
-      GenType.LootTableSimpleBlockType, GenType.MineAxe, GenType.LogBlockState,
+      GenType.LootTableSimpleBlockType,
+      GenType.MineAxe,
+      GenType.SimpleItemModel,
+    }
+  )
+  public static Block GINKGO_WOOD;
+
+  //====================== Stripped log ==========//
+  @GenTypes(
+    types = {
+      GenType.LootTableSimpleBlockType,
+      GenType.MineAxe,
+      GenType.SimpleItemModel,
     }
   )
   public static Block STRIPPED_GINKGO_LOG;
@@ -81,6 +97,7 @@ public class AdvAgriBlocks {
       GenType.LootTableSimpleBlockType,
       GenType.MineAxe,
       GenType.SimpleBlockState,
+      GenType.SimpleItemModel,
     }
   )
   public static Block GINKGO_PLANKS;
@@ -138,17 +155,35 @@ public class AdvAgriBlocks {
       );
     VERMICULITE_ORE = registry(defaultBlock(Blocks.DIRT), "vermiculite_ore");
 
-    //====================== Wood ====================//
+    //====================== Log =====================//
     GINKGO_LOG =
       registry(
-        new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).luminance(4)),
+        new PillarBlock(
+          FabricBlockSettings
+            .copyOf(Blocks.createLogBlock(MapColor.CYAN, MapColor.CYAN))
+            .luminance(4)
+        ),
         "ginkgo_log"
+      );
+    //====================== Wood ====================//
+    GINKGO_WOOD =
+      registry(
+        new PillarBlock(
+          FabricBlockSettings
+            .copyOf(Blocks.createLogBlock(MapColor.CYAN, MapColor.CYAN))
+            .luminance(4)
+        ),
+        "ginkgo_wood"
       );
 
     //====================== Stripped wood ==========//
     STRIPPED_GINKGO_LOG =
       registry(
-        new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).luminance(4)),
+        new PillarBlock(
+          FabricBlockSettings
+            .copyOf(Blocks.createLogBlock(MapColor.CYAN, MapColor.CYAN))
+            .luminance(4)
+        ),
         "stripped_ginkgo_log"
       );
 
