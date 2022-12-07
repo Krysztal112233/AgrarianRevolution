@@ -1,4 +1,18 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    {
+      "id": "#minecraft:leaves",
+      "required": false
+    },
+    {
+      "id": "#minecraft:flowers",
+      "required": false
+    },
+    "minecraft:fern",
+    "minecraft:dead_bush",
+    "minecraft:kelp",
+    "minecraft:sea_pickle",
+    "minecraft:seagrass"
+  ]
 }
