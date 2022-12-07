@@ -21,18 +21,14 @@ public class AdvAgriBlocks {
 
   @GenTypes(
     types = {
-      GenType.SimpleBlockModel,
-      GenType.LootTableSimpleBlockType,
-      GenType.MineShovel,
+      GenType.SimpleBlockModel, GenType.SimpleBlockLoot, GenType.MineShovel,
     }
   )
   public static Block ACIDIFIED_SOIL;
 
   @GenTypes(
     types = {
-      GenType.SimpleBlockModel,
-      GenType.LootTableSimpleBlockType,
-      GenType.MineShovel,
+      GenType.SimpleBlockModel, GenType.SimpleBlockLoot, GenType.MineShovel,
     }
   )
   public static Block HARDENED_SOIL;
@@ -64,9 +60,7 @@ public class AdvAgriBlocks {
   //====================== Log ===================//
   @GenTypes(
     types = {
-      GenType.LootTableSimpleBlockType,
-      GenType.MineAxe,
-      GenType.SimpleItemModel,
+      GenType.SimpleBlockLoot, GenType.MineAxe, GenType.SimpleItemModel,
     }
   )
   public static Block GINKGO_LOG;
@@ -74,9 +68,7 @@ public class AdvAgriBlocks {
   //====================== Wood ====================//
   @GenTypes(
     types = {
-      GenType.LootTableSimpleBlockType,
-      GenType.MineAxe,
-      GenType.SimpleItemModel,
+      GenType.SimpleBlockLoot, GenType.MineAxe, GenType.SimpleItemModel,
     }
   )
   public static Block GINKGO_WOOD;
@@ -84,9 +76,7 @@ public class AdvAgriBlocks {
   //====================== Stripped log ==========//
   @GenTypes(
     types = {
-      GenType.LootTableSimpleBlockType,
-      GenType.MineAxe,
-      GenType.SimpleItemModel,
+      GenType.SimpleBlockLoot, GenType.MineAxe, GenType.SimpleItemModel,
     }
   )
   public static Block STRIPPED_GINKGO_LOG;
@@ -94,7 +84,7 @@ public class AdvAgriBlocks {
   //====================== Planks =================//
   @GenTypes(
     types = {
-      GenType.LootTableSimpleBlockType,
+      GenType.SimpleBlockLoot,
       GenType.MineAxe,
       GenType.SimpleBlockState,
       GenType.SimpleItemModel,

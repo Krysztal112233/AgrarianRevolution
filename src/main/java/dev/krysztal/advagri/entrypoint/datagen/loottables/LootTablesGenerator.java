@@ -24,7 +24,7 @@ public class LootTablesGenerator extends SimpleFabricLootTableProvider {
   public void accept(
     BiConsumer<Identifier, LootTable.Builder> identifierBuilderBiConsumer
   ) {
-    new GeneratorUtils.Collector(GenType.LootTableSimpleBlockType)
+    new GeneratorUtils.Collector(GenType.SimpleBlockLoot)
       .<Block>collect(AdvAgriBlocks.class)
       .forEach(block -> {
         identifierBuilderBiConsumer.accept(

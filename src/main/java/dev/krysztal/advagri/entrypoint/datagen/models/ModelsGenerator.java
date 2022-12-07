@@ -16,9 +16,22 @@ import net.minecraft.util.Pair;
 
 public class ModelsGenerator extends FabricModelProvider {
 
-  private static final List<Pair<Block, Block>> LOGS = List.of(
+  // log & wood type.
+  private static final List<Pair<Block, Block>> LOG_WOOD = List.of(
     new Pair<Block, Block>(AdvAgriBlocks.GINKGO_LOG, AdvAgriBlocks.GINKGO_WOOD)
   );
+
+  // Collect simple block states
+  private static final List<Block> SIMPLE_BLOCK_STATE = new GeneratorUtils.Collector(
+    GenType.SimpleBlockState
+  )
+    .<Block>collect(AdvAgriBlocks.class);
+
+  // Collect simple block models
+  private static final List<Block> SIMPLE_BLOCK_MODEL = new GeneratorUtils.Collector(
+    GenType.SimpleBlockModel
+  )
+    .<Block>collect(AdvAgriBlocks.class);
 
   public ModelsGenerator(FabricDataGenerator dataGenerator) {
     super(dataGenerator);
@@ -28,15 +41,11 @@ public class ModelsGenerator extends FabricModelProvider {
   public void generateBlockStateModels(
     BlockStateModelGenerator blockStateModelGenerator
   ) {
-    new GeneratorUtils.Collector(GenType.SimpleBlockModel)
-      .<Block>collect(AdvAgriBlocks.class)
-      .forEach(blockStateModelGenerator::registerSimpleCubeAll);
+    SIMPLE_BLOCK_MODEL.forEach(blockStateModelGenerator::registerSimpleCubeAll);
 
-    new GeneratorUtils.Collector(GenType.SimpleBlockState)
-      .<Block>collect(AdvAgriBlocks.class)
-      .forEach(blockStateModelGenerator::registerSimpleState);
+    SIMPLE_BLOCK_STATE.forEach(blockStateModelGenerator::registerSimpleState);
 
-    LOGS.forEach(block ->
+    LOG_WOOD.forEach(block ->
       blockStateModelGenerator
         .registerLog(block.getLeft())
         .log(block.getLeft())
