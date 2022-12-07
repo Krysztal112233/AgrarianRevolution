@@ -1,5 +1,6 @@
-// 1.19.2	2022-12-07T21:09:49.0809637	minecraft:block Loot Table
+// 1.19.2	2022-12-07T23:52:28.4307707	minecraft:block Loot Table
 8fe492b256e619f99c767ed311f19cb2082ffcc4 data\advagri\loot_tables\blocks\ginkgo_log.json
+fe2248eabade4b026d65a93602ba40b01c5b1887 data\advagri\loot_tables\blocks\stripped_ginkgo_wood.json
 53fbd50d65071bcca6fc7af7b3cf575d795a30c5 data\advagri\loot_tables\blocks\ginkgo_planks.json
 56d5133ef6469ea292ef677debc0850a1270968e data\advagri\loot_tables\blocks\hardened_soil.json
 7e1b877ee968d2c04fe65cdd47bda4926cbbb323 data\advagri\loot_tables\blocks\stripped_ginkgo_log.json

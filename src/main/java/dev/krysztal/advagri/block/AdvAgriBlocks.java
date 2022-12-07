@@ -81,6 +81,14 @@ public class AdvAgriBlocks {
   )
   public static Block STRIPPED_GINKGO_LOG;
 
+  //====================== Stripped wood ==========//
+  @GenTypes(
+    types = {
+      GenType.SimpleBlockLoot, GenType.MineAxe, GenType.SimpleItemModel,
+    }
+  )
+  public static Block STRIPPED_GINKGO_WOOD;
+
   //====================== Planks =================//
   @GenTypes(
     types = {
@@ -149,9 +157,7 @@ public class AdvAgriBlocks {
     GINKGO_LOG =
       registry(
         new PillarBlock(
-          FabricBlockSettings
-            .copyOf(Blocks.createLogBlock(MapColor.CYAN, MapColor.CYAN))
-            .luminance(4)
+          FabricBlockSettings.copyOf(Blocks.OAK_WOOD).luminance(4)
         ),
         "ginkgo_log"
       );
@@ -159,22 +165,26 @@ public class AdvAgriBlocks {
     GINKGO_WOOD =
       registry(
         new PillarBlock(
-          FabricBlockSettings
-            .copyOf(Blocks.createLogBlock(MapColor.CYAN, MapColor.CYAN))
-            .luminance(4)
+          FabricBlockSettings.copyOf(Blocks.OAK_WOOD).luminance(4)
         ),
         "ginkgo_wood"
       );
 
-    //====================== Stripped wood ==========//
+    //====================== Stripped log ==========//
     STRIPPED_GINKGO_LOG =
       registry(
         new PillarBlock(
-          FabricBlockSettings
-            .copyOf(Blocks.createLogBlock(MapColor.CYAN, MapColor.CYAN))
-            .luminance(4)
+          FabricBlockSettings.copyOf(Blocks.OAK_WOOD).luminance(4)
         ),
         "stripped_ginkgo_log"
+      );
+    //====================== Stripped log ==========//
+    STRIPPED_GINKGO_WOOD =
+      registry(
+        new PillarBlock(
+          FabricBlockSettings.copyOf(Blocks.OAK_WOOD).luminance(4)
+        ),
+        "stripped_ginkgo_wood"
       );
 
     //====================== Planks =================//

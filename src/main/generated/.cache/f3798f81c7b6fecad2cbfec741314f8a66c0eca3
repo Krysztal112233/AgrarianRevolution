@@ -1,8 +1,9 @@
-// 1.19.2	2022-12-07T21:09:49.0759459	Models
+// 1.19.2	2022-12-07T23:52:28.4337748	Models
 306a8c27f2f9363f399de5dc3f8145707980699d assets\advagri\models\item\phos_ore.json
 2d7dc129080b5c64af965a9a2ffbb29373871835 assets\advagri\models\item\bamboo_drill_rod.json
 1c277c0229a523eed6899fdd69784e9cc58df93a assets\advagri\models\item\hardened_soil.json
 9c45a85fe48998f3815a5c64ebc9a7123c84fda4 assets\advagri\blockstates\sulphur_ore.json
+d144ad3d45521ef1909c9fe1235d969e9cf477eb assets\advagri\models\item\stripped_ginkgo_wood.json
 a366ac5ff21dba80aed313971df8e0e619e9f035 assets\advagri\models\item\peeled_bamboo_shoot.json
 5f6e5cf7df31349c96f917bc1ff588e100ef9ebb assets\advagri\blockstates\vermiculite_ore.json
 e01f82b606c6da05669c560ec1be795de2d277d4 assets\advagri\models\item\celery_seed_bag.json
@@ -18,7 +19,9 @@ b80bc2596ed5b590c0508841e58f5a68c49b2dbb assets\advagri\models\block\hardened_so
 63e6cb2ac56078bf56370e331556ff14f456f570 assets\advagri\models\block\ginkgo_log_horizontal.json
 bbe88e1bd5ae2c9d3493a75626aed6070120bfb9 assets\advagri\blockstates\hardened_soil.json
 0cbc1cac2e940721cd87a572c3536593a0842e83 assets\advagri\models\block\ginkgo_wood.json
+d312501b683bc9162772decb064d1b3f233fefb7 assets\advagri\models\block\stripped_ginkgo_log.json
 bc1f75c53ef2fe3db1f24bc11ab2c0cdac33fedd assets\advagri\models\item\celery.json
+6bfae73d8e57f27ce9d11efc66b85cb79c7b4215 assets\advagri\models\block\stripped_ginkgo_wood.json
 5ee6c81269c1b1c5f33a9995946516414e18fde5 assets\advagri\models\item\fertilizer.json
 23a7c4825b55a5e4c1fd665d318327de500f6d28 assets\advagri\models\item\phos.json
 fffe11d268eebfdc2ab91faa145efe577bddc198 assets\advagri\models\item\plant_ash.json
@@ -29,6 +32,7 @@ bea242ab6b400762b1fe5f4bac8294ec9661dbb7 assets\advagri\blockstates\nether_sulph
 9223917540ddd7206c35bd41331f1d74a4928291 assets\advagri\models\item\water_chestnut.json
 0401c02b8ac07f158f1a3aa99606ecf5feed4d4e assets\advagri\models\item\ginkgo_planks.json
 49921ac70bebba9e0dd1e3da0b46ba60842ba463 assets\advagri\models\item\solarium_bottle_small.json
+a6b48c6a17ab7daed1c1d513a4ddd2e5afdf6610 assets\advagri\blockstates\stripped_ginkgo_log.json
 bea191169af271db7aeb1ae5640090a4690957d7 assets\advagri\models\block\vermiculite_ore.json
 c83a8b59af5280f93e490d498fd788e492e53fb4 assets\advagri\models\item\bamboo_charcoal.json
 080b751e52f70dbdb10d31ebc95255881f1e714c assets\advagri\models\item\solarium_bottle_medium.json
@@ -61,12 +65,15 @@ af517543192dc184c8c0ea61192d6ad9580335cd assets\advagri\models\item\asparagus.js
 588834aa94cf5a6cb9d79d306a7a2413370f8585 assets\advagri\models\item\bamboo_leaves.json
 ca080a42a954214cf54ebe0688873a1456c8a92b assets\advagri\models\item\sulfur.json
 10a31b8dedd5baa33ec5ed52d4b5d9b54b3f3e16 assets\advagri\models\item\bottle_medium.json
+e63f9d8395190a971c396c1685419ba2ae45999c assets\advagri\models\block\stripped_ginkgo_log_horizontal.json
 87a599d2c898e8554c15ab848619adb2542d092a assets\advagri\models\block\acidified_soil.json
 9872885cde8e996811de1ee9d0817f84366ba2f1 assets\advagri\models\item\acorns.json
+d98a18170f00c03fbf05f0e4752fe5c09a5f0e50 assets\advagri\models\item\stripped_ginkgo_log.json
 b7ee31e1eac36ad44c8ed8000cb2b61cf87a54e1 assets\advagri\blockstates\ginkgo_planks.json
 a2d383628ceca3f1ccc7bfe3d8d448ec41090d5c assets\advagri\models\item\roasted_acorns.json
 7d84778203c65ef90b7cc8d5ae472779d581c443 assets\advagri\models\item\corn_seed_bag.json
 c46e0a3a9451e860dc41a1aaa589f1675041f54b assets\advagri\blockstates\acidified_soil.json
+6515417afbcc73c868643faf32b3d45809173339 assets\advagri\blockstates\stripped_ginkgo_wood.json
 4bc845484814f4d9fcebff633880dc03be6f3106 assets\advagri\models\item\bamboo_chopper.json
 3ddea6e503b5898ed31a34089e8cda86e1fa46ee assets\advagri\models\item\chili_seed_bag.json
 9324a034b94e1f674319b015e5527df7ae08daec assets\advagri\models\item\bamboo_silk_board.json
