@@ -23,7 +23,8 @@ repositories {
     // for more information about repositories.
     maven { url "https://maven.shedaniel.me/" }
     maven { url "https://maven.terraformersmc.com/releases/" }
-    maven { url = "https://mvn.devos.one/snapshots/" }
+    maven { url "https://mvn.devos.one/snapshots/" }
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -47,7 +48,7 @@ dependencies {
     }
 
     // Registrate for fabric
-    modImplementation "com.tterrag.registrate_fabric:Registrate:${project.registrate_version}"
+    modImplementation(include("com.tterrag.registrate_fabric:Registrate:${project.registrate_version}"))
 }
 
 processResources {
