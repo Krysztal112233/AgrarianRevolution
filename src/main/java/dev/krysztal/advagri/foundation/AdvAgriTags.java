@@ -31,7 +31,7 @@ public class AdvAgriTags {
     private static TagKey<Block> registry(String id) {
       return TagKey.of(
         Registry.BLOCK_KEY,
-        new Identifier(AdvAgriConstants.ADV_AGRI_MODID, id)
+        new Identifier(AdvAgriConstants.MODID, id)
       );
     }
   }
@@ -49,7 +49,7 @@ public class AdvAgriTags {
     private static TagKey<Item> registry(String id) {
       return TagKey.of(
         Registry.ITEM_KEY,
-        new Identifier(AdvAgriConstants.ADV_AGRI_MODID, id)
+        new Identifier(AdvAgriConstants.MODID, id)
       );
     }
   }

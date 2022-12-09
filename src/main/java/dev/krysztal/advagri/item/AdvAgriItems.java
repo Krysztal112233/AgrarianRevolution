@@ -291,7 +291,7 @@ public class AdvAgriItems {
   private static <T extends Item> T registry(T item, String path) {
     Registry.register(
       Registry.ITEM,
-      new Identifier(AdvAgriConstants.ADV_AGRI_MODID, path),
+      new Identifier(AdvAgriConstants.MODID, path),
       item
     );
     return item;
@@ -304,7 +304,7 @@ public class AdvAgriItems {
     );
     Registry.register(
       Registry.ITEM,
-      new Identifier(AdvAgriConstants.ADV_AGRI_MODID, path),
+      new Identifier(AdvAgriConstants.MODID, path),
       aliased
     );
     return aliased;
@@ -314,7 +314,7 @@ public class AdvAgriItems {
     var di = defaultItem();
     Registry.register(
       Registry.ITEM,
-      new Identifier(AdvAgriConstants.ADV_AGRI_MODID, path),
+      new Identifier(AdvAgriConstants.MODID, path),
       di
     );
     return di;
