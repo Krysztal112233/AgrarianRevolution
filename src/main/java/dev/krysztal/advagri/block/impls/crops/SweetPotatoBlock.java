@@ -41,7 +41,7 @@ public class SweetPotatoBlock extends AdvAgriCropBlock {
 
   @Override
   protected ItemConvertible getSeedsItem() {
-    return AdvAgriItems.SEED_BAG_SWEET_POTATO_BEAN;
+    return AdvAgriItems.SEED_BAG_SWEET_POTATO_BEAN.get();
   }
 
   public SweetPotatoBlock(Settings settings) {

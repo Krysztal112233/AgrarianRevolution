@@ -22,7 +22,7 @@ public class BambooLoot {
         .builder()
         .rolls(ConstantLootNumberProvider.create(1))
         .conditionally(RandomChanceLootCondition.builder(0.7F).build())
-        .with(ItemEntry.builder(AdvAgriItems.BAMBOO_LEAVES).build())
+        .with(ItemEntry.builder(AdvAgriItems.BAMBOO_LEAVES.get()).build())
         .build();
 
     BAMBOO_SAPLING_POOL =
@@ -33,7 +33,7 @@ public class BambooLoot {
         .conditionally(
           OnGroundTagCondition.builder().tag("minecraft:dirt").build()
         )
-        .with(ItemEntry.builder(AdvAgriItems.BAMBOO_SAPLING).build())
+        .with(ItemEntry.builder(AdvAgriItems.BAMBOO_SAPLING.get()).build())
         .build();
   }
 

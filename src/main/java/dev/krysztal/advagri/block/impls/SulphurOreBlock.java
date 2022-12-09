@@ -35,7 +35,10 @@ public class SulphurOreBlock extends Block {
     if (
       !player.isCreative() &&
       rad <= explosionChance &&
-      !(player.getMainHandStack().getItem() == AdvAgriItems.BAMBOO_DRILL_ROD)
+      !(
+        player.getMainHandStack().getItem() ==
+        AdvAgriItems.BAMBOO_DRILL_ROD.get()
+      )
     ) {
       world.createExplosion(
         player,

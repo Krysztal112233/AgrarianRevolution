@@ -37,6 +37,6 @@ public class StrawBerryBlock extends SweetBerryBushBlock {
     BlockPos pos,
     BlockState state
   ) {
-    return new ItemStack(AdvAgriItems.STRAWBERRY);
+    return new ItemStack(AdvAgriItems.STRAWBERRY.get());
   }
 }

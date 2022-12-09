@@ -10,6 +10,6 @@ public class AdvAgriItemGroups {
 
   public static ItemGroup ADV_AGRI_CORE_ITEM_GROUP = FabricItemGroupBuilder.build(
     new Identifier(AdvAgriConstants.MODID, "agriculture"),
-    () -> new ItemStack(AdvAgriItems.BAMBOO_LEAVES)
+    () -> new ItemStack(AdvAgriItems.BAMBOO_LEAVES.get())
   );
 }

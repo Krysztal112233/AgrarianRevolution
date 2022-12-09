@@ -15,7 +15,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
-public class CornBlock extends AdvAgriCropBlock {
+public class ChiliBlock extends AdvAgriCropBlock {
+
+  public ChiliBlock(Settings settings) {
+    super(settings, AdvAgriSolarTerm.AUTUMN);
+  }
 
   private static final IntProperty AGE = Properties.AGE_7;
 
@@ -25,8 +29,8 @@ public class CornBlock extends AdvAgriCropBlock {
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D), // Age 1, 出苗
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D), // Age 3, 拔高至半格
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), // Age 4, 拔高至一格
-    Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D), // Age 5, 拔高至两格，开花
-    Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 7.0D, 16.0D), // Age 6, 两格，育果
+    Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D), // Age 5, 开花
+    Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 7.0D, 16.0D), // Age 6, 育果
     Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D), // Age 7. 结果
   };
 
@@ -59,10 +63,6 @@ public class CornBlock extends AdvAgriCropBlock {
 
   @Override
   protected ItemConvertible getSeedsItem() {
-    return AdvAgriItems.SEED_BAG_CORN.get();
-  }
-
-  public CornBlock(Settings settings) {
-    super(settings, AdvAgriSolarTerm.CLEAR_AND_BRIGHT);
+    return AdvAgriItems.SEED_BAG_CHILI.get();
   }
 }

@@ -1,9 +1,11 @@
 package dev.krysztal.advagri.item;
 
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import dev.krysztal.advagri.block.AdvAgriBlocks;
 import dev.krysztal.advagri.foundation.AdvAgriConstants;
 import dev.krysztal.advagri.foundation.AdvAgriFoodComponents;
 import dev.krysztal.advagri.foundation.AdvAgriItemGroups;
+import dev.krysztal.advagri.foundation.AdvAgriRegistrates;
 import dev.krysztal.advagri.foundation.annotation.GenTypes;
 import dev.krysztal.advagri.item.impls.BambooChopper;
 import dev.krysztal.advagri.item.impls.BambooDrillRod;
@@ -12,6 +14,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.AliasedBlockItem;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.FoodComponents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -21,308 +24,196 @@ import net.minecraft.util.registry.Registry;
 
 public class AdvAgriItems {
 
-  @GenTypes
-  public static Item FERTILIZER;
+  public static RegistryEntry<Fertilizer> FERTILIZER;
+  public static RegistryEntry<Item> POTASSIUM_SALT_POWDER;
+  public static RegistryEntry<Item> PLANT_ASH;
+  public static RegistryEntry<Item> BOTTLE_SMALL;
+  public static RegistryEntry<Item> BOTTLE_MEDIUM;
+  public static RegistryEntry<Item> BOTTLE_LARGE;
+  public static RegistryEntry<Item> SOLARIUM_BOTTLE_LARGE;
+  public static RegistryEntry<Item> SOLARIUM_BOTTLE_MEDIUM;
+  public static RegistryEntry<Item> SOLARIUM_BOTTLE_SMALL;
+  public static RegistryEntry<Item> BAMBOO_LEAVES;
+  public static RegistryEntry<Item> BAMBOO_SILK;
+  public static RegistryEntry<Item> BAMBOO_SILK_BOARD;
+  public static RegistryEntry<Item> BAMBOO_CHARCOAL;
+  public static RegistryEntry<Item> BAMBOO_CHARCOAL_BALL;
 
-  @GenTypes
-  public static Item POTASSIUM_SALT_POWDER;
+  public static RegistryEntry<Item> BAMBOO_SAPLING;
+  public static RegistryEntry<Item> PHOS;
+  public static RegistryEntry<Item> VERMICULITE;
+  public static RegistryEntry<Item> SULFUR;
+  public static RegistryEntry<BambooChopper> BAMBOO_CHOPPER;
 
-  @GenTypes
-  public static Item PLANT_ASH;
+  //===================== Tools ===================/
+  public static RegistryEntry<BambooDrillRod> BAMBOO_DRILL_ROD;
 
-  @GenTypes
-  public static Item BOTTLE_SMALL;
+  //================== "Seed" ====================/
+  public static RegistryEntry<AliasedBlockItem> SEED_BAG_RICE;
+  public static RegistryEntry<AliasedBlockItem> SEED_BAG_CHILI;
+  public static RegistryEntry<AliasedBlockItem> SEED_BAG_CELERY;
+  public static RegistryEntry<AliasedBlockItem> SEED_BAG_LETTUCE;
+  public static RegistryEntry<AliasedBlockItem> SEED_BAG_STRAWBERRY;
+  public static RegistryEntry<AliasedBlockItem> SEED_BAG_CORN;
+  public static RegistryEntry<AliasedBlockItem> SEED_BAG_SWEET_POTATO_BEAN;
 
-  @GenTypes
-  public static Item BOTTLE_MEDIUM;
+  //========= Agricultural Products =============/
+  public static RegistryEntry<Item> RICE_UNHUSKED;
+  public static RegistryEntry<Item> RICE;
+  public static RegistryEntry<Item> CHILI;
+  public static RegistryEntry<Item> CELERY;
+  public static RegistryEntry<Item> LETTUCE;
+  public static RegistryEntry<Item> STRAWBERRY;
+  public static RegistryEntry<Item> GARLIC;
+  public static RegistryEntry<AliasedBlockItem> WATER_CHESTNUT;
+  public static RegistryEntry<Item> STRAW;
 
-  @GenTypes
-  public static Item BOTTLE_LARGE;
-
-  @GenTypes
-  public static Item SOLARIUM_BOTTLE_LARGE;
-
-  @GenTypes
-  public static Item SOLARIUM_BOTTLE_MEDIUM;
-
-  @GenTypes
-  public static Item SOLARIUM_BOTTLE_SMALL;
-
-  @GenTypes
-  public static Item BAMBOO_LEAVES;
-
-  @GenTypes
-  public static Item BAMBOO_SILK;
-
-  @GenTypes
-  public static Item BAMBOO_SILK_BOARD;
-
-  @GenTypes
-  public static Item BAMBOO_CHARCOAL;
-
-  @GenTypes
-  public static Item BAMBOO_CHARCOAL_BALL;
-
-  public static Item BAMBOO_SAPLING;
-
-  @GenTypes
-  public static Item PHOS;
-
-  @GenTypes
-  public static Item VERMICULITE;
-
-  @GenTypes
-  public static Item SULFUR;
-
-  @GenTypes
-  public static BambooChopper BAMBOO_CHOPPER;
-
-  //===================== Tools ===================//
-  @GenTypes
-  public static BambooDrillRod BAMBOO_DRILL_ROD;
-
-  //================== "Seed" ====================//
-  @GenTypes
-  public static Item SEED_BAG_RICE;
-
-  @GenTypes
-  public static Item SEED_BAG_CHILI;
-
-  @GenTypes
-  public static Item SEED_BAG_CELERY;
-
-  @GenTypes
-  public static Item SEED_BAG_LETTUCE;
-
-  @GenTypes
-  public static Item SEED_BAG_STRAWBERRY;
-
-  @GenTypes
-  public static Item SEED_BAG_CORN;
-
-  @GenTypes
-  public static Item SEED_BAG_SWEET_POTATO_BEAN;
-
-  //========= Agricultural Products =============//
-  @GenTypes
-  public static Item RICE_UNHUSKED;
-
-  @GenTypes
-  public static Item RICE;
-
-  @GenTypes
-  public static Item PLANT_STRAW;
-
-  @GenTypes
-  public static Item CHILI;
-
-  @GenTypes
-  public static Item CELERY;
-
-  @GenTypes
-  public static Item LETTUCE;
-
-  @GenTypes
-  public static Item STRAWBERRY;
-
-  @GenTypes
-  public static Item GARLIC;
-
-  @GenTypes
-  public static Item WATER_CHESTNUT;
-
-  //================ Food =====================//
-  @GenTypes
-  public static Item ASPARAGUS;
-
-  @GenTypes
-  public static Item PEELED_BAMBOO_SAPLING;
-
-  @GenTypes
-  public static Item SOLAR_BERRY;
-
-  @GenTypes
-  public static Item SWEET_POTATO;
-
-  @GenTypes
-  public static Item ACORNS;
-
-  @GenTypes
-  public static Item ROASTED_ACORNS;
+  //================ Food =====================/
+  public static RegistryEntry<Item> ASPARAGUS;
+  public static RegistryEntry<Item> PEELED_BAMBOO_SAPLING;
+  public static RegistryEntry<Item> SOLAR_BERRY;
+  public static RegistryEntry<Item> SWEET_POTATO;
+  public static RegistryEntry<Item> ACORNS;
+  public static RegistryEntry<Item> ROASTED_ACORNS;
 
   public static void init() {}
 
   static {
     FERTILIZER =
-      registry(
-        new Fertilizer(
-          new FabricItemSettings()
-            .group(AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
-        ),
-        "fertilizer"
-      );
-    POTASSIUM_SALT_POWDER = registry("potassium_salt_powder");
-    PLANT_ASH = registry("plant_ash");
-    BOTTLE_SMALL = registry("bottle_small");
-    BOTTLE_MEDIUM = registry("bottle_medium");
-    BOTTLE_LARGE = registry("bottle_large");
-    SOLARIUM_BOTTLE_SMALL = registry("solarium_bottle_small");
-    SOLARIUM_BOTTLE_MEDIUM = registry("solarium_bottle_medium");
-    SOLARIUM_BOTTLE_LARGE = registry("solarium_bottle_large");
-    BAMBOO_LEAVES = registry("bamboo_leaves");
-    BAMBOO_SILK = registry("bamboo_silk");
-    BAMBOO_SILK_BOARD = registry("bamboo_silk_board");
-    BAMBOO_CHARCOAL = registry("bamboo_charcoal");
-    BAMBOO_CHARCOAL_BALL = registry("bamboo_charcoal_ball");
-    BAMBOO_SAPLING = registry("bamboo_sapling");
-    PHOS = registry("phos");
-    VERMICULITE = registry("vermiculite");
-    SULFUR = registry("sulfur");
+      AdvAgriRegistrates.ITEM_REGISTRATE
+        .item("fertilizer", Fertilizer::new)
+        .tab(() -> AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
+        .register();
+
+    POTASSIUM_SALT_POWDER = defaultItemRegistry("potassium_salt_powder");
+    PLANT_ASH = defaultItemRegistry("plant_ash");
+    BOTTLE_SMALL = defaultItemRegistry("bottle_small");
+    BOTTLE_MEDIUM = defaultItemRegistry("bottle_medium");
+    BOTTLE_LARGE = defaultItemRegistry("bottle_large");
+    SOLARIUM_BOTTLE_SMALL = defaultItemRegistry("solarium_bottle_small");
+    SOLARIUM_BOTTLE_MEDIUM = defaultItemRegistry("solarium_bottle_medium");
+    SOLARIUM_BOTTLE_LARGE = defaultItemRegistry("solarium_bottle_large");
+    BAMBOO_LEAVES = defaultItemRegistry("bamboo_leaves");
+    BAMBOO_SILK = defaultItemRegistry("bamboo_silk");
+    BAMBOO_SILK_BOARD = defaultItemRegistry("bamboo_silk_board");
+    BAMBOO_CHARCOAL = defaultItemRegistry("bamboo_charcoal");
+    BAMBOO_CHARCOAL_BALL = defaultItemRegistry("bamboo_charcoal_ball");
+    BAMBOO_SAPLING = defaultItemRegistry("bamboo_sapling");
+    PHOS = defaultItemRegistry("phos");
+    VERMICULITE = defaultItemRegistry("vermiculite");
+    SULFUR = defaultItemRegistry("sulfur");
   }
 
   static {
-    SEED_BAG_RICE = registry("rice_seed_bag");
-    SEED_BAG_CHILI = registry("chili_seed_bag");
-    SEED_BAG_CELERY = registry("celery_seed_bag");
-    SEED_BAG_LETTUCE = registry("lettuce_seed_bag");
-    SEED_BAG_STRAWBERRY = registry("strawberry_seed_bag");
+    SEED_BAG_RICE = registryAliased("rice_seed_bag", AdvAgriBlocks.RICE_BLOCK);
+    SEED_BAG_CHILI =
+      registryAliased("chili_seed_bag", AdvAgriBlocks.CHILI_BLOCK);
+    SEED_BAG_CELERY =
+      registryAliased("celery_seed_bag", AdvAgriBlocks.CELERY_BLOCK);
+    SEED_BAG_LETTUCE =
+      registryAliased("lettuce_seed_bag", AdvAgriBlocks.LETTUCE_BLOCK);
+    SEED_BAG_STRAWBERRY =
+      registryAliased("strawberry_seed_bag", AdvAgriBlocks.STRAW_BERRY_BLOCK);
     SEED_BAG_CORN = registryAliased("corn_seed_bag", AdvAgriBlocks.CRON_BLOCK);
-    SEED_BAG_SWEET_POTATO_BEAN = registry("sweet_potato_bean_seed_bag");
-    RICE_UNHUSKED = registry("rice_unhusked");
-    RICE = registry("rice");
-    PLANT_STRAW = registry("plant_straw");
-    CHILI = registry("chili");
-    CELERY = registry("celery");
-    LETTUCE = registry("lettuce");
-    STRAWBERRY = registry("strawberry");
-    GARLIC = registry("garlic");
+    SEED_BAG_SWEET_POTATO_BEAN =
+      registryAliased(
+        "sweet_potato_bean_seed_bag",
+        AdvAgriBlocks.SWEET_POTATO_BLOCK
+      );
+  }
+
+  static {
+    RICE = defaultItemRegistry("rice");
+    RICE_UNHUSKED = defaultItemRegistry("rice_unhusked");
+    CHILI = defaultItemRegistry("chili");
+    CELERY = defaultItemRegistry("celery");
+    LETTUCE = defaultItemRegistry("lettuce");
+    STRAWBERRY = defaultItemRegistry("strawberry");
+    GARLIC = defaultItemRegistry("garlic");
     WATER_CHESTNUT =
       registryAliased("water_chestnut", AdvAgriBlocks.WATER_CHESTNUT_BLOCK);
+    STRAW = defaultItemRegistry("straw");
+  }
 
+  static {
     BAMBOO_CHOPPER =
-      registry(
-        new BambooChopper(
-          ToolMaterials.IRON,
-          1,
-          0F,
-          new FabricItemSettings()
-            .group(AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
-        ),
-        "bamboo_chopper"
-      );
+      AdvAgriRegistrates.ITEM_REGISTRATE
+        .item(
+          "bamboo_chopper",
+          $ ->
+            new BambooChopper(
+              ToolMaterials.IRON,
+              1,
+              0F,
+              new FabricItemSettings()
+                .group(AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
+            )
+        )
+        .tab(() -> AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
+        .register();
+
     BAMBOO_DRILL_ROD =
-      registry(
-        new BambooDrillRod(
-          new FabricItemSettings()
-            .group(AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
-        ),
-        "bamboo_drill_rod"
-      );
+      AdvAgriRegistrates.ITEM_REGISTRATE
+        .item("bamboo_drill_rod", BambooDrillRod::new)
+        .tab(() -> AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
+        .register();
   }
 
   static {
     ASPARAGUS =
-      registry(
-        new Item(
-          new FabricItemSettings()
-            .group(ItemGroup.FOOD)
-            .food(AdvAgriFoodComponents.ASPARAGUS)
-        ),
-        "asparagus"
-      );
+      defaultFoodRegistry("asparagus", AdvAgriFoodComponents.ASPARAGUS);
 
     PEELED_BAMBOO_SAPLING =
-      registry(
-        new Item(
-          new FabricItemSettings()
-            .group(ItemGroup.FOOD)
-            .food(AdvAgriFoodComponents.PEELED_BAMBOO_SAPLING)
-        ),
-        "peeled_bamboo_shoot"
+      defaultFoodRegistry(
+        "peeled_bamboo_shoot",
+        AdvAgriFoodComponents.PEELED_BAMBOO_SAPLING
       );
 
     SWEET_POTATO =
-      registry(
-        new Item(
-          new FabricItemSettings()
-            .group(ItemGroup.FOOD)
-            .food(AdvAgriFoodComponents.SWEET_POTATO)
-        ),
-        "sweet_potato"
-      );
+      defaultFoodRegistry("sweet_potato", AdvAgriFoodComponents.SWEET_POTATO);
 
     SOLAR_BERRY =
-      registry(
-        new Item(
-          new FabricItemSettings()
-            .group(ItemGroup.FOOD)
-            .food(AdvAgriFoodComponents.SOLAR_BERRY)
-        ),
-        "solar_berry"
-      );
+      defaultFoodRegistry("solar_berry", AdvAgriFoodComponents.SOLAR_BERRY);
 
-    ACORNS =
-      registry(
-        new Item(
-          new FabricItemSettings()
-            .group(ItemGroup.FOOD)
-            .food(FoodComponents.DRIED_KELP)
-        ),
-        "acorns"
-      );
+    ACORNS = defaultFoodRegistry("acorns", FoodComponents.DRIED_KELP);
 
     ROASTED_ACORNS =
-      registry(
-        new Item(
-          new FabricItemSettings()
-            .group(ItemGroup.FOOD)
-            .food(AdvAgriFoodComponents.ROASTED_ACORNS)
-        ),
-        "roasted_acorns"
+      defaultFoodRegistry(
+        "roasted_acorns",
+        AdvAgriFoodComponents.ROASTED_ACORNS
       );
   }
 
   static {
-    FuelRegistry.INSTANCE.add(BAMBOO_CHARCOAL_BALL, 80 * 20); //80s
-    FuelRegistry.INSTANCE.add(BAMBOO_CHARCOAL, 20 * 20); //20s
-    FuelRegistry.INSTANCE.add(BAMBOO_LEAVES, 2 * 20); //2s
+    FuelRegistry.INSTANCE.add(BAMBOO_CHARCOAL_BALL.get(), 80 * 20); //80s
+    FuelRegistry.INSTANCE.add(BAMBOO_CHARCOAL.get(), 20 * 20); //20s
+    FuelRegistry.INSTANCE.add(BAMBOO_LEAVES.get(), 2 * 20); //2s
   }
 
-  private static <T extends Item> T registry(T item, String path) {
-    Registry.register(
-      Registry.ITEM,
-      new Identifier(AdvAgriConstants.MODID, path),
-      item
-    );
-    return item;
+  private static RegistryEntry<AliasedBlockItem> registryAliased(
+    String path,
+    Block aliasedBlock
+  ) {
+    return AdvAgriRegistrates.ITEM_REGISTRATE
+      .item(path, s -> new AliasedBlockItem(aliasedBlock, s))
+      .tab(() -> AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
+      .register();
   }
 
-  private static Item registryAliased(String path, Block aliasedBlock) {
-    var aliased = new AliasedBlockItem(
-      aliasedBlock,
-      new FabricItemSettings().group(AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
-    );
-    Registry.register(
-      Registry.ITEM,
-      new Identifier(AdvAgriConstants.MODID, path),
-      aliased
-    );
-    return aliased;
+  private static RegistryEntry<Item> defaultItemRegistry(String path) {
+    return AdvAgriRegistrates.ITEM_REGISTRATE
+      .item(path, Item::new)
+      .tab(() -> AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
+      .register();
   }
 
-  private static Item registry(String path) {
-    var di = defaultItem();
-    Registry.register(
-      Registry.ITEM,
-      new Identifier(AdvAgriConstants.MODID, path),
-      di
-    );
-    return di;
-  }
-
-  private static Item defaultItem() {
-    return new Item(
-      new FabricItemSettings().group(AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
-    );
+  private static RegistryEntry<Item> defaultFoodRegistry(
+    String path,
+    FoodComponent foodComponent
+  ) {
+    return AdvAgriRegistrates.ITEM_REGISTRATE
+      .item(path, s -> new Item(s.food(foodComponent)))
+      .tab(() -> AdvAgriItemGroups.ADV_AGRI_CORE_ITEM_GROUP)
+      .register();
   }
 }

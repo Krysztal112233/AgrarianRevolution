@@ -2,16 +2,22 @@ package dev.krysztal.advagri.block;
 
 import dev.krysztal.advagri.block.impls.NetherSulphurOreBlock;
 import dev.krysztal.advagri.block.impls.SulphurOreBlock;
-import dev.krysztal.advagri.block.impls.crops.*;
+import dev.krysztal.advagri.block.impls.crops.CeleryBlock;
+import dev.krysztal.advagri.block.impls.crops.ChiliBlock;
+import dev.krysztal.advagri.block.impls.crops.CornBlock;
+import dev.krysztal.advagri.block.impls.crops.GarlicBlock;
+import dev.krysztal.advagri.block.impls.crops.LettuceBlock;
+import dev.krysztal.advagri.block.impls.crops.RiceBlock;
+import dev.krysztal.advagri.block.impls.crops.SolarBerryBushBlock;
+import dev.krysztal.advagri.block.impls.crops.StrawBerryBlock;
+import dev.krysztal.advagri.block.impls.crops.SweetPotatoBlock;
+import dev.krysztal.advagri.block.impls.crops.WaterChestnutBlock;
 import dev.krysztal.advagri.foundation.AdvAgriConstants;
 import dev.krysztal.advagri.foundation.AdvAgriItemGroups;
-import dev.krysztal.advagri.foundation.annotation.GenType;
-import dev.krysztal.advagri.foundation.annotation.GenTypes;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.MapColor;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
@@ -19,110 +25,47 @@ import net.minecraft.util.registry.Registry;
 
 public class AdvAgriBlocks {
 
-  @GenTypes(
-    types = {
-      GenType.SimpleBlockModel, GenType.SimpleBlockLoot, GenType.MineShovel,
-    }
-  )
+  //============== Functional Block ==============//
   public static Block ACIDIFIED_SOIL;
-
-  @GenTypes(
-    types = {
-      GenType.SimpleBlockModel, GenType.SimpleBlockLoot, GenType.MineShovel,
-    }
-  )
   public static Block HARDENED_SOIL;
 
-  @GenTypes(
-    types = {
-      GenType.SimpleBlockModel, GenType.MinePickaxe, GenType.MineLevel1,
-    }
-  )
+  //====================== Ore ===================//
+  public static Block VERMICULITE_ORE;
   public static Block PHOS_ORE;
-
-  @GenTypes(
-    types = {
-      GenType.SimpleBlockModel, GenType.MinePickaxe, GenType.MineLevel1,
-    }
-  )
   public static Block SULPHUR_ORE;
-
-  @GenTypes(
-    types = {
-      GenType.SimpleBlockModel, GenType.MinePickaxe, GenType.MineLevel1,
-    }
-  )
   public static Block NETHER_SULPHUR_ORE;
 
-  @GenTypes(types = { GenType.SimpleBlockModel, GenType.MineShovel })
-  public static Block VERMICULITE_ORE;
-
-  //====================== Log ===================//
-  @GenTypes(
-    types = {
-      GenType.SimpleBlockLoot, GenType.MineAxe, GenType.SimpleItemModel,
-    }
-  )
+  //====================== Log ====================//
   public static Block GINKGO_LOG;
 
-  //====================== Wood ====================//
-  @GenTypes(
-    types = {
-      GenType.SimpleBlockLoot, GenType.MineAxe, GenType.SimpleItemModel,
-    }
-  )
+  //====================== Wood ===================//
   public static Block GINKGO_WOOD;
 
-  //====================== Stripped log ==========//
-  @GenTypes(
-    types = {
-      GenType.SimpleBlockLoot, GenType.MineAxe, GenType.SimpleItemModel,
-    }
-  )
+  //====================== Stripped log ===========//
   public static Block STRIPPED_GINKGO_LOG;
 
   //====================== Stripped wood ==========//
-  @GenTypes(
-    types = {
-      GenType.SimpleBlockLoot, GenType.MineAxe, GenType.SimpleItemModel,
-    }
-  )
   public static Block STRIPPED_GINKGO_WOOD;
 
   //====================== Planks =================//
-  @GenTypes(
-    types = {
-      GenType.SimpleBlockLoot,
-      GenType.MineAxe,
-      GenType.SimpleBlockState,
-      GenType.SimpleItemModel,
-    }
-  )
   public static Block GINKGO_PLANKS;
 
   //====================== Leaves =================//
-  @GenTypes(types = { GenType.MineAxe, GenType.SimpleBlockModel })
   public static Block GINKGO_LEAVES;
 
   //================= Plants Blocks ===============//
-  @GenTypes(types = { GenType.CropBlockState })
+  // Crop type
   public static CornBlock CRON_BLOCK;
-
-  @GenTypes(types = { GenType.CropBlockState })
   public static GarlicBlock GARLIC_BLOCK;
-
-  @GenTypes(types = { GenType.CropBlockState })
   public static LettuceBlock LETTUCE_BLOCK;
-
-  public static SolarBerryBushBlock SOLAR_BERRY_BUSH_BLOCK;
-
-  public static StrawBerryBlock STRAW_BERRY_BLOCK;
-
-  @GenTypes(types = { GenType.CropBlockState })
   public static SweetPotatoBlock SWEET_POTATO_BLOCK;
-
-  @GenTypes(types = { GenType.CropBlockState })
   public static WaterChestnutBlock WATER_CHESTNUT_BLOCK;
+  public static ChiliBlock CHILI_BLOCK;
+  public static CeleryBlock CELERY_BLOCK;
+  public static RiceBlock RICE_BLOCK;
+  // Bush type
+  public static SolarBerryBushBlock SOLAR_BERRY_BUSH_BLOCK;
+  public static StrawBerryBlock STRAW_BERRY_BLOCK;
 
   public static void init() {
     ACIDIFIED_SOIL = registry(defaultBlock(Blocks.DIRT), "acidified_soil");
