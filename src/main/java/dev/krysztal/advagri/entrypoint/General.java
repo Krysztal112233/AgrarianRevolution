@@ -3,6 +3,7 @@ package dev.krysztal.advagri.entrypoint;
 import dev.krysztal.advagri.block.AdvAgriBlocks;
 import dev.krysztal.advagri.event.AdvAgriEvents;
 import dev.krysztal.advagri.foundation.AdvAgriGameRules;
+import dev.krysztal.advagri.foundation.AdvAgriRegistrates;
 import dev.krysztal.advagri.foundation.AdvAgriTags;
 import dev.krysztal.advagri.item.AdvAgriItems;
 import dev.krysztal.advagri.loot.AdvAgriLoot;
@@ -18,5 +19,9 @@ public class General implements ModInitializer {
     AdvAgriGameRules.init();
     AdvAgriLoot.init();
     AdvAgriEvents.init();
+
+    AdvAgriRegistrates.ITEM_REGISTRATE.register();
+    AdvAgriRegistrates.FOOD_REGISTRATE.register();
+    AdvAgriRegistrates.BLOCK_REGISTRATE.register();
   }
 }

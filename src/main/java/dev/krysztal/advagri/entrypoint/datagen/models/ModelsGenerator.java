@@ -18,10 +18,13 @@ public class ModelsGenerator extends FabricModelProvider {
 
   // log & wood type.
   private static final List<Pair<Block, Block>> LOG_WOOD = List.of(
-    new Pair<Block, Block>(AdvAgriBlocks.GINKGO_LOG, AdvAgriBlocks.GINKGO_WOOD),
     new Pair<Block, Block>(
-      AdvAgriBlocks.STRIPPED_GINKGO_LOG,
-      AdvAgriBlocks.STRIPPED_GINKGO_WOOD
+      AdvAgriBlocks.GINKGO_LOG.get(),
+      AdvAgriBlocks.GINKGO_WOOD.get()
+    ),
+    new Pair<Block, Block>(
+      AdvAgriBlocks.STRIPPED_GINKGO_LOG.get(),
+      AdvAgriBlocks.STRIPPED_GINKGO_WOOD.get()
     )
   );
 
