@@ -248,12 +248,12 @@ public class AdvAgriBlocks {
   private static <T extends Block> T registry(T block, String path) {
     Registry.register(
       Registry.BLOCK,
-      new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path),
+      new Identifier(AdvAgriConstants.MODID, path),
       block
     );
     Registry.register(
       Registry.ITEM,
-      new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path),
+      new Identifier(AdvAgriConstants.MODID, path),
       new BlockItem(
         block,
         new FabricItemSettings()
@@ -266,12 +266,12 @@ public class AdvAgriBlocks {
   private static <T extends Block> T registryPlant(T block, String path) {
     Registry.register(
       Registry.BLOCK,
-      new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path),
+      new Identifier(AdvAgriConstants.MODID, path),
       block
     );
     Registry.register(
       Registry.ITEM,
-      new Identifier(AdvAgriConstants.ADV_AGRI_NAMESPACE, path),
+      new Identifier(AdvAgriConstants.MODID, path),
       new BlockItem(block, new FabricItemSettings())
     );
     return block;

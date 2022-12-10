@@ -29,7 +29,7 @@ public class LootTablesGenerator extends SimpleFabricLootTableProvider {
       .forEach(block -> {
         identifierBuilderBiConsumer.accept(
           new Identifier(
-            AdvAgriConstants.ADV_AGRI_NAMESPACE,
+            AdvAgriConstants.MODID,
             block.getLootTableId().getPath()
           ),
           BlockLootTableGenerator.drops(
