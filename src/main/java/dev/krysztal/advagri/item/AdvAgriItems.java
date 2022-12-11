@@ -150,6 +150,9 @@ public class AdvAgriItems {
   @GenTypes
   public static Item ROASTED_ACORNS;
 
+  @GenTypes
+  public static Item GINKGO_NUTS;
+
   public static void init() {}
 
   static {
@@ -279,6 +282,16 @@ public class AdvAgriItems {
             .food(AdvAgriFoodComponents.ROASTED_ACORNS)
         ),
         "roasted_acorns"
+      );
+
+    GINKGO_NUTS =
+      registry(
+        new Item(
+          new FabricItemSettings()
+            .group(ItemGroup.FOOD)
+            .food(AdvAgriFoodComponents.GINKGO_NUTS)
+        ),
+        "ginkgo_nuts"
       );
   }
 

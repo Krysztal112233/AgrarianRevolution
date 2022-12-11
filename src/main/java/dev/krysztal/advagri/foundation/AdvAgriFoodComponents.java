@@ -12,6 +12,7 @@ public class AdvAgriFoodComponents {
   public static final FoodComponent SOLAR_BERRY;
   public static final FoodComponent WATER_CHESTNUT;
   public static final FoodComponent ROASTED_ACORNS;
+  public static final FoodComponent GINKGO_NUTS;
 
   static {
     ASPARAGUS =
@@ -74,6 +75,34 @@ public class AdvAgriFoodComponents {
         .statusEffect(
           new StatusEffectInstance(StatusEffects.ABSORPTION, 6 * 20),
           0.3F
+        )
+        .snack()
+        .alwaysEdible()
+        .build();
+
+    GINKGO_NUTS =
+      new FoodComponent.Builder()
+        .hunger(2)
+        .saturationModifier(0.5F)
+        .statusEffect(
+          new StatusEffectInstance(StatusEffects.POISON, 6 * 20),
+          0.1F
+        )
+        .statusEffect(
+          new StatusEffectInstance(StatusEffects.LUCK, 12 * 20),
+          0.005F
+        )
+        .statusEffect(
+          new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 12 * 20),
+          0.005F
+        )
+        .statusEffect(
+          new StatusEffectInstance(StatusEffects.HERO_OF_THE_VILLAGE, 60 * 20),
+          0.005F
+        )
+        .statusEffect(
+          new StatusEffectInstance(StatusEffects.RESISTANCE, 60 * 20, 4),
+          0.001F
         )
         .snack()
         .alwaysEdible()
