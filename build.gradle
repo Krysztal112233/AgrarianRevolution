@@ -67,7 +67,6 @@ dependencies {
 
 	// Cardinal Components API
 	modApi "org.ladysnake.cardinal-components-api:cardinal-components-base:${cca_version}"
-	modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-chunk:${cca_version}"
 	modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-world:${cca_version}"
 }
 

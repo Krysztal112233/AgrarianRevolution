@@ -27,8 +27,7 @@
 			"dev.krysztal.are.AgrarianRevolutionDataGenerator"
 		],
 		"cardinal-components": [
-			"dev.krysztal.are.foundation.component.SeasonComponentImpl",
-			"dev.krysztal.are.foundation.component.TemperatureComponentImpl"
+			"dev.krysztal.are.foundation.component.SeasonComponentImpl"
 		]
 	},
 	"mixins": [
@@ -46,7 +45,6 @@
 	},
 	"custom": {
 		"cardinal-components": [
-			"are:temperature",
 			"are:season"
 		]
 	}
