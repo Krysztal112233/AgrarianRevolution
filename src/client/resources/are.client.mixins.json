@@ -1,0 +1,9 @@
+{
+	"required": true,
+	"package": "dev.krysztal.are.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"client": [],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

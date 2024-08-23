@@ -1,0 +1,53 @@
+{
+	"schemaVersion": 1,
+	"id": "are",
+	"version": "${version}",
+	"name": "AgrarianRevolution",
+	"description": "Hybridization, cultivation, food, energy, REVOLUTION.",
+	"authors": [
+		"KrysztalHuang"
+	],
+	"contact": {
+		"homepage": "https://github.com/Krysztal112233/AgrarianRevolution",
+		"sources": "https://github.com/Krysztal112233/AgrarianRevolution",
+		"issues": "https://github.com/Krysztal112233/AgrarianRevolution/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/are/icon.png",
+	"environment": "*",
+	"accessWidener": "are.accesswidener",
+	"entrypoints": {
+		"main": [
+			"dev.krysztal.are.AgrarianRevolution"
+		],
+		"client": [
+			"dev.krysztal.are.AgrarianRevolutionClient"
+		],
+		"fabric-datagen": [
+			"dev.krysztal.are.AgrarianRevolutionDataGenerator"
+		],
+		"cardinal-components": [
+			"dev.krysztal.are.foundation.component.SeasonComponentImpl",
+			"dev.krysztal.are.foundation.component.TemperatureComponentImpl"
+		]
+	},
+	"mixins": [
+		"are.mixins.json",
+		{
+			"config": "are.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"custom": {
+		"cardinal-components": [
+			"are:temperature",
+			"are:season"
+		]
+	}
+}
