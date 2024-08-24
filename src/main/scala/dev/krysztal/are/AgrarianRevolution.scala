@@ -1,6 +1,7 @@
 package dev.krysztal.are
 
 import dev.krysztal.are.common.Blocks
+import dev.krysztal.are.common.DataComponentTypes
 import dev.krysztal.are.common.ItemGroups
 import dev.krysztal.are.common.Items
 import dev.krysztal.are.common.WorldComponents
@@ -11,6 +12,7 @@ import org.slf4j.LoggerFactory
 class AgrarianRevolution extends ModInitializer {
 
     def onInitialize() = {
+        DataComponentTypes.initialize()
         WorldComponents.initialize()
 
         ItemGroups.initialize()

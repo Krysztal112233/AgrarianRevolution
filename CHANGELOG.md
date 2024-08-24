@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Add `TraitLens` for analyzing trait
 - Add `HybridNote` for recording species hybridization information
 - Add `SpecimenRepository` for storage `HybridNote` and **_specimen_**
+- Add `CaffeineComponent` for storage `caffeine` count
 
 ### Change
 
