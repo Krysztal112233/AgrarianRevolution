@@ -27,7 +27,7 @@ package dev.krysztal.are.common.data
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 
-case class SugarComponent(sugar: Int)
+case class SugarComponent(sugar: Int = 0)
 
 object SugarComponent {
     val CODEC: Codec[SugarComponent] =

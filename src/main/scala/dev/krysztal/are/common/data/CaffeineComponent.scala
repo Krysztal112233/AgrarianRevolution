@@ -27,7 +27,7 @@ package dev.krysztal.are.common.data
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 
-case class CaffeineComponent(caffeine: Int)
+case class CaffeineComponent(caffeine: Int = 0)
 
 object CaffeineComponent {
     val CODEC: Codec[CaffeineComponent] =
