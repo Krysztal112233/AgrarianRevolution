@@ -14,6 +14,7 @@ import net.minecraft.item.ItemGroup
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.registry.RegistryKey
+import dev.krysztal.are.common.block.SpecimenRepository
 
 object Blocks {
 
@@ -35,6 +36,12 @@ object Blocks {
     val APATITE_ORE: Block = register(
       "apatite_ore",
       Block(AbstractBlock.Settings.copy(MBlocks.COAL_ORE))
+    )
+
+    // Workstation
+    val TRAIT_BOOKSHELF: Block = register(
+      "specimen_repository",
+      SpecimenRepository(AbstractBlock.Settings.copy(MBlocks.CHEST))
     )
 
     private def register(

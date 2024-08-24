@@ -18,13 +18,17 @@ class BaseItemProvider {
     }
 
     private def registerItemGenerated() = {
+
         Array(
           ASHES,
           SULFUR,
           PHOSPHORCOAL,
           PHOSPHORUS,
           RAW_VERMICULITE,
-          VERMICULITE,
+          VERMICULITE
+        ).foreach(itemModelGenerator.register(_, Models.GENERATED))
+
+        Array(
           GINKGO_NUT,
           CORN,
           GRAPE,
@@ -36,6 +40,10 @@ class BaseItemProvider {
           JICAMA,
           BAMBOO_LEAVES
         ).foreach(itemModelGenerator.register(_, Models.GENERATED))
+
+        Array(HYBRID_NOTE, TRAIT_LENS).foreach(
+          itemModelGenerator.register(_, Models.GENERATED)
+        )
     }
 
     private def registerBlockGenerated() = {

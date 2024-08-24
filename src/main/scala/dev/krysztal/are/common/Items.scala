@@ -3,6 +3,8 @@ package dev.krysztal.are.common
 import dev.krysztal.are.AgrarianRevolution.identifier
 import dev.krysztal.are.AgrarianRevolution.log
 import dev.krysztal.are.common.ItemGroups.BASE_GROUP_KEY
+import dev.krysztal.are.common.item.HybridNote
+import dev.krysztal.are.common.item.TraitLens
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents
 import net.minecraft.item.Item
 import net.minecraft.item.Item.Settings
@@ -31,6 +33,10 @@ object Items {
     val LETTUCE: Item = register(Item(Settings()), "lettuce")
     val JICAMA: Item = register(Item(Settings()), "jicama")
     val BAMBOO_LEAVES: Item = register(Item(Settings()), "bamboo_leaves")
+
+    // Tools
+    val TRAIT_LENS: Item = register(TraitLens(Settings()), "trait_lens")
+    val HYBRID_NOTE: Item = register(HybridNote(Settings()), "hybrid_note")
 
     private def register(
         item: Item,
