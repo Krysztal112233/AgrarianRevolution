@@ -3,6 +3,7 @@ plugins {
 	id 'maven-publish'
 	id 'scala'
 	id 'io.github.cosmicsilence.scalafix' version '0.2.2'
+	id 'org.cadixdev.licenser' version '0.6.1'
 }
 
 version = project.mod_version
@@ -32,6 +33,11 @@ repositories {
     	name = "Terraformers"
     	url = "https://maven.terraformersmc.com/"
   	}
+}
+
+license {
+    header = project.file('LICENSE')
+	include '**/*.scala'
 }
 
 loom {
