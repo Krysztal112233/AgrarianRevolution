@@ -1,8 +1,8 @@
 package dev.krysztal.are.common
 
 import dev.krysztal.are.AgrarianRevolution.identifier
-import dev.krysztal.are.AgrarianRevolution.log
 import dev.krysztal.are.common.ItemGroups.BASE_GROUP_KEY
+import dev.krysztal.are.common.block.SpecimenRepository
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents
 import net.minecraft.block.AbstractBlock
 import net.minecraft.block.Block
@@ -14,9 +14,10 @@ import net.minecraft.item.ItemGroup
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.registry.RegistryKey
-import dev.krysztal.are.common.block.SpecimenRepository
+import org.slf4j.LoggerFactory
 
 object Blocks {
+    private lazy val log = LoggerFactory.getLogger("AgrarianBlocks")
 
     // Dirt
     val ACIDIFIED_DIRT: Block = register(

@@ -1,7 +1,6 @@
 package dev.krysztal.are.common
 
 import dev.krysztal.are.AgrarianRevolution.identifier
-import dev.krysztal.are.AgrarianRevolution.log
 import dev.krysztal.are.common.ItemGroups.BASE_GROUP_KEY
 import dev.krysztal.are.common.item.HybridNote
 import dev.krysztal.are.common.item.TraitLens
@@ -12,8 +11,11 @@ import net.minecraft.item.ItemGroup
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.registry.RegistryKey
+import org.slf4j.LoggerFactory
 
 object Items {
+    private lazy val log = LoggerFactory.getLogger("AgrarianItems")
+
     // Mineral Products
     val ASHES: Item = register(Item(Settings()), "ashes")
     val SULFUR: Item = register(Item(Settings()), "sulfur")
