@@ -16,6 +16,15 @@ trait SeasonComponent extends ComponentV3 {
     private[component] var shouldChangeSeason: Boolean = false
 }
 
+/** [[SeasonComponent]] implementation.
+  *
+  * This class implemented [[SeasonComponent]], the season changed by the moon
+  * phase.
+  *
+  * @author
+  *   Krysztal Huang <krysztal.huang@outlook.com>
+  * @param world
+  */
 class SeasonComponentImpl(val world: World)
     extends SeasonComponent,
       AutoSyncedComponent,

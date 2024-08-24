@@ -19,7 +19,6 @@ class AgrarianRevolution extends ModInitializer {
     }
 }
 
-//noinspection TypeAnnotation
 object AgrarianRevolution {
     private lazy val log = LoggerFactory.getLogger("AgrarianRevolution")
 
