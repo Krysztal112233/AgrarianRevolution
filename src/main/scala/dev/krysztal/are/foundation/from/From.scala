@@ -22,39 +22,10 @@
  * SOFTWARE.
  */
 
-package dev.krysztal.are
+package dev.krysztal.are.foundation.from
 
-import dev.krysztal.are.common.Blocks
-import dev.krysztal.are.common.ChunkComponents
-import dev.krysztal.are.common.DataComponentTypes
-import dev.krysztal.are.common.ItemGroups
-import dev.krysztal.are.common.Items
-import dev.krysztal.are.common.Registries
-import dev.krysztal.are.common.WorldComponents
-import net.fabricmc.api.ModInitializer
-import net.minecraft.util.Identifier
-import org.slf4j.LoggerFactory
+trait From[I] {
+    type Self
 
-class AgrarianRevolution extends ModInitializer {
-
-    def onInitialize() = {
-        Registries.initialize()
-
-        DataComponentTypes.initialize()
-
-        WorldComponents.initialize()
-        ChunkComponents.initialize()
-
-        ItemGroups.initialize()
-        Items.initialize()
-        Blocks.initialize()
-    }
-}
-
-object AgrarianRevolution {
-    private lazy val log = LoggerFactory.getLogger("AgrarianRevolution")
-
-    val modID = "are"
-
-    def identifier(id: String) = Identifier.of(modID, id)
+    def from(value: I): Self {}
 }

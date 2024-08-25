@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Add `SpecimenRepository` for storage `HybridNote` and **_specimen_**
 - Add `CaffeineComponent` for storage `caffeine` count
 - Add `SugarComponent` for storage `sugar` count
+- Add `GENETIC_SEQUENCE` registry for genetic sequence processing
 
 ### Change
 

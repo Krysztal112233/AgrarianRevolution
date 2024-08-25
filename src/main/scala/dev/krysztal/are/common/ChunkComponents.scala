@@ -22,39 +22,36 @@
  * SOFTWARE.
  */
 
-package dev.krysztal.are
+package dev.krysztal.are.common
 
-import dev.krysztal.are.common.Blocks
-import dev.krysztal.are.common.ChunkComponents
-import dev.krysztal.are.common.DataComponentTypes
-import dev.krysztal.are.common.ItemGroups
-import dev.krysztal.are.common.Items
-import dev.krysztal.are.common.Registries
-import dev.krysztal.are.common.WorldComponents
-import net.fabricmc.api.ModInitializer
-import net.minecraft.util.Identifier
-import org.slf4j.LoggerFactory
+import dev.krysztal.are.AgrarianRevolution.identifier
+import dev.krysztal.are.common.ChunkComponents.TRAITS_MAP
+import dev.krysztal.are.common.component.TraitsMapComponent
+import dev.krysztal.are.common.component.TraitsMapComponentImpl
+import org.ladysnake.cca.api.v3.chunk.ChunkComponentFactoryRegistry
+import org.ladysnake.cca.api.v3.chunk.ChunkComponentInitializer
+import org.ladysnake.cca.api.v3.component.ComponentKey
+import org.ladysnake.cca.api.v3.component.ComponentRegistryV3
 
-class AgrarianRevolution extends ModInitializer {
+class ChunkComponents extends ChunkComponentInitializer {
 
-    def onInitialize() = {
-        Registries.initialize()
-
-        DataComponentTypes.initialize()
-
-        WorldComponents.initialize()
-        ChunkComponents.initialize()
-
-        ItemGroups.initialize()
-        Items.initialize()
-        Blocks.initialize()
+    override def registerChunkComponentFactories(
+        registry: ChunkComponentFactoryRegistry
+    ): Unit = {
+        registry.register(
+          TRAITS_MAP,
+          classOf[TraitsMapComponentImpl],
+          TraitsMapComponentImpl(_)
+        )
     }
 }
 
-object AgrarianRevolution {
-    private lazy val log = LoggerFactory.getLogger("AgrarianRevolution")
+object ChunkComponents {
+    val TRAITS_MAP: ComponentKey[TraitsMapComponent] =
+        ComponentRegistryV3.INSTANCE.getOrCreate(
+          identifier("traits_map"),
+          classOf[TraitsMapComponent]
+        )
 
-    val modID = "are"
-
-    def identifier(id: String) = Identifier.of(modID, id)
+    def initialize() = {}
 }

@@ -27,7 +27,8 @@
 			"dev.krysztal.are.AgrarianRevolutionDataGenerator"
 		],
 		"cardinal-components": [
-			"dev.krysztal.are.common.WorldComponents"
+			"dev.krysztal.are.common.WorldComponents",
+			"dev.krysztal.are.common.ChunkComponents"
 		]
 	},
 	"mixins": [
@@ -45,7 +46,8 @@
 	},
 	"custom": {
 		"cardinal-components": [
-			"are:season"
+			"are:season",
+			"are:traits_map"
 		]
 	}
 }

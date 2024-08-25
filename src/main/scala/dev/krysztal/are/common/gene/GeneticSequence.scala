@@ -22,39 +22,26 @@
  * SOFTWARE.
  */
 
-package dev.krysztal.are
+package dev.krysztal.are.common.gene
 
-import dev.krysztal.are.common.Blocks
-import dev.krysztal.are.common.ChunkComponents
-import dev.krysztal.are.common.DataComponentTypes
-import dev.krysztal.are.common.ItemGroups
-import dev.krysztal.are.common.Items
-import dev.krysztal.are.common.Registries
-import dev.krysztal.are.common.WorldComponents
-import net.fabricmc.api.ModInitializer
+import dev.krysztal.are.foundation.as.AsNbtCompound
+import dev.krysztal.are.foundation.from.From
+import net.minecraft.nbt.NbtCompound
 import net.minecraft.util.Identifier
-import org.slf4j.LoggerFactory
+import net.minecraft.util.math.Position
+import net.minecraft.world.World
 
-class AgrarianRevolution extends ModInitializer {
+import scala.util.Try
 
-    def onInitialize() = {
-        Registries.initialize()
+case class EnvironmentContext(
+    val world: World,
+    val position: Position
+)
 
-        DataComponentTypes.initialize()
+trait GeneticSequence extends AsNbtCompound, From[NbtCompound] {
+    val identifier: Identifier
 
-        WorldComponents.initialize()
-        ChunkComponents.initialize()
+    def evaluate(ctx: EnvironmentContext): NbtCompound
 
-        ItemGroups.initialize()
-        Items.initialize()
-        Blocks.initialize()
-    }
-}
-
-object AgrarianRevolution {
-    private lazy val log = LoggerFactory.getLogger("AgrarianRevolution")
-
-    val modID = "are"
-
-    def identifier(id: String) = Identifier.of(modID, id)
+    def hybridize(gene: GeneticSequence): Try[NbtCompound]
 }
