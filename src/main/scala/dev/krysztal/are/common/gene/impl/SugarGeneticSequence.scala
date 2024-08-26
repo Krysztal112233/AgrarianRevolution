@@ -22,36 +22,30 @@
  * SOFTWARE.
  */
 
-package dev.krysztal.are.common.gene
+package dev.krysztal.are.common.gene.impl
 
-import com.mojang.serialization.MapCodec
-import dev.krysztal.are.foundation.as.AsNbtCompound
-import dev.krysztal.are.foundation.from.From
+import dev.krysztal.are.common.gene.EnvironmentContext
+import dev.krysztal.are.common.gene.GeneticSequence
+import dev.krysztal.are.common.gene.GeneticSequenceCodec
 import net.minecraft.nbt.NbtCompound
-import net.minecraft.util.math.BlockPos
-import net.minecraft.world.World
 
 import scala.util.Try
 
-case class EnvironmentContext(
-    val world: World,
-    val pos: BlockPos
-)
+class SugarGeneticSequence extends GeneticSequence {
 
-/** Genetic sequence, the core of hybrid system.
-  *
-  * @author
-  *   KrysztalHuang <krysztal.huang@outlook.com>
-  */
-trait GeneticSequence extends AsNbtCompound, From[NbtCompound] {
-    def codec(): GeneticSequenceCodec[?]
+    type Self = SugarGeneticSequence;
 
-    def evaluate(ctx: EnvironmentContext): NbtCompound
+    override def evaluate(ctx: EnvironmentContext): NbtCompound = ???
 
-    def hybridize(
+    override def as(): NbtCompound = ???
+
+    override def from(value: NbtCompound): Self = ???
+
+    override def hybridize(
         parentA: GeneticSequence,
         parentB: GeneticSequence
-    ): Try[NbtCompound]
-}
+    ): Try[NbtCompound] = ???
 
-case class GeneticSequenceCodec[T <: GeneticSequence](codec: MapCodec[T])
+    override def codec(): GeneticSequenceCodec[?] = ???
+
+}

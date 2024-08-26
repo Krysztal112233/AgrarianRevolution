@@ -22,36 +22,9 @@
  * SOFTWARE.
  */
 
-package dev.krysztal.are.common.gene
+package dev.krysztal.are.common
 
-import com.mojang.serialization.MapCodec
-import dev.krysztal.are.foundation.as.AsNbtCompound
-import dev.krysztal.are.foundation.from.From
-import net.minecraft.nbt.NbtCompound
-import net.minecraft.util.math.BlockPos
-import net.minecraft.world.World
+object GeneticSequences {
 
-import scala.util.Try
-
-case class EnvironmentContext(
-    val world: World,
-    val pos: BlockPos
-)
-
-/** Genetic sequence, the core of hybrid system.
-  *
-  * @author
-  *   KrysztalHuang <krysztal.huang@outlook.com>
-  */
-trait GeneticSequence extends AsNbtCompound, From[NbtCompound] {
-    def codec(): GeneticSequenceCodec[?]
-
-    def evaluate(ctx: EnvironmentContext): NbtCompound
-
-    def hybridize(
-        parentA: GeneticSequence,
-        parentB: GeneticSequence
-    ): Try[NbtCompound]
+    def initialize() = {}
 }
-
-case class GeneticSequenceCodec[T <: GeneticSequence](codec: MapCodec[T])

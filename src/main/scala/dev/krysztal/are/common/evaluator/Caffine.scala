@@ -22,36 +22,20 @@
  * SOFTWARE.
  */
 
-package dev.krysztal.are.common.gene
+package dev.krysztal.are.common.evaluator
 
-import com.mojang.serialization.MapCodec
+import dev.krysztal.are.common.gene.EnvironmentContext
 import dev.krysztal.are.foundation.as.AsNbtCompound
-import dev.krysztal.are.foundation.from.From
-import net.minecraft.nbt.NbtCompound
-import net.minecraft.util.math.BlockPos
-import net.minecraft.world.World
+import dev.krysztal.are.foundation.evaluator.Evaluator
 
-import scala.util.Try
+class Caffeine extends Evaluator[EnvironmentContext] {
 
-case class EnvironmentContext(
-    val world: World,
-    val pos: BlockPos
-)
+    override def eval(ctx: EnvironmentContext): Class[? <: AsNbtCompound] = {
+        ???
+    }
 
-/** Genetic sequence, the core of hybrid system.
-  *
-  * @author
-  *   KrysztalHuang <krysztal.huang@outlook.com>
-  */
-trait GeneticSequence extends AsNbtCompound, From[NbtCompound] {
-    def codec(): GeneticSequenceCodec[?]
-
-    def evaluate(ctx: EnvironmentContext): NbtCompound
-
-    def hybridize(
-        parentA: GeneticSequence,
-        parentB: GeneticSequence
-    ): Try[NbtCompound]
 }
 
-case class GeneticSequenceCodec[T <: GeneticSequence](codec: MapCodec[T])
+object Caffeine {
+    lazy val INSTANCE = Caffeine()
+}

@@ -22,36 +22,21 @@
  * SOFTWARE.
  */
 
-package dev.krysztal.are.common.gene
+package dev.krysztal.are.mixin
 
-import com.mojang.serialization.MapCodec
-import dev.krysztal.are.foundation.as.AsNbtCompound
-import dev.krysztal.are.foundation.from.From
 import net.minecraft.nbt.NbtCompound
-import net.minecraft.util.math.BlockPos
-import net.minecraft.world.World
+import net.minecraft.nbt.NbtElement
+import org.spongepowered.asm.mixin.Mixin
+import org.spongepowered.asm.mixin.gen.Invoker
 
-import scala.util.Try
+import java.util.Map
 
-case class EnvironmentContext(
-    val world: World,
-    val pos: BlockPos
-)
+@Mixin(Array(classOf[NbtCompound]))
+trait NbtCompoundAccessorMixin
 
-/** Genetic sequence, the core of hybrid system.
-  *
-  * @author
-  *   KrysztalHuang <krysztal.huang@outlook.com>
-  */
-trait GeneticSequence extends AsNbtCompound, From[NbtCompound] {
-    def codec(): GeneticSequenceCodec[?]
-
-    def evaluate(ctx: EnvironmentContext): NbtCompound
-
-    def hybridize(
-        parentA: GeneticSequence,
-        parentB: GeneticSequence
-    ): Try[NbtCompound]
+object NbtCompoundAccessorMixin {
+    @Invoker("<init>")
+    def fromMap(entries: Map[String, NbtElement]): NbtCompound = {
+        throw AssertionError()
+    }
 }
-
-case class GeneticSequenceCodec[T <: GeneticSequence](codec: MapCodec[T])

@@ -1,4 +1,1 @@
 accessWidener v2 named
-accessible method net/minecraft/block/WoodType register (Lnet/minecraft/block/WoodType;)Lnet/minecraft/block/WoodType;
-accessible method net/minecraft/block/Blocks createStairsBlock (Lnet/minecraft/block/Block;)Lnet/minecraft/block/Block;
-accessible method net/minecraft/block/Blocks createOldStairsBlock (Lnet/minecraft/block/Block;)Lnet/minecraft/block/Block;

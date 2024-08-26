@@ -22,36 +22,32 @@
  * SOFTWARE.
  */
 
-package dev.krysztal.are.common.gene
+package dev.krysztal.are.foundation.evaluator
 
-import com.mojang.serialization.MapCodec
 import dev.krysztal.are.foundation.as.AsNbtCompound
-import dev.krysztal.are.foundation.from.From
-import net.minecraft.nbt.NbtCompound
-import net.minecraft.util.math.BlockPos
-import net.minecraft.world.World
 
-import scala.util.Try
-
-case class EnvironmentContext(
-    val world: World,
-    val pos: BlockPos
-)
-
-/** Genetic sequence, the core of hybrid system.
-  *
-  * @author
-  *   KrysztalHuang <krysztal.huang@outlook.com>
-  */
-trait GeneticSequence extends AsNbtCompound, From[NbtCompound] {
-    def codec(): GeneticSequenceCodec[?]
-
-    def evaluate(ctx: EnvironmentContext): NbtCompound
-
-    def hybridize(
-        parentA: GeneticSequence,
-        parentB: GeneticSequence
-    ): Try[NbtCompound]
+trait Evaluator[T] {
+    def eval(ctx: T): Class[? <: AsNbtCompound];
 }
 
-case class GeneticSequenceCodec[T <: GeneticSequence](codec: MapCodec[T])
+object Evaluator {
+
+    case class EvaluatorChain[T](
+        private val ctx: T,
+        private val fList: List[(T) => Class[? <: AsNbtCompound]]
+    ) {
+        def chain(eval: Evaluator[T]): EvaluatorChain[T] = {
+            EvaluatorChain(ctx, fList.appended(eval.eval))
+        }
+
+        def chain(eval: (T) => Class[? <: AsNbtCompound]): EvaluatorChain[T] = {
+            EvaluatorChain(ctx, fList.appended(eval))
+        }
+
+        def evaluate() = {
+            fList.map(_(ctx))
+        }
+    }
+
+    def create[T](ctx: T): EvaluatorChain[T] = EvaluatorChain(ctx, List())
+}

@@ -27,6 +27,7 @@ package dev.krysztal.are
 import dev.krysztal.are.common.Blocks
 import dev.krysztal.are.common.ChunkComponents
 import dev.krysztal.are.common.DataComponentTypes
+import dev.krysztal.are.common.GeneticSequences
 import dev.krysztal.are.common.ItemGroups
 import dev.krysztal.are.common.Items
 import dev.krysztal.are.common.Registries
@@ -39,6 +40,7 @@ class AgrarianRevolution extends ModInitializer {
 
     def onInitialize() = {
         Registries.initialize()
+        GeneticSequences.initialize()
 
         DataComponentTypes.initialize()
 

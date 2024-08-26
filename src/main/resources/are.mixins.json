@@ -2,7 +2,9 @@
 	"required": true,
 	"package": "dev.krysztal.are.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [],
+	"mixins": [
+		"NbtCompoundAccessorMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
 	}

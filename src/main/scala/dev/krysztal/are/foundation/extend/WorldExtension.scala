@@ -22,36 +22,21 @@
  * SOFTWARE.
  */
 
-package dev.krysztal.are.common.gene
+package dev.krysztal.are.foundation.extend
 
-import com.mojang.serialization.MapCodec
-import dev.krysztal.are.foundation.as.AsNbtCompound
-import dev.krysztal.are.foundation.from.From
-import net.minecraft.nbt.NbtCompound
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 
-import scala.util.Try
+object WorldExtension {
+    extension (world: World)
+        def temperature(blockPos: BlockPos, noise: Float = 0) = {
+            val baseLine = world.getBiome(blockPos).value().getTemperature()
 
-case class EnvironmentContext(
-    val world: World,
-    val pos: BlockPos
-)
+            val y = blockPos.getY()
+            val decreased = if (y >= 81) { (y - 80) * 0.00125f }
+            else { y.asInstanceOf[Float] }
 
-/** Genetic sequence, the core of hybrid system.
-  *
-  * @author
-  *   KrysztalHuang <krysztal.huang@outlook.com>
-  */
-trait GeneticSequence extends AsNbtCompound, From[NbtCompound] {
-    def codec(): GeneticSequenceCodec[?]
+            baseLine - decreased + noise
+        }
 
-    def evaluate(ctx: EnvironmentContext): NbtCompound
-
-    def hybridize(
-        parentA: GeneticSequence,
-        parentB: GeneticSequence
-    ): Try[NbtCompound]
 }
-
-case class GeneticSequenceCodec[T <: GeneticSequence](codec: MapCodec[T])

@@ -16,6 +16,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Add `CaffeineComponent` for storage `caffeine` count
 - Add `SugarComponent` for storage `sugar` count
 - Add `GENETIC_SEQUENCE` registry for genetic sequence processing
+- Add `NbtCompoundAccessorMixin` to open constructor of `NbtCompound`
+- Add `Evaluator` for evaluating genetic sequence
 
 ### Change
 
